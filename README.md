@@ -125,9 +125,9 @@ Lors du travail à distance, vous serez appelé-es à créer vous-même un pré-
 
 Dans cette partie du cours, vous allez commencer l'activité en utilisant les informations de l'expérience en technologie éducative présentée au point précédent :
 
-1.  Ouvrez le **template de pré-enregistrement d'une expérience** en [format Word](./fondements-empiriques/template_pre-enregistrement_experience.docx) pour éditer directement ou si vous préférez en [format PDF](./fondements-empiriques/template_pre-enregistrement_experience.pdf) pour copier la structure dans un autre éditeur de votre choix
+1.  Téléchargez/ouvrez le **template de pré-enregistrement d'une expérience** en [format Word](./fondements-empiriques/template_pre-enregistrement_experience.docx) pour éditer directement ou si vous préférez en [format PDF](./fondements-empiriques/template_pre-enregistrement_experience.pdf) pour copier la structure dans un autre éditeur de votre choix
 
-2.  Utilisez les slides de la présentation pour repérer les informations utiles à remplir le template. Concentrez-vous dans l'ordre sur les sections suivantes :
+2.  Utilisez **les slides de la présentation** pour repérer les informations utiles à remplir le template. Concentrez-vous dans l'ordre sur les sections suivantes :
 
     -   Section 2 Information sur l'étude/expérience
 
