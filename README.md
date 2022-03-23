@@ -157,6 +157,28 @@ Les détails de chaque livrable sont disponibles dans l'espace Moodle du cours.
 
 ### Mardi 10 mai 2022
 
+## Livrables et critères d'évaluation
+
+Cette section présente les détails des livrables à rendre pendant les périodes à distance. Les modalités de rendu sont indiquées dans l'espace Moodle du cours.
+
+### P5
+
+La période 5 prévoit deux livrables (un individuel, un par groupes) et un commentaire croisé.
+
+#### Fiche de pré-enregistrement de l'expérience sur l'awareness émotionnelle (individuel)
+
+#### Première version d'une fiche de pré-enregistrement d'une expérience imaginée par vois soins (groupe)
+
+#### Commentaires croisés sur la première version de la fiche de pré-enregistrement
+
+### P6
+
+La période 5 prévoit deux livrables par groupes.
+
+#### Version finalisée de la fiche de pré-enregistrement et obtention de données de synthèse
+
+#### Communication scientifique sous forme de poster de recherche
+
 ## Licence
 
-Cette œuvre est mise à disposition selon les termes de la Licence [Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+Le contenu de ce dépôt est mise à disposition selon les termes de la Licence [Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
