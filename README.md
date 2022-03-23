@@ -287,13 +287,43 @@ La période 5 prévoit deux livrables par groupes.
 
 **Consignes** :
 
+-   Créez un poster au format A0 qui résume l'ensemble de votre expérience (simulée) : bref cadre théorique, questions/hypothèses de recherche, méthode, résultats et discussion
+
+-   Vous pouvez vous référez à cet exemple : [The Social Sharing of Emotions with an Emotion Awareness Tool during a Computer-Supported Collaborative Task](https://mfr.de-1.osf.io/render?url=https://osf.io/3rsmd/?direct%26mode=render%26action=download%26mode=render) (Fritz, Perrier & Bétrancourt, 2019)
+
 **Contraintes** :
+
+-   Votre poster doit citer au moins deux articles scientifiques en format bref (auteurs et date). Les références complètes sont à insérez dans le message avec lequel vous rendez le livrable
+
+-   Le poster doit indiquer clairement qu'il ne s'agit pas d'une expérience qui a été menée réellement !
 
 **Conseils** :
 
+-   Référez-vous aux ressources sur EduTechWiki dans le module [Communiquer efficacement : principes et astuces en communication visuelle](https://edutechwiki.unige.ch/fr/Communiquer_efficacement_:_principes_et_astuces_en_communication_visuelle)
+
+-   Vous pouvez utiliser Power Point (voir les sections à ce propos dans le module) ou tout autre éditeur de texte/graphique
+
 **Évaluation** :
 
+-   Évaluation sommative sur 3 points
+
+-   De 0 à 1 point pour la qualité scientifique du poster (cadre théorique, questions/hypothèses, méthode)
+
+-   De 0 à 1 point pour les résultats des analyses et les inférences statistiques et pratiques que vous en tirez
+
+-   De 0 à 1 point pour la qualité du design du poster (lisibilité, alignement, respect de contraintes, ...)
+
 **Délai** :
+
+-   Mardi 14 juin à 21h00
+
+### Calcule de la note finale
+
+La note finale est calculée de la manière suivante :
+
+-   La somme entre les points de la fiche de pré-enregistrement de votre propre expérience et les points du poster (de 0 à 6)
+
+-   L'auto-évaluation (de 0 à 1) sert en tant que bonus et sera ajoutée à la somme des deux livrables du groupe
 
 ## Licence
 
