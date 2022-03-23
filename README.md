@@ -189,13 +189,63 @@ La période 5 prévoit deux livrables (un individuel, un par groupes) et un comm
 
 -   Pour cette raison, le rendu de ce livrable hors délai correspond automatiquement à une évaluation de 0
 
-**Délais** :
+**Délai** :
 
 -   Mercredi 13 avril à 21h00
 
 #### Première version d'une fiche de pré-enregistrement d'une expérience imaginée par vois soins (groupe)
 
+**Consignes** :
+
+-   Imaginez une expérience dans le domaine de la technologie éducative et créez votre propre fiche de pré-enregistrement dans laquelle vous définissez les détails
+
+-   L'expérience peut porter sur un sujet de votre choix, mais nous vous proposons trois thématiques avec une collection d'articles auxquels vous pouvez vous référez au besoin. Les thématiques sont :
+
+    -   Lecture sur papier vs. écran (c.f. la vidéo vue en salle de classe)
+
+    -   Principes multimédia dans l'apprentissage
+
+    -   Awareness émotionnelle dans l'apprentissage médiatisée par ordinateur
+
+**Contraintes** :
+
+-   Votre expérience doit prévoir un plan inter-sujet (sans mesure répétée) caractérisé par une VI avec deux ou trois modalités, ou deux VI avec deux modalités maximum (plan 2 X 2)
+
+-   Vous devez spécifier deux VD, dont au moins une doit être considérée valide/*objective*. Vous pouvez vous référez à une liste d'articles dans l'espace Moodle pour plus de détails
+
+-   Remplissez les sections/points de la fiche qui vous semblent appropriés, en sachant que les points 4.3 et 4.4, ainsi que la section 6 seront abordés dans les fondements statistiques en P6. Les plus ambitieux peuvent déjà se lancer si souhaité, de toute manière la première version est commentée par vos collègues et reçoit un feedback formative de l'équipe enseignante
+
+-   Il n'y a pas de limites pour la longueur de la fiche, mais soyez raisonnable. Votre fiche sera commentée par vos collègues. Référez-vous à la fiche proposée par l'équipe enseignante après le premier livrable.
+
+**Conseils** :
+
+-   Freinez vos ambitions : concevoir une expérience est une procédure complexe et qui nécessite du temps. Concentrez-vous sur les aspects logiques/causales qui détermine le rapport entre votre intervention (VI) et vos phénomènes d'intérêt (VD)
+
+-   Il vous faudra lire des articles empiriques pour vous aider/inspirer. Référez-vous à la méthode QALMRI pour les comprendre
+
+-   N'hésitez pas à reprendre des protocoles expérimentaux qui vous semblent intéressants et modifier des éléments (e.g. changer la VI/VD, le public cible, proposer une hypothèse alternative, etc.)
+
+**Évaluation** :
+
+-   Commentaires croisés par vos collègues
+
+-   Évaluation formative de l'équipe enseignante
+
+**Délai** :
+
+-   Mardi 3 mai à 21h00
+
 #### Commentaires croisés sur la première version de la fiche de pré-enregistrement
+
+**Consignes** :
+
+-   Chaque fiche de groupe sera attribué au commentaire de deux étudiant-es d'autres groupes
+
+-   Pour le commentaire, focalisez vous sur les hypothèses et le choix des VI/VD
+
+**Délai** :
+
+-   Vendredi 6 mai à 21h00
 
 ### P6
 
