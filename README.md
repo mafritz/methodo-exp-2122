@@ -253,7 +253,47 @@ La période 5 prévoit deux livrables par groupes.
 
 #### Version finalisée de la fiche de pré-enregistrement et obtention de données de synthèse
 
+**Consignes** :
+
+-   Finalisez votre fiche de pré-enregistrement, notamment en ce qui concerne le nombre de participant-es envisagés (calcule de puissance statistique ou justification alternative de l'échantillon comme le temps, le budget, la littérature, ...) et le type d'analyse statistique à mener (*t*-test de Welch, ANOVA simple, ANOVA factorielle, ...)
+
+-   Sur la base de la fiche vous allez recevoir des données de synthèse pour mener les analyses indiquées dans la fiche
+
+**Contraintes** :
+
+-   Même contraintes que pour la première version
+
+**Conseils** :
+
+-   Le plus complexe votre plan expérimental, le plus complexe votre analyse des données (soyez raisonnables)
+
+-   Vous pouvez essayer de simuler vous-mêmes des données avec les techniques vues en salle de classe avec R pour s'assurer que l'analyse que vous comptez mener est correcte
+
+**Évaluation** :
+
+-   Évaluation sommative sur 3 points
+
+-   De 0 à 1 point pour la qualité de la question de recherche/hypothèses
+
+-   De 0 à 1 point pour le choix des VI/VD
+
+-   De 0 à 1point pour la qualité générale de la fiche de pré-enregistrement
+
+**Délai** :
+
+-   Dimanche 29 mai à 21h00
+
 #### Communication scientifique sous forme de poster de recherche
+
+**Consignes** :
+
+**Contraintes** :
+
+**Conseils** :
+
+**Évaluation** :
+
+**Délai** :
 
 ## Licence
 
