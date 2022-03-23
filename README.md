@@ -46,11 +46,11 @@ Pour atteindre les objectifs pédagogiques du cours, vous allez produire les él
 
 -   Lire et interpréter des articles scientifiques à travers la méthode QALMRI, acronyme de *Question, Alternative, Logic, Method, Results, Inferences*
 
-## Programme
+# Programme
 
 Le cours est organisé sur deux périodes du Master MALTT (P5 et P6), avec deux demi-journées de cours en présence et deux périodes de travail à distance. Ici vous trouverez les contenus et activités des séances snychrones du cours. Pour le travail à distance, référez-vous à la section sur les livrables.
 
-### Mardi 29 mars 2022
+## Mardi 29 mars 2022
 
 |    Horaire    | Contenus                                              |
 |:-------------:|-------------------------------------------------------|
@@ -63,7 +63,7 @@ Le cours est organisé sur deux périodes du Master MALTT (P5 et P6), avec deux 
 
 : Répartition horaire de la demi-journée de mardi 29 mars
 
-#### Introduction aux périodes 5 et 6 sur la méthode expérimentale
+### Introduction aux périodes 5 et 6 sur la méthode expérimentale
 
 Cette partie du cours introduit les contenus, objectifs et l'environnement d'apprentissage de la partie du cours METHODO consacrée à la méthode expérimentale :
 
@@ -71,7 +71,7 @@ Cette partie du cours introduit les contenus, objectifs et l'environnement d'app
 
 -   Illustration des objectifs
 
-#### Présentation et activité sur le fondements empiriques de la méthode expérimentale
+### Présentation et activité sur le fondements empiriques de la méthode expérimentale
 
 Cette partie du cours présente les fondements empiriques de la méthode expérimentale à travers l'articulation d'une présentation avec une activité portant sur une thématique de recherche en technologie éducative : les effets du support de lecture (papier vs. écran) sur différents phénomènes liés à l'apprentissage (compréhension, capacité attentionnelle, etc.).
 
@@ -109,7 +109,7 @@ La présentation est précédée par la vision d'une courte vidéo, et ensuite d
 
     -   Faites un liste des éléments qui pourraient influencer/perturber l'expérience (e.g. variables à contrôler/neutraliser, précautions éthiques, ...)
 
-#### Présentation d'une expérience en technologie éducative
+### Présentation d'une expérience en technologie éducative
 
 Une expérience en technologie éducative portant sur l'awareness émotionnelle en situation d'apprentissage collaboratif médiatisé par ordinateur vous sera illustré pour les raisons suivantes :
 
@@ -121,7 +121,7 @@ Une expérience en technologie éducative portant sur l'awareness émotionnelle 
 
 Les slides de la présentation sont disponibles dans l'espace Moodle du cours.
 
-#### Pré-enregistrement d'une recherche expérimentale
+### Pré-enregistrement d'une recherche expérimentale
 
 Le pré-enregistrement d'une expérience consiste à planifier à l'avance et publier sur une plateforme indépendante les différentes informations concernant une expérience, afin de maximiser la transparence et la réplicabilité de cette même expérience par d'autres chercheurs. La plateforme OSF résume ce concept de la manière suivante :
 
@@ -147,25 +147,21 @@ Dans cette partie du cours, vous allez commencer l'activité en utilisant les in
 
 Il peut y avoir des informations manquantes, peu claires ou incomplètes. Essayez de remplir les points de la manière plus précise possible en fonction du temps disponible. Vous terminerez l'activité pendant la période à distance.
 
-#### Illustration des livrables
+### Illustration des livrables
 
--   Terminer le template de pré-enregistrement de l'expérience en technologie éducative commencé en salle de classe (individuel)
+Voir la section "Livrables et critères d'évaluation" plus bas.
 
--   Imaginer une expérience potentielle et créer une *fiche* de pré-enregistrement (groupe)
+## Mardi 10 mai 2022
 
-Les détails de chaque livrable sont disponibles dans l'espace Moodle du cours.
-
-### Mardi 10 mai 2022
-
-## Livrables et critères d'évaluation
+# Livrables et critères d'évaluation
 
 Cette section présente les détails des livrables à rendre pendant les périodes à distance. Les modalités de rendu sont indiquées dans l'espace Moodle du cours.
 
-### P5
+## P5
 
 La période 5 prévoit deux livrables (un individuel, un par groupes) et un commentaire croisé.
 
-#### Fiche de pré-enregistrement de l'expérience sur l'awareness émotionnelle (individuel)
+### Fiche de pré-enregistrement de l'expérience sur l'awareness émotionnelle (individuel)
 
 **Consignes** :
 
@@ -193,7 +189,7 @@ La période 5 prévoit deux livrables (un individuel, un par groupes) et un comm
 
 -   Mercredi 13 avril à 21h00
 
-#### Première version d'une fiche de pré-enregistrement d'une expérience imaginée par vois soins (groupe)
+### Première version d'une fiche de pré-enregistrement d'une expérience imaginée par vois soins (groupe)
 
 **Consignes** :
 
@@ -235,7 +231,7 @@ La période 5 prévoit deux livrables (un individuel, un par groupes) et un comm
 
 -   Mardi 3 mai à 21h00
 
-#### Commentaires croisés sur la première version de la fiche de pré-enregistrement
+### Commentaires croisés sur la première version de la fiche de pré-enregistrement
 
 **Consignes** :
 
@@ -247,11 +243,11 @@ La période 5 prévoit deux livrables (un individuel, un par groupes) et un comm
 
 -   Vendredi 6 mai à 21h00
 
-### P6
+## P6
 
 La période 5 prévoit deux livrables par groupes.
 
-#### Version finalisée de la fiche de pré-enregistrement et obtention de données de synthèse
+### Version finalisée de la fiche de pré-enregistrement et obtention de données de synthèse
 
 **Consignes** :
 
@@ -283,7 +279,7 @@ La période 5 prévoit deux livrables par groupes.
 
 -   Dimanche 29 mai à 21h00
 
-#### Communication scientifique sous forme de poster de recherche
+### Communication scientifique sous forme de poster de recherche
 
 **Consignes** :
 
@@ -317,7 +313,7 @@ La période 5 prévoit deux livrables par groupes.
 
 -   Mardi 14 juin à 21h00
 
-### Calcule de la note finale
+## Calcule de la note finale
 
 La note finale est calculée de la manière suivante :
 
@@ -325,6 +321,6 @@ La note finale est calculée de la manière suivante :
 
 -   L'auto-évaluation (de 0 à 1) sert en tant que bonus et sera ajoutée à la somme des deux livrables du groupe
 
-## Licence
+# Licence
 
 Le contenu de ce dépôt est mis à disposition selon les termes de la Licence [Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
