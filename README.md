@@ -167,6 +167,32 @@ La période 5 prévoit deux livrables (un individuel, un par groupes) et un comm
 
 #### Fiche de pré-enregistrement de l'expérience sur l'awareness émotionnelle (individuel)
 
+**Consignes** :
+
+-   Complétez la fiche de pré-enregistrement de l'expérience sur l'awareness émotionnelle commencée en salle de classe selon le template de pré-enregistrement disponible dans ce dépôt (format [Word](./fondements-empiriques/template_pre-enregistrement_experience.docx)ou [PDF](./fondements-empiriques/template_pre-enregistrement_experience.pdf))
+
+-   Tous les points ne doivent pas être complétés, utilisez votre propre jugement
+
+**Contraintes** :
+
+-   Aucune contrainte particulière au niveau de la précision ou de la longueur de la fiche, essayez de comprendre les contenus de chaque section/point et d'indiquer les informations saillantes que vous retrouvez dans la présentation de l'expérience faite en salle de classe
+
+**Conseils** :
+
+-   Il n'est pas nécessaire de reformuler ou vous démarquer des contenus de la présentation ; l'objectif est de savoir bien identifier les informations saillantes et reconnaître si des informations sont incomplètes ou manquantes
+
+**Évaluation** :
+
+-   Une fois le délai passé, l'équipe enseignante publiera la fiche de l'expérience même que vous allez ensuite comparer avec la votre
+
+-   Vous allez auto-évaluer votre propre fiche en la comparant avec la fiche de l'équipe enseignante et vous auto-attribuer un score entre 0 (pas de similarité du tout) à 1 (les fiches correspondent plus ou moins) avec 0.1 points décimaux d'écart
+
+-   Pour cette raison, le rendu de ce livrable hors délai correspond automatiquement à une évaluation de 0
+
+**Délais** :
+
+-   Mercredi 13 avril à 21h00
+
 #### Première version d'une fiche de pré-enregistrement d'une expérience imaginée par vois soins (groupe)
 
 #### Commentaires croisés sur la première version de la fiche de pré-enregistrement
