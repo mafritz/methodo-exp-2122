@@ -7,6 +7,8 @@ lang: fr
 linestretch: 1.2
 fontsize: 12pt
 output:
+  word_document:
+    number_sections: true
   pdf_document:
     toc: false
     toc_depth: 1
