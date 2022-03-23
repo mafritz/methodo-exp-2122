@@ -327,4 +327,4 @@ La note finale est calculée de la manière suivante :
 
 ## Licence
 
-Le contenu de ce dépôt est mise à disposition selon les termes de la Licence [Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+Le contenu de ce dépôt est mis à disposition selon les termes de la Licence [Creative Commons Attribution - Pas d'Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
