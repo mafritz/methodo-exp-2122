@@ -42,6 +42,8 @@ Pour atteindre les objectifs pédagogiques du cours, vous allez produire les él
 
 -   Mener et interpréter des analyses statistiques sur différents jeux de données
 
+-   Créer un poster scientifique qui illustre l'ensemble du processus d'une recherche expérimentale (cadre théorique, question/hypothèses de recherche, méthode, résultats et discussion)
+
 -   Lire et interpréter des articles scientifiques à travers la méthode QALMRI, acronyme de *Question, Alternative, Logic, Method, Results, Inferences*
 
 ## Programme
@@ -149,7 +151,7 @@ Il peut y avoir des informations manquantes, peu claires ou incomplètes. Essaye
 
 -   Terminer le template de pré-enregistrement de l'expérience en technologie éducative commencé en salle de classe (individuel)
 
--   Produire une première version du pré-enregistrement d'une expérience conçues par vos soins (groupe)
+-   Imaginer une expérience potentielle et créer une *fiche* de pré-enregistrement (groupe)
 
 Les détails de chaque livrable sont disponibles dans l'espace Moodle du cours.
 
