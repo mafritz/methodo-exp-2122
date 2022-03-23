@@ -285,11 +285,11 @@ La période 5 prévoit deux livrables par groupes.
 
 -   Créez un poster au format A0 qui résume l'ensemble de votre expérience (simulée) : bref cadre théorique, questions/hypothèses de recherche, méthode, résultats et discussion
 
--   Vous pouvez vous référez à cet exemple : [The Social Sharing of Emotions with an Emotion Awareness Tool during a Computer-Supported Collaborative Task](https://mfr.de-1.osf.io/render?url=https://osf.io/3rsmd/?direct%26mode=render%26action=download%26mode=render) (Fritz, Perrier & Bétrancourt, 2019)
+-   Vous pouvez vous référez à cet exemple : [The Social Sharing of Emotions with an Emotion Awareness Tool during a Computer-Supported Collaborative Task](https://www.researchgate.net/publication/337388453_The_Social_Sharing_of_Emotions_with_an_Emotion_Awareness_Tool_during_a_Computer-Supported_Collaborative_Task) (Fritz, Perrier & Bétrancourt, 2019)
 
 **Contraintes** :
 
--   Votre poster doit citer au moins deux articles scientifiques en format bref (auteurs et date). Les références complètes sont à insérez dans le message avec lequel vous rendez le livrable
+-   Votre poster doit citer au moins deux articles scientifiques en format bref (auteurs et date). Les références complètes sont à insérer dans le message avec lequel vous rendez le livrable
 
 -   Le poster doit indiquer clairement qu'il ne s'agit pas d'une expérience qui a été menée réellement !
 
