@@ -109,7 +109,13 @@ La présentation est précédée par la vision d'une courte vidéo, et ensuite d
 
 #### Présentation d'une expérience en technologie éducative
 
-Dans cette partie du cours, vous jouerez le rôle des participant-es à une expérience en technologie éducative portant sur l'awareness émotionnelle dans l'apprentissage médiatisée par ordinateur.
+Une expérience en technologie éducative portant sur l'awareness émotionnelle en situation d'apprentissage collaboratif médiatisé par ordinateur vous sera illustré pour les raisons suivantes :
+
+-   Fournir un exemple de planification d'une recherche expérimentale (cadre théorique, question de recherche, hypothèses et protocole expérimentale)
+
+-   Introduction de la [Dynamic Emotion Wheel](https://dynamicemotionwheel.ch/), un outil développé selon l'approche centrée utilisateur du domaine ERGO mais qui est pensé aussi pour la recherche expérimentale
+
+-   Fournir des éléments utiles à remplir une *fiche* de pré-enregistrement d'une expérience (voir point suivant)
 
 Les slides de la présentation sont disponibles dans l'espace Moodle du cours.
 
