@@ -67,7 +67,7 @@ Cette partie du cours introduit les contenus, objectifs et l'environnement d'app
 
 -   Présentation du site d'accompagnement
 
--   Illustration des [objectifs](./objectifs.html)
+-   Illustration des objectifs
 
 #### Présentation et activité sur le fondements empiriques de la méthode expérimentale
 
