@@ -129,11 +129,11 @@ Le pré-enregistrement d'une expérience consiste à planifier à l'avance et pu
 >
 > --- OSF website
 
-Lors du travail à distance, vous serez appelé-es à créer vous-même un pré-enregistrement à travers une procédure similaire à celle de la plateforme OSF, mais en utilisant un [template légèrement différent disponible dans ce dépôt](./fondements-empiriques/teamplate_pre-enregistrement-experience.pdf).
+Lors du travail à distance, vous serez appelé-es à créer vous-même un pré-enregistrement à travers une procédure similaire à celle de la plateforme OSF, mais en utilisant un [template légèrement différent disponible dans ce dépôt](https://github.com/mafritz/methodo-exp-2122/fondements-empiriques/teamplate_pre-enregistrement-experience.pdf).
 
 Dans cette partie du cours, vous allez commencer l'activité en utilisant les informations de l'expérience en technologie éducative présentée au point précédent :
 
-1.  Téléchargez/ouvrez le **template de pré-enregistrement d'une expérience** en [format Word](./fondements-empiriques/template_pre-enregistrement_experience.docx) pour éditer directement ou si vous préférez en [format PDF](./fondements-empiriques/template_pre-enregistrement_experience.pdf) pour copier la structure dans un autre éditeur de votre choix
+1.  Téléchargez/ouvrez le **template de pré-enregistrement d'une expérience** en [format Word](https://github.com/mafritz/methodo-exp-2122/fondements-empiriques/template_pre-enregistrement_experience.docx) pour éditer directement ou si vous préférez en [format PDF](https://github.com/mafritz/methodo-exp-2122/fondements-empiriques/template_pre-enregistrement_experience.pdf) pour copier la structure dans un autre éditeur de votre choix
 
 2.  Utilisez **les slides de la présentation** pour repérer les informations utiles à remplir le template. Concentrez-vous dans l'ordre sur les sections suivantes :
 
@@ -165,7 +165,7 @@ La période 5 prévoit deux livrables (un individuel, un par groupes) et un comm
 
 **Consignes** :
 
--   Complétez la fiche de pré-enregistrement de l'expérience sur l'awareness émotionnelle commencée en salle de classe selon le template de pré-enregistrement disponible dans ce dépôt (format [Word](./fondements-empiriques/template_pre-enregistrement_experience.docx)ou [PDF](./fondements-empiriques/template_pre-enregistrement_experience.pdf))
+-   Complétez la fiche de pré-enregistrement de l'expérience sur l'awareness émotionnelle commencée en salle de classe selon le template de pré-enregistrement disponible dans ce dépôt (format [Word](https://github.com/mafritz/methodo-exp-2122/fondements-empiriques/template_pre-enregistrement_experience.docx)ou [PDF](https://github.com/mafritz/methodo-exp-2122/fondements-empiriques/template_pre-enregistrement_experience.pdf))
 
 -   Tous les points ne doivent pas être complétés, utilisez votre propre jugement
 
