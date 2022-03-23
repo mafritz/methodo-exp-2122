@@ -127,7 +127,7 @@ Le pré-enregistrement d'une expérience consiste à planifier à l'avance et pu
 >
 > --- OSF website
 
-Lors du travail à distance, vous serez appelé-es à créer vous-même un pré-enregistrement à travers une procédure similaire à celle de la plateforme OSF, mais en utilisant un [template légèrement différent disponible dans la section pré-enregistrement de ce site](./fondements-empiriques/teamplate_pre-enregistrement-experience.pdf).
+Lors du travail à distance, vous serez appelé-es à créer vous-même un pré-enregistrement à travers une procédure similaire à celle de la plateforme OSF, mais en utilisant un [template légèrement différent disponible dans ce dépôt](./fondements-empiriques/teamplate_pre-enregistrement-experience.pdf).
 
 Dans cette partie du cours, vous allez commencer l'activité en utilisant les informations de l'expérience en technologie éducative présentée au point précédent :
 
