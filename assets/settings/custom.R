@@ -4,6 +4,7 @@ library(knitr)
 library(kableExtra)
 library(papaja)
 library("ggokabeito")
+library(effectsize)
 
 ## Graphics
 theme_set(theme_apa(box = TRUE))

@@ -1,0 +1,144 @@
+---
+title: "Lire et interpréter des contributions expérimentales *primaires*"
+author:
+  - Mattia A. Fritz
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+lang: fr
+linestretch: 1.2
+fontsize: 12pt
+output:
+  pdf_document:
+    toc: false
+    toc_depth: 1
+    number_sections: true
+    latex_engine: xelatex
+    extra_dependencies: ["flafter"]
+    includes:
+      in_header: "../assets/settings/preamble.tex"
+      before_body: "../assets/settings/before-body.tex"
+      #after_body: "doc-suffix.tex"
+bibliography: ../assets/bib/references.bib
+csl: ../assets/settings/apa.csl
+#abstract: "This is my abstract."
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+Sys.setlocale("LC_ALL", "French")
+source(here::here("assets", "settings", "custom.R"))
+```
+
+# Introduction {.unnumbered}
+
+Malgré le fait que les contributions scientifiques adoptant la méthode expérimentale partagent souvent la même structure et des informations similaires, lire, comprendre et interpréter le contenu de ces sources dites *primaires* reste un exercice difficile [@kershaw2018]. Ce document illustre les caractéristiques communes aux contributions expérimentales et propose une méthode pour en faciliter la lecture et interprétations : la méthode QALMRI [@brosowsky2020], acronyme anglais de *Question, Alternatives, Logic, Method, Results et Inferences*.
+
+## Crédits {.unnumbered}
+
+Ce document reprend est adapte des contenus présents dans d'autres ressources en anglais déjà disponible sur le sujet, voir par exemple :
+
+-   [*Learning To Read Scientific Journal Articles*](https://bartlettje.github.io/2021-10-06-learning-to-read-scientific-journal-articles/)de James Bartlett
+-   [*Research Methods: Lab Manual*](https://www.crumplab.com/ResearchMethodsLab/qalmri.html) de Matthew J. C. Crump
+
+# Sources expérimentales primaires
+
+On peut diviser les contributions expérimentales en deux catégories :
+
+-   Dans une contribution de type *source primaire*, les chercheurs reportent directement l'ensemble du processus expérimental qui a caractérisé l'expérience.
+
+-   Dans une contribution de type *source secondaire*, les auteurs utilisent différentes contributions scientifiques -- du même *type* (e.g. que des articles utilisant la méthode expérimentale) ou de *type* différent -- pour combiner/comparer les différentes informations.
+
+## Structure d'une source expérimentale primaire
+
+Les contributions expérimentales *primaires* sont assez facilement reconnaissables grâce une structure qui est très similaire dans les différents domaines/disciplines scientifiques, adoptée de manière consistante depuis les années 1980 [@sollaci2004], et qui est parfois identifiée avec l'acronyme anglais IMRAD : *Introduction, Method(s), Results And Discussion*. Les contributions présentent en général aussi une section *Conclusion*.
+
+## Introduction
+
+L'introduction sert à justifier la recherche en termes de sa contribution au réseau de connaissances qui composent la littérature scientifique. On peut résumer l'introduction en trois éléments étroitement liées :
+
+1.  **Qu'est-ce qu'on sait déjà et comment on le sait\
+    **Si l'introduction prévoit de sous-sections, ces informations se trouvent souvent dans des sous-sections telles que :
+
+    -   *Theoretical Background* / Cadre théorique : résumé/synthèse des éléments théoriques pertinents dans la recherche, comme par exemple la définition de concepts mobilisés, des modèles théoriques de références, etc.
+
+    -   *Related Works* / Contributions de référence : liste de contributions expérimentales qui partagent des éléments sémantiques avec la contribution en objet, souvent selon une approche similarité/contraste. L'objectif est souvent de mettre en évidence des lacunes ou des divergences dans les contributions existantes.
+
+2.  **Qu'est-ce qu'on veut savoir en plus**\
+    Ces informations se trouvent en général au tout début de l'article, sous forme d'une problématique/axe de recherche générale, et à la fin de l'introduction. Au début, on défini la *grande question/problématique* de recherche à laquelle plusieurs chercheurs essaient de contribuer et pour laquelle une seule expérience ne peut sûrement pas proposer une réponse à elle toute seule. À la fin de l'introduction, après donc le cadre théorique et les contributions en lien, la contribution spécifie la *question/problématique spécifique* à travers laquelle les chercheurs pensent pouvoir contribuer à la *grande question/problématique*. Souvent, les informations à ce propos se trouvent dans une sous-section nommée :
+
+    -   *Research Question(s) (and Hypotheses)* / Question(s) de recherche et hypothèses : les objectifs spécifiques de la contribution sont définie souvent même en forme interrogative. Si les chercheurs avancent des explications causales potentielles, celles-ci sont formulées sous forme d'hypothèse théoriques.
+
+### Exemple de *mini*-introduction
+
+La pensée computationnelle est un terme se référant, de manière plutôt flexible, à un ensemble d'habiletés, compétences et procédures qui facilitent la résolution de problèmes en s'appuyant sur des principes tirés des sciences informatiques [@denning2019computational; @wing2008; @fritzPenseeComputationnelleAvec2019; @guzdial2008\]. Dans les 20 dernières années, la pensée computationnelle est de plus en plus considérée en tant que sujet à enseigner déjà lors de la scolarisation primaire et secondaire \[@bocconi2016; @computer2018; @grover2013; @resnick2017\]. Les activités prévues à cet effet sont souvent divisées en deux catégories : (1) les activités débranchées qui n'utilisent pas des dispositifs numériques mais des modélisations abstraites dérivées d'objets tangibles; et (2) les activités branchées qui, au contraire, s'appuient sur des dispositifs numériques et, souvent, des technologies de l'information et de la communication appliquées à l'enseignement (ibid.). Il existe pour l'instant peu d'études qui comparent directement les bénéfices des deux approches, et ces études s'intéressent principalement aux effets au niveau des apprentissages \[ @thecamb2019; @guzdial2015].
+
+Dans cette contribution, l'accent est plutôt porté sur l'intérêt que les types d'activités peuvent susciter à propos d'une éventuelle carrière dans l'un de domaines communément identifiés avec l'acronyme STEM (*Science,\
+Technology, Engineering, and Mathematics*). Nous formulons à cet effet l'hypothèse que des activités branchées peuvent susciter plus d'intérêt, comparé aux activités débranchées, en raison de l'inter-médiation d'un dispositif numérique.
+
+## Méthode
+
+La section sur la méthode concerne le micro-monde créé par les chercheurs afin de répondre à la question de recherche spécifique, et tester éventuellement les hypothèses théoriques avancées. La section méthode a deux fonctions principales :
+
+1.  Fournir aux lecteurs des informations utiles à évaluer à quel point le micro-monde est suffisamment sensible, fiable et valide pour *produire/représenter* l'effet de l'intervention expérimentale sur le(s) phénomène(s) d'intérêt.
+2.  Donner tous les détails utiles à répliquer l'expérience par d'autres chercheurs intéressées à refaire exactement la même expérience (dans la perspective de corroborer ou remettre en questions les résultats obtenus) ou des expériences avec quelques variations qui permettent de contribuer d'avantage à la *grande question/problématique*.
+
+Pour atteindre les deux objectifs, la section sur la méthode propose souvent les sous-sections suivantes[^1].
+
+[^1]: L'ordre peut varier et parfois deux sections sont groupées, par exemple "Participants et design expérimental" ou "Design expérimental et variables"
+
+### Participants
+
+Les chercheurs fournissent des informations à propos des participant-es à l'expérience. Traditionnellement on indique le nombre total de participant-es, l'âge moyen, le nombre d'hommes/femmes, l'appartenance à une catégorie professionnel/niveau scolaire, ... D'autres informations plus spécifiques peuvent être illustrés, mais les tendances actuelles sont plus inclines à dévoiler les informations selon une évaluation éthique/scientifique sur la pertinence (i.e. des possibles influences sur les résultats). Dans la sous-section figurent également les modalités de recrutement et l'éventuelle rémunération.
+
+### Design expérimental
+
+Les chercheurs indiquent par exemple s'il s'agit d'un plan expérimtnal ou quasi-expérimental ; intra-sujets, inter-sujets, ou mixte ; à mesure répétée ; etc. La répartition des participant-es (e.g. aléatoire complète, aléatoire par blocs, ...) est également indiquée.
+
+### Matériel
+
+Les chercheurs illustrent tout le matériel expérimental déployé dans l'expérience, comme par exemple des instruments de mésure (e.g. eye-tracker, ...) ; des échelles ou questionnaires ; des stimuli ; etc.
+
+### Procédure
+
+Le processus de génération/récolte des données de l'expérience est décrit généralement sous forme d'étapes successives, par exemple la préparation du matériel, l'accueil des participants, les consignes données, les tâches à effectuer, le débriefing final, etc.
+
+### Variables
+
+Les chercheurs illustrent clairement :
+
+-   les variables indépendantes, c'est--à-dire l'*opérationnalisation* de l'intervention, avec les différentes modalités, ainsi que les différences entre elles.
+
+-   toutes les variables mesurées (variables indépendantes, variables contrôlées, ...) et la manière dont elles ont été mesurées (e.g. par rapport au matériel et à la procédure.
+
+### Analyse des données (et hypothèses opérationnelles)
+
+Les chercheurs indiquent comment ils vont traiter les données récoltés : quel type de test statistique est prévu, avec quelles critères d'inférences statistiques ; quel logiciel est utilisés ; quelles données vont être considérées inutilisables ; etc.
+
+### Exemple de *mini*-méthode
+
+\$N\$ = `r 26 * 14` élèves de 26 classes d'écoles secondaires ($M_{age}$ = 14.2, $SD_{age}$ = 1.75) ont suivi 6 activités pendant 6 semaines sur la pensée computationnelle. La moitié de ces classes a été aléatoirement assignée à des activités débranchées, tandis que les autres classes ont effectué les activités branchées. Dans les deux cas, les activités ont été conçues par un comité de programme. À la fin des 6 activités, les élèves ont rempli une traduction française du *STEM Career Interest Survey* [@kier2014\], un questionnaire avec 44 items qui mesurent l'intérêt pour une carrière dans les domaines STEM (global et avec une sous-échelle pour chaque élément de l'acronyme). Cette contribution s'intéressent principalement à la dimension *technology* et comparent donc les deux groupes sur le score de la sous-échelle relative aux technologies. Les scores des élèves ont été analysée à l'aide d'un modèle linéaire multi-niveaux hiérarchique \[@finchMultilevelModelingUsing2019; @brown2021] pour tester l'hypothèses que les scores des classes avec les activités branchées sont supérieurs aux scores des classes avec les activités débranchées.
+
+## Résultats
+
+La section des résultats reportent de manière assez *brute* les résultats des analyses statistiques menées sur les données. Il y a en effet l'habitude dans les contributions expérimentales à diviser l'illustration et la discussion des résultats. Ceci a l'avantage de rendre les résultats des tests statistiques identifiables rapidement, par exemple dans une perspective de réproductibilité ou pour les inclure dans une méta-analyse.
+
+Dans cette section, les chercheurs peuvent également indiquer des problèmes avec les données ou des critères d'exclusion qui n'ont pas été prévus à l'avance.
+
+### Exemple de *mini*-résultats
+
+## Discussion
+
+La discussion intègre les résultats en relation avec la question de recherche et les éventuelles hypothèses émises par les chercheurs. Les chercheurs discutent à quel point les inférences statistiques permettent de répondre à la *question de recherche spécifique*, par exemple en corroborant ou en rejetant les hypothèses. Dans cette section il y a également un retour ou une ouverture sur la littérature scientifique qui essaie de placer les résultats par comparaison/contrastes avec d'autres recherches dans le domaine.
+
+### Exemple de *mini*-discussion
+
+Contrairement à notre hypothèse, les élèves ayant suivi des activités débranchées ont manifesté un plus grand intérêt pour une carrière dans le domaine STEM comparé aux élèves ayant suivi des activités branchées. Notre hypothèses est donc rejetée, avec des résultats qui vont à l'encontre de notre prévision.
+
+## Conclusion
+
+Dans la conclusion, les chercheurs analysent la réponse de l'expérience à la *question de recherche spécifique* en relation avec la *grande question de recherche*. L'apport que l'expérience peut avoir sur l'axe de recherche plus large est évalué de manière critique. Une seule expérience ne produit que des éléments ultérieurs de réflexion, dans l'attente que l'accumulation d'évidence puisse donner des informations plus stables. Les chercheurs indiquent à cet effet des éventuelles limites ou facteurs non considérés qui pourraient expliquer les résultats obtenus, ainsi que des ouvertures pour des recherches ultérieures.
+
+### Exemple de mini-conclusion
+
+Les résultats de notre expérience pourraient s'expliquer par la difficultés des activités branchées qui ont été perçues en général comme trop compliquées par les élèves. De ce fait, le mineur intérêt des élèves pour une carrière STEM pourrait s'expliquer par une perception du domaine comme étant réservé à des personnes avec des meilleures connaissances techniques. Nous préconisons à cet effet de répliquer l'expérience avec des activités branchées plus adaptées au niveau des étudiant-es.
+
+# Références {.unnumbered}
