@@ -118,7 +118,7 @@ $N$ = `r 26 * 14` élèves d'écoles secondaires ($M_{age}$ = 14.2, $SD_{age}$ =
 
 ## Résultats
 
-La section des résultats reportent de manière assez *brute* les résultats des analyses statistiques menées sur les données. Il y a en effet l'habitude dans les contributions expérimentales à diviser l'illustration et la discussion des résultats. Ceci a l'avantage de rendre les résultats des tests statistiques identifiables rapidement, par exemple dans une perspective de réproductibilité ou pour les inclure dans une méta-analyse.
+La section des résultats reportent de manière assez *brute* les résultats des analyses statistiques descriptives et inférentielles menées sur les données. Il y a en effet l'habitude dans les contributions expérimentales à diviser l'illustration et la discussion des résultats. Ceci a l'avantage de rendre les résultats des tests statistiques identifiables rapidement, par exemple dans une perspective de reproductibilité ou pour les inclure dans une méta-analyse.
 
 Dans cette section, les chercheurs peuvent également indiquer des problèmes avec les données ou des critères d'exclusion qui n'ont pas été prévus à l'avance.
 
