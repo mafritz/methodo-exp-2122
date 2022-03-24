@@ -1,0 +1,149 @@
+---
+title: "Fondements empiriques de la méthode expérimentale"
+author:
+  - Mattia A. Fritz
+date: "`r format(Sys.time(), '%d/%m/%Y')`"
+lang: fr
+linestretch: 1.2
+fontsize: 12pt
+output:
+  pdf_document:
+    toc: false
+    toc_depth: 1
+    number_sections: true
+    latex_engine: xelatex
+    extra_dependencies: ["flafter"]
+    includes:
+      in_header: "../assets/settings/preamble.tex"
+      before_body: "../assets/settings/before-body.tex"
+      #after_body: "doc-suffix.tex"
+bibliography: ../assets/bib/references.bib
+csl: ../assets/settings/apa.csl
+#abstract: "This is my abstract."
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+Sys.setlocale("LC_ALL", "French")
+source(here::here("assets", "settings", "custom.R"))
+```
+
+# Introduction {-}
+
+Ce chapitre offre un survol des fondements empiriques de la méthode expérimentale.
+
+# Sources de la connaissance empirique
+
+Les connaissances empiriques sont basées sur trois sources :
+
+1.  **Les observations**\
+    La « réalité » est observée de manière plutôt passive, en exploitant des phénomènes qui se manifestent spontanément
+2.  **Les simulations**\
+    La « réalité » est (re)construite à travers des mécanismes computationnels qui illustrent l'évolution d'un phénomène
+3.  **Les expériences**\
+    La « réalité » est sollicitée par une intervention active, pondérée et planifiée, dont l'effet est évalué sur un phénomène d'intérêt
+
+Il y a eu dans le passé la tendance à séparer nettement les trois sources, notamment au niveau de la distinction entre observations et expériences selon le principe "*correlation is not causation"*. Dans ce sens, les expériences sont identifiées comme le *golden standard* pour établir des mécanismes causales. Plus récemment, il y a la tendance à voir la causalité comme un effet émergent qui peut être établi également lorsque l'intervention n'est pas effectuée de manière active, mais inférer depuis des situations qui répondent à des critères spécifiques [@pearl2018book].
+
+De plus, il existe des recouvrements entre les trois sources qui sont souvent utilisées de manière complémentaires pour maximiser la connaissance qu'on peut avoir sur un sujet. Le reste de cette section s'intéresse néanmoins aux expériences de manière plutôt *classique*, afin de fournir un aperçu conceptuel qui peut être ensuite décliné dans des *formats hybrides* plus complexes.
+
+# Les étapes d'une expérience
+
+On peut identifier 4 étapes principales dans une expérience :
+
+1.  La **justification** qui consiste à établir la *raison d'être* d'une intervention active pour en étudier l'effet sur un ou plusieurs phénomènes d'intérêt
+
+2.  L'**explication causale potentielle** qui consiste à émettre des hypothèses --avec différents niveaux de précision possibles -- sur le mécanisme causale qui détermine/explique l'effet de l'intervention
+
+3.  Le **processus génératif de données** qui consiste à créer un micro-monde dans lequel l'intervention puisse être menée dans des conditions qui visent à exclure, idéalement, toute autre source de variabilité potentielle
+
+4.  L'**inférence** qui combine des outils statistiques et des connaissances dans le domaine pour déterminer à quel point le processus génératif de données (le micro-monde) fourni des éléments utiles et fiables qu'on peut généraliser au contexte plus large (le macro-monde/la réalité)
+
+# Justification
+
+Les expériences impliquent une forme d'action -- l'intervention -- qui est susceptible d'avoir un effet sur la réalité à travers au moins un phénomène identifiable :
+
+-   Par **intervention**, on se réfère de manière très flexible à une action qui modifie la « réalité », y compris de manière épistémique (i.e. ce que l'on sait sur un sujet). L'action peut être concrète et appliquée (e.g. introduire une technologie en salle de classe, proposer un scénario pédagogique innovant, mettre à jour une interface utilisateur, ...) ou plus abstraite et théorique (e.g. un principe ou une théorie pédagogique, un référentiel de compétences, un plan d'études, ...).
+
+-   Par **phénomène**, on se réfère de manière très fléxible à un pattern d'événements qui se répète de manière congruente, par exemple dans des conditions similaires. Le pattern peut être concret et appliqué (e.g. la rétention mnésique d'éléments dans une liste, la perception d'utilité d'un artefact technologique, ...) ou plus abstrait et théorique (e.g. la compréhension de texte, la collaboration, le bien-être des étudiant-es, ...).
+
+De ce fait, les expériences doivent être planifiées et pondérées attentivement selon au moins deux principes phares :
+
+-   Quel serait le bénéfice à appliquer l'intervention, comparé à ne pas l'appliquer
+
+-   Quel serait la perte potentielle à appliquer l'intervention, comparé à ne pas l'appliquer
+
+Si on prend l'exemple de l'introduction d'une technologie éducative pendant un cours, les deux questions à se poser seront donc (1) qu'est-ce que les étudiant-es obtiennent *en plus* par l'introduction de la technologie ; et (2) qu'est-ce que les étudiant-es *risquent de perdre* à cause de l'introduction de la technologie. Les étudiant-es pourraient gagner en interactivité, collaboration, maîtrise technique, etc. ; et en même temps risquer de perdre en termes de temps nécessaire pour apprendre à utiliser la technologie, en charge cognitive pour articuler plusieurs environnements de travail, etc.
+
+Dans le domaine de la recherche, en plus, l'introduction d'une intervention doit aussi respecter une double justification :
+
+1.  **Scientifique** : est-ce que l'intervention est pertinente par rapport aux connaissances disponibles dans le domaine de référence ?
+
+2.  **Éthique** : est-ce que l'intervention considère attentivement le rapport entre bénéfices et risques potentiels, notamment au niveau des participant-es ?
+
+La combinaison entre les deux justifications jettent les bases pour une question de recherche à laquelle on peut essayer de répondre à travers une expérience.
+
+## Justification scientifique
+
+La justification scientifique est représentée dans un article ou contributions scientifiques en général par l'introduction et le cadre théorique.
+
+L'introduction illustre la problématique, sa pertinence par rapport aux connaissances actuelles ou phénomènes émergents. La problématique peut être abordée idéalement dans un espace défini par deux continuum :
+
+1.  **Exploratoire vs. Confirmatoire\
+    **Dans une expérience exploratoire, les connaissances actuelles sont jugées encore incomplètes ou trop fragiles/contradictoires pour formuler une explication causale potentielle précise (voir point suivant). L'objectif de l'expérience est principalement celui de mettre en relief des effets potentiels qui pourraient justifier l'intérêt pour des recherches ultérieurs. Au contraire, les expériences confirmatoires cibles de manière précise une intervention, qui peut être aussi une théorie, avec l'objectif d'en corroborer la validité ou d'en remettre en question la pertinence (e.g. la rejeter). Ce mécanisme en technologie éducative -- et plus en général dans les sciences sociales -- est très complèxe, car les phénomènes sont souvent articulés [@meehlAppraisingAmendingTheories1990; @scheel2020].
+
+2.  **Fondamentale vs. Appliquée\
+    **La recherche fondamentale s'intéresse à la compréhension de phénomènes de manière transversale et indépendante à des applications concrètes, tandis que la recherche appliquée vise généralement un contexte et un cadre d'intervention plus spécifique. La distinction est néanmoins délicate et avec plusieurs recouvrements possibles. On peut retenir généralement l'intention de la recherche : est-ce qu'elle vise à apporter des contributions sur un large domaine d'application ou plutôt sur un cadre plus restreint et spécifique ?
+
+Le cadre théorique articule ce que la communauté scientifique connait (ou ne connait pas encore) à propos d'un sujet et comment ces connaissances ont été acquises : observations, simulations, expériences, mais aussi raisonnement, argumentation, synthèse de connaissances actuelles avec des revues de la littérature ou méta-analyses. Le cadre théorique met en général en relief des manques ou évidences ambivalentes qui justifient la nécessité de proposer une nouvelle expérience ou de répliquer une expérience déjà menée afin de *contrôler* la fiabilité et robustesse des résultats.
+
+La justification scientifique dépend des connaissances du domaine spécifique duquel l'intervention s'inspire et/ou s'applique.
+
+## Justification éthique
+
+La justification éthique considère l'ensemble des implications internes et externes à l'expérience, surtout d'un point de vue des entités impliquées (e.g. les participant-es, les écoles, ...). Outre à la sensibilité de données recueillies qui est partagée aussi avec les études de type observation, les expériences sont caractérisées par une intervention active, décidée en amont par les chercheurs, qui peut par exemple être appliquée seulement à une partie des participant-es. Il faut donc pondérer à quel point l'intervention peut produire des effets *objectivement* ou *subjectivement* négatifs pour les participant-es.
+
+De plus, les implications éthiques ne concernent donc pas seulement ce qui est fait, mais également ce qui n'est pas fait (et aurait pu être fait). Si on imagine une intervention techno-pédagogique qui est censée apporter des bénéfices énormes au groupe qui peut en bénéficier, est-il acceptable d'un point de vue éthique d'avoir un *groupe contrôle* sous forme d'une classe qui n'aura pas accès à cette technologie ?
+
+Ce type de dilemmes étant très délicat, les expériences doivent être acceptées par une commission éthique, à laquelle les chercheurs doivent fournir toute information utile, comme par exemple le public cible, le type d'intervention envisagée, la présence d'éventuels mécanismes cachés aux participant-es, etc.
+
+## Question de recherche expérimentale
+
+La combinaison entre la justification scientifique (qu'est-ce qui est pertinent par rapport aux connaissances actuelles) et la justification éthique (qu'est-ce qui est raisonnable tester en respectant l'intégrité de toutes les parties prenantes) détermine la question de recherche expérimentale.
+
+Comparé à une question de recherche scientifique au sens plus large, une question de recherche expérimentale se caractérise généralement par la prédisposition à identifier l'intervention et le(s) phénomène(s) d'intérêt de manière la plus précise possible, souvent déjà à partir du titre de la contribution ou de l'article scientifique, comme illustré par exemple par ces sujets de mémoire du Master MALTT ayant fait recours à la méthode expérimentale :
+
+-   *The influence of background music on learning from text* ([Adam, 2019](https://tecfa.unige.ch/tecfa/maltt/memoire/Adam2019.pdf))
+-   Collaboration en environnement médiatisé par ordinateur : Des usages et de l'impact d'un outil de feedback émotionnel ([Perrier, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Perrier2017.pdf))
+-   Étude de l'effet de l'esthétique sur l'utilisabilité d'une interface lors d'une tâche de recherche d'informations sur un site Internet ([Venni, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Venni2017.pdf))
+
+La recherche expérimentale se traduit souvent par des formulations qui suggèrent -- avec différents degrés de *précaution* selon le caractère exploratoire ou confirmatoire vu plus haut -- des mécanismes causales potentiels entre l'intervention et l'évolution du phénomène d'intérêt.
+
+# Explication causale potentielle
+
+L'explication causale potentielle est la seule étape du processus qui n'est pas formellement indispensable à la méthode expérimentale. On peut tout à fait imaginer de mener des expériences dans lesquelles les chercheurs n'émettent pas d'hypothèses sur les mécanismes qui déterminent l'effet de l'intervention sur le phénomène d'intérêt. Cette utilisation non-explicative ou a-théorique s'applique notamment dans certaines type de test A/B utilisés en expérience utilisateur (est-ce que le bouton vert génère plus d'inscriptions du bouton bleu ?). Cependant, même lorsqu'une hypothèse causale n'est pas formellement testée dans une expérience, l'expérience en elle-même est soutenue au moins par une réflexion de causalité potentielle (j'imagine que le bouton vert peut attirer d'avantage le regard, ou avoir une meilleure lisibilité, ou les deux en même temps). Si ce n'était pas le cas, alors on devrait tester indistinctement toutes les combinaisons potentielles entre éléments, avec des coûts et pertes de temps exorbitants.
+
+## L'effet de *X* sur *Y*
+
+La plupart des recherches qui adoptent la méthode expérimentale s'intéressent donc à des mécanismes causales potentiels qui pourraient expliquer/prédire l'effet de l'intervention *X* sur un phénomène *Y*. D'un point de vue logique, on essaie d'établir une *fonction causale* selon laquelle le phénomène Y *écoute* l'intervention X pour déterminer son état. Nous avons donc une sorte de *fonction* similaire au principe de Input-Output en programmation :
+
+$$Y = f(X)$$
+La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique, sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. la note à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiante a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). 
+
+D'un point de vue logique, la fonction causale est simple à déclarer en termes formelles. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile. Il existe plusieurs facteurs qui peuvent déterminer :
+
+* Pourquoi une entité, par exemple une personne, pourrait choisir un certain type d'intervention et pas une autre. Par exemple, les étudiant-es qui n'ont jamais suivi un cours qui montre les cartes conceptuelles ne connaissent probablement pas cette technique et ne vont pas l'adopter pour cette raison, indépendamment des bénéfices ou risques potentiels sur leur note à l'examen.
+* Le phénomène X de manière indépendante de l'intervention. Par exemple, des étudiant-es avec des connaissances préalables sur le sujet du cours vont probablement obtenir une meilleure note indépendamment de la technique adopté pour résumer leurs notes.
+* Un lien à double tranchant entre l'intervention et le phénomène d'intérêt. Par exemple, des étudiant-es avec des bonnes connaissances préalables dans un cours peuvent se sentir plus à l'aise à adopter la technique des cartes conceptuelles, car les liens sémantiques entre nœuds leur viennent plus facilement à l'esprit. Cette technique renforce en même temps ces liens déjà présents, donnant aux étudiant-es plus de confiance dans leurs connaissances. En revanche, des étudiant-es avec moins de connaissances vont probablement créer des liens heuristiques qui ne sont pas très saillants entre concepts, et vont donc avoir l’impression que cette technique ne leur apporte pas d'avantages.
+
+## L'échelle de causalité
+
+
+
+
+# Processus génératif des données
+
+# Inférence
+
+# Références {-}
+
