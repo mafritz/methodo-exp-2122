@@ -65,7 +65,7 @@ L'introduction sert à justifier la recherche en termes de sa contribution au r�
 2.  **Qu'est-ce qu'on veut savoir en plus**\
     Ces informations se trouvent en général au tout début de l'article, sous forme d'une problématique/axe de recherche générale, et à la fin de l'introduction. Au début, on défini la *grande question/problématique* de recherche à laquelle plusieurs chercheurs essaient de contribuer et pour laquelle une seule expérience ne peut sûrement pas proposer une réponse à elle toute seule. À la fin de l'introduction, après donc le cadre théorique et les contributions en lien, la contribution spécifie la *question/problématique spécifique* à travers laquelle les chercheurs pensent pouvoir contribuer à la *grande question/problématique*. Souvent, les informations à ce propos se trouvent dans une sous-section nommée :
 
-    -   *Research Question(s) (and Hypotheses)* / Question(s) de recherche et hypothèses : les objectifs spécifiques de la contribution sont définie souvent même en forme interrogative. Si les chercheurs avancent des explications causales potentielles, celles-ci sont formulées sous forme d'hypothèse théoriques.
+    -   *Research Question(s) (and Hypotheses)* / Question(s) de recherche (et hypothèses) : les objectifs spécifiques de la contribution sont définis souvent même en forme interrogative. Si les chercheurs avancent des explications causales potentielles, celles-ci sont formulées sous forme d'hypothèses théoriques.
 
 ### Exemple de *mini*-introduction
 
@@ -111,6 +111,8 @@ Les chercheurs illustrent clairement :
 ### Analyse des données (et hypothèses opérationnelles)
 
 Les chercheurs indiquent comment ils vont traiter les données récoltés : quel type de test statistique est prévu, avec quelles critères d'inférences statistiques ; quel logiciel est utilisés ; quelles données vont être considérées inutilisables ; etc.
+
+Si des hypothèses théoriques ont été emises dans l'introduction à complément de la question de recherche spécifique, les chercheurs illustrent les résultats attendus, par exemple en termes de différences entre moyennes (e.g. la modalité A produira un effet plus grand sur la VD par rapport à la modalité B).
 
 ### Exemple de *mini*-méthode
 
