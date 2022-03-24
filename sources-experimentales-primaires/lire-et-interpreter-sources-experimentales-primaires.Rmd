@@ -104,9 +104,9 @@ Le processus de génération/récolte des données de l'expérience est décrit 
 
 Les chercheurs illustrent clairement :
 
--   les variables indépendantes, c'est--à-dire l'*opérationnalisation* de l'intervention, avec les différentes modalités, ainsi que les différences entre elles.
+-   la ou les variables indépendantes (VI), c'est--à-dire l'*opérationnalisation* de l'intervention, avec les différentes modalités, ainsi que les différences entre celles-ci.
 
--   toutes les variables mesurées (variables indépendantes, variables contrôlées, ...) et la manière dont elles ont été mesurées (e.g. par rapport au matériel et à la procédure.
+-   toutes les variables mesurées -- variables dépendantes (VD), variables contrôlées, ... -- et la manière dont elles ont été mesurées (e.g. par rapport au matériel et à la procédure).
 
 ### Analyse des données (et hypothèses opérationnelles)
 
