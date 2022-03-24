@@ -130,11 +130,13 @@ La plupart des recherches qui adoptent la méthode expérimentale s'intéressent
 $$Y = f(X)$$
 La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique, sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. la note à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiante a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). 
 
-D'un point de vue logique, la fonction causale est simple à déclarer en termes formelles. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile. Il existe plusieurs facteurs qui peuvent déterminer :
+D'un point de vue logique, la fonction causale est simple à déclarer en termes formelles. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile.
 
-* Pourquoi une entité, par exemple une personne, pourrait choisir un certain type d'intervention et pas une autre. Par exemple, les étudiant-es qui n'ont jamais suivi un cours qui montre les cartes conceptuelles ne connaissent probablement pas cette technique et ne vont pas l'adopter pour cette raison, indépendamment des bénéfices ou risques potentiels sur leur note à l'examen.
-* Le phénomène X de manière indépendante de l'intervention. Par exemple, des étudiant-es avec des connaissances préalables sur le sujet du cours vont probablement obtenir une meilleure note indépendamment de la technique adopté pour résumer leurs notes.
-* Un lien à double tranchant entre l'intervention et le phénomène d'intérêt. Par exemple, des étudiant-es avec des bonnes connaissances préalables dans un cours peuvent se sentir plus à l'aise à adopter la technique des cartes conceptuelles, car les liens sémantiques entre nœuds leur viennent plus facilement à l'esprit. Cette technique renforce en même temps ces liens déjà présents, donnant aux étudiant-es plus de confiance dans leurs connaissances. En revanche, des étudiant-es avec moins de connaissances vont probablement créer des liens heuristiques qui ne sont pas très saillants entre concepts, et vont donc avoir l’impression que cette technique ne leur apporte pas d'avantages.
+## Causalité en technologie éducative
+
+Le contexte de la technologie éducative est particulièrement sensible à cette complexité, car il regroupe plusieurs types d'interaction entre les technologies et les processus d'apprentissage.
+
+
 
 ## L'échelle de causalité
 

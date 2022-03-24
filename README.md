@@ -221,6 +221,8 @@ La période 5 prévoit deux livrables (un individuel, un par groupes) et un comm
 
 -   N'hésitez pas à reprendre des protocoles expérimentaux qui vous semblent intéressants et modifier des éléments (e.g. changer la VI/VD, le public cible, proposer une hypothèse alternative, etc.)
 
+-   Vous pouvez insérer dans la fiche des images/schémas/modèles qui peuvent être utile à la compréhension des questions/hypothèses, de la procédure, des VI/VD, etc.
+
 **Évaluation** :
 
 -   Commentaires croisés par vos collègues
