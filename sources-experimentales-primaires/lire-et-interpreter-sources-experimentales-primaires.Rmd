@@ -139,6 +139,8 @@ model <- t.test(stem_cis ~ groupe, data = data)
 ef_model <- effectsize(model)
 ```
 
+Les participant-es ont manifesté un intérêt moyen pour la sous-échelle *technology* du questionnaire STEM-CIS [@kier2014] de $M$ = `r data$stem_cis |> mean() |> printnum()` ($SD$ = `r data$stem_cis |> sd() |> printnum()`). Un résultat similaire au score observé par Kier et collègues (*ibid.*) qui a été de $M$ = 26.27 ($SD$=10.41). Dans le groupe branché, les participant-es ont manifesté un intérêt avec $M$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> sd() |> printnum()`) ; dans le groupe débranché avec $M$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> sd() |> printnum()`).
+
 Un *t*-test de Welch a été mené avec le score à la sous-échelle *technology* du questionnaire STEM-CIS (*ibid.*) comme variable dépendante et le type d'activité proposé à l'élève comme variable indépendante (branchée vs. débranchée). Les résultats indiquent que le groupe *branchée* a manifesté un mineur intérêt pour une carrière dans le domaine STEM comparé au groupe *branché* : `r apa_print(model)$full_result`. La différence d'environ 3 points sur la sous-échelle STEM-CIS correspond à une taille de l'effet de Cohen's $d$ = `r printnum(ef_model$d)` [`r printnum(ef_model$CI_low)`; `r printnum(ef_model$CI_high)`].
 
 ## Discussion
@@ -147,7 +149,7 @@ La discussion intègre les résultats en relation avec la question de recherche 
 
 ### Exemple de *mini*-discussion
 
-Contrairement à notre hypothèse, les élèves ayant suivi des activités débranchées ont manifesté un plus grand intérêt pour une carrière dans le domaine STEM comparé aux élèves ayant suivi des activités branchées. Notre hypothèses est donc rejetée, avec des résultats qui vont à l'encontre de notre prévision.
+Contrairement à notre hypothèse, les élèves ayant suivi des activités débranchées ont manifesté un plus grand intérêt pour une carrière dans le domaine STEM comparé aux élèves ayant suivi des activités branchées. Notre hypothèses est donc rejetée, avec des résultats qui vont à l'encontre de notre prévision. Cependant, les activités branchés prévues dans notre protocole expérimental ont été perçues comme étant trop difficiles, affectant ainsi très probablement le sentiment d'acceptabilité de la technologie [@venkateshUserAcceptanceInformation2003; @scherer2019] de la part des élèves. Par reflet, cette difficulté pourrait avoir influencé négativement l'intérêt pour une future carrière dans la sphère technologique des STEM.
 
 ## Conclusion
 
@@ -155,6 +157,8 @@ Dans la conclusion, les chercheurs analysent la réponse de l'expérience à la 
 
 ### Exemple de mini-conclusion
 
-Les résultats de notre expérience pourraient s'expliquer par la difficultés des activités branchées qui ont été perçues en général comme trop compliquées par les élèves. De ce fait, le mineur intérêt des élèves pour une carrière STEM pourrait s'expliquer par une perception du domaine comme étant réservé à des personnes avec des meilleures connaissances techniques. Nous préconisons à cet effet de répliquer l'expérience avec des activités branchées plus adaptées au niveau des étudiant-es.
+Cette expérience s'est intéressée à l'effet du type d'activité pédagogique (branchée vs. débranchée) sur l'intérêt de poursuivre une carrière dans le domaine STEM, plus particulièrement dans la sphère des technologies. Les résultats de notre expérience vont à l'encontre de l'hypothèse que les activités branchées pourraient susciter un plus grand intérêt grâce à l'inter-médiation techno-pédagogique d'un outil numérique. Cet effet pourrait néanmoins s'expliquer par un biais du protocole, notamment au niveau de la difficulté des activités branchées. Ces résultats mettent en évidence à nouveau l'importance, et en même temps la difficulté, de trouver des activités branchées adaptées au niveau des élèves du secondaire [@grover2013; @bocconi2016]. Nous préconisons à cet effet de répliquer l'expérience avec des activités branchées différentes.
+
+# La méthode QALMRI
 
 # Références {.unnumbered}
