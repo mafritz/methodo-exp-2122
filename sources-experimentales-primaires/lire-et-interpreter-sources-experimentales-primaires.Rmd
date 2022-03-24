@@ -69,10 +69,9 @@ L'introduction sert à justifier la recherche en termes de sa contribution au r�
 
 ### Exemple de *mini*-introduction
 
-La pensée computationnelle est un terme se référant, de manière plutôt flexible, à un ensemble d'habiletés, compétences et procédures qui facilitent la résolution de problèmes en s'appuyant sur des principes tirés des sciences informatiques [@denning2019computational; @wing2008; @fritzPenseeComputationnelleAvec2019; @guzdial2008\]. Dans les 20 dernières années, la pensée computationnelle est de plus en plus considérée en tant que sujet à enseigner déjà lors de la scolarisation primaire et secondaire \[@bocconi2016; @computer2018; @grover2013; @resnick2017\]. Les activités prévues à cet effet sont souvent divisées en deux catégories : (1) les activités débranchées qui n'utilisent pas des dispositifs numériques mais des modélisations abstraites dérivées d'objets tangibles; et (2) les activités branchées qui, au contraire, s'appuient sur des dispositifs numériques et, souvent, des technologies de l'information et de la communication appliquées à l'enseignement (ibid.). Il existe pour l'instant peu d'études qui comparent directement les bénéfices des deux approches, et ces études s'intéressent principalement aux effets au niveau des apprentissages \[ @thecamb2019; @guzdial2015].
+La pensée computationnelle est un terme se référant, de manière plutôt flexible, à un ensemble d'habiletés, compétences et procédures qui facilitent la résolution de problèmes en s'appuyant sur des principes tirés des sciences informatiques [@denning2019computational; @wing2008; @fritzPenseeComputationnelleAvec2019; @guzdial2008]. Dans les 20 dernières années, la pensée computationnelle est de plus en plus considérée en tant que sujet à enseigner déjà lors de la scolarisation primaire et secondaire [@bocconi2016; @computer2018; @grover2013; @resnick2017]. Les activités prévues à cet effet sont souvent divisées en deux catégories : (1) les activités débranchées qui n'utilisent pas des dispositifs numériques mais des modélisations abstraites dérivées d'objets tangibles; et (2) les activités branchées qui, au contraire, s'appuient sur des dispositifs numériques et, souvent, des technologies de l'information et de la communication appliquées à l'enseignement (ibid.). Il existe pour l'instant peu d'études qui comparent directement les bénéfices des deux approches, et ces études s'intéressent principalement aux effets au niveau des apprentissages [@thecamb2019; @guzdial2015].
 
-Dans cette contribution, l'accent est plutôt porté sur l'intérêt que les types d'activités peuvent susciter à propos d'une éventuelle carrière dans l'un de domaines communément identifiés avec l'acronyme STEM (*Science,\
-Technology, Engineering, and Mathematics*). Nous formulons à cet effet l'hypothèse que des activités branchées peuvent susciter plus d'intérêt, comparé aux activités débranchées, en raison de l'inter-médiation d'un dispositif numérique.
+Dans cette contribution, l'accent est plutôt porté sur l'intérêt que les types d'activités peuvent susciter à propos d'une éventuelle carrière dans l'un de domaines communément identifiés avec l'acronyme STEM (*Science, Technology, Engineering, and Mathematics*). Nous formulons à cet effet l'hypothèse que des activités branchées peuvent susciter plus d'intérêt, comparé aux activités débranchées, en raison de l'inter-médiation d'un dispositif numérique.
 
 ## Méthode
 
@@ -115,7 +114,7 @@ Les chercheurs indiquent comment ils vont traiter les données récoltés : quel
 
 ### Exemple de *mini*-méthode
 
-\$N\$ = `r 26 * 14` élèves de 26 classes d'écoles secondaires ($M_{age}$ = 14.2, $SD_{age}$ = 1.75) ont suivi 6 activités pendant 6 semaines sur la pensée computationnelle. La moitié de ces classes a été aléatoirement assignée à des activités débranchées, tandis que les autres classes ont effectué les activités branchées. Dans les deux cas, les activités ont été conçues par un comité de programme. À la fin des 6 activités, les élèves ont rempli une traduction française du *STEM Career Interest Survey* [@kier2014\], un questionnaire avec 44 items qui mesurent l'intérêt pour une carrière dans les domaines STEM (global et avec une sous-échelle pour chaque élément de l'acronyme). Cette contribution s'intéressent principalement à la dimension *technology* et comparent donc les deux groupes sur le score de la sous-échelle relative aux technologies. Les scores des élèves ont été analysée à l'aide d'un modèle linéaire multi-niveaux hiérarchique \[@finchMultilevelModelingUsing2019; @brown2021] pour tester l'hypothèses que les scores des classes avec les activités branchées sont supérieurs aux scores des classes avec les activités débranchées.
+$N$ = `r 26 * 14` élèves d'écoles secondaires ($M_{age}$ = 14.2, $SD_{age}$ = 1.75) ont suivi effectué individuellement une activité sur la pensée computationnelle pendant un après-midi. La moitié des élèves a été aléatoirement assignée à des activités débranchées, tandis que l'autre moitié a effectué les activités branchées. Dans les deux cas, les activités ont été conçues par un comité de programme. À la fin de l'activité, les élèves ont rempli une traduction française du *STEM Career Interest Survey* [@kier2014], un questionnaire avec 44 items qui mesurent l'intérêt pour une carrière dans les domaines STEM (global et avec une sous-échelle pour chaque élément de l'acronyme). Cette contribution s'intéressent principalement à la dimension *technology* et comparent donc les deux groupes sur le score de la sous-échelle relative aux technologies. Les scores des élèves ont été analysée en utilisant un *t*-test de Welch [@delacre2017] pour tester l'hypothèse que les scores des classes avec les activités branchées sont supérieurs aux scores des classes avec les activités débranchées.
 
 ## Résultats
 
@@ -124,6 +123,23 @@ La section des résultats reportent de manière assez *brute* les résultats des
 Dans cette section, les chercheurs peuvent également indiquer des problèmes avec les données ou des critères d'exclusion qui n'ont pas été prévus à l'avance.
 
 ### Exemple de *mini*-résultats
+
+```{r example-results}
+set.seed(92453)
+data <- tibble(
+  id = paste0("P", 1:364),
+  groupe = rep(c("B", "D"), 364/2),
+  stem_cis = rnorm(364, 26.27, 10.41)
+) |> 
+  mutate(
+    stem_cis = if_else(groupe == "B", stem_cis - 2.2 - rexp(1), stem_cis + 1.2 + rexp(1))
+  )
+
+model <- t.test(stem_cis ~ groupe, data = data)
+ef_model <- effectsize(model)
+```
+
+Un *t*-test de Welch a été mené avec le score à la sous-échelle *technology* du questionnaire STEM-CIS (*ibid.*) comme variable dépendante et le type d'activité proposé à l'élève comme variable indépendante (branchée vs. débranchée). Les résultats indiquent que le groupe *branchée* a manifesté un mineur intérêt pour une carrière dans le domaine STEM comparé au groupe *branché* : `r apa_print(model)$full_result`. La différence d'environ 3 points sur la sous-échelle STEM-CIS correspond à une taille de l'effet de Cohen's $d$ = `r printnum(ef_model$d)` [`r printnum(ef_model$CI_low)`; `r printnum(ef_model$CI_high)`].
 
 ## Discussion
 
