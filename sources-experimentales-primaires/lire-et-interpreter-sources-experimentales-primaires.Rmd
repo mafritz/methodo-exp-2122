@@ -185,8 +185,6 @@ La liste suivant -- librement traduite et adaptée de Brosowsky et collègues [-
 
     -   Quel est le mécanisme causale à la base de l'hypothèse ?
 
-    -   Pourquoi le phénomène d'intérêt est-il déterminé par l'intervention ?
-
     -   Si l'hypothèse est corroborée, qu'est qu'on devrait observer comme résultat ?
 
     -   Quel résultat pourrait-on obtenir qui ne corroborerait pas l'hypothèse ?
@@ -211,13 +209,81 @@ La liste suivant -- librement traduite et adaptée de Brosowsky et collègues [-
 
 ## Questions
 
+La condition naturelle d'un chercheur est le doute, et le doute se traduit par des questions. Est-ce que la technologie peut vraiment faciliter l'apprentissage ? Est-ce qu'une synthèse en forme de carte conceptuelle est plus efficace qu'une synthèse textuelle ? Faut-il enseigner aux élèves la programmation pour améliorer leurs compétences numériques ?
+
+La méthode expérimentale *attaque* les *grandes questions/problématiques de recherche* avec des *questions/problématiques spécifiques* qui se traduisent par la mise en place d'une expérience. L'expérience est censée donner une réponse *spécifique* qui représente un pas en avant dans la direction de la *grande réponse*.
+
+Dans une contribution expérimentale il est important d'identifier les deux niveaux des questions :
+
+-   La *grande question/problématique de recherche* est en général liée à un domaine/axe de recherche -- uni-, multi- ou inter-disciplinaire -- poursuivi par plusieurs chercheurs.
+
+-   Si on considère la grande question comme un édifice, alors la *question/problématique spécifique* peut-être considérée comme une brique. En combinant plusieurs questions spécifiques, on essaie d'ériger l'édifice qui sera d'autant plus solide si (1) les briques sont bien intégrées les unes avec les autres ; et (2) des tests sévères ont été menés pour s'assurer que l'édifice ne s'écroule pas -- ce qui implique qu'on doit de quelque sorte essayer de le faire écrouler [@mayo2018].
+
+Identifier la grande question/problématique de recherche et la question/problématique de recherche spécifique permet de :
+
+-   Connaître les intentions de la recherche
+
+-   Identifier les concepts principaux mobilisés par la recherche
+
+-   Avoir déjà une idée de l'intervention et du phénomène d'intérêt sur lequel un effet est attendu
+
 ## Alternatives
+
+Le doute qui amène des chercheurs à concevoir une expérience doit être *plausible*; c'est-à-dire que la réponse ne doit pas être trivial. Par exemple si on s'attend à un effet de l'intervention $X_1$ plus élevé par rapport à l'intervention $X_0$, au moins l'une des alternatives possibles devrait être plausible :
+
+-   Les deux interventions produisent des effets plus ou moins similaire, ou dont la différence peut être considérée négligeable d'un point de vue *pratique*, c'est-à-dire $X_0 \approx X_1$
+
+-   L'intervention $X_0$ produit un effet plus élevé par rapport à l'intervention $X_1$
+
+La plausibilité des alternatives est notamment fondamentale par exemple lorsque l'expérience est orientée vers le test d'une théorie ou de deux théories *en compétition*.
+
+Dans les alternatives on peut également considérer d'autres facteurs potentiels -- différents de l'intervention -- qui pourraient expliquer l'effet sur le phénomène d'intérêt (e.g. variables cachées, médiateurs, ...).
 
 ## Logique
 
+La partie logique d'une contribution expérimentale concerne :
+
+-   L'identification claire et précise des alternatives/différences dans les interventions $X_0$, $X_1$, $X_2$, ... $X_j$
+
+-   La raison, en termes d'explication causale potentielle, pour laquelle les interventions produisent des effets différents, des effets similaires, ou pas d'effet du tout.
+
+L'analyse logique d'une contribution expérimentale peut se faire à l'aide d'opérateurs logiques utilisés également dans la programmation :
+
+> Si $p$ alors $q$
+
+Par exemple :
+
+-   ***Si*** les cartes conceptuelles renforcent davantage les liens sémantiques entre concepts comparé à une synthèse écrite, ***alors*** les participant-es dans la condition $X_{carte}$ auront des meilleures performances au test de compréhension par rapport aux participant-es dans la condition $X_{synthèse}$
+
+-   ***Si*** des vidéos de plus courte durée permettent d'éviter des phénomènes de distraction chez les apprenant-es, ***alors*** les participant-es ayant observé trois vidéos de 5 minutes ($X_{3x5min}$) auront des meilleures performances au test de rétention mnésique par rapport aux participant-es ayant observé le même contenu dans une vidéo de 15 minutes ($X_{1x15min}$).
+
 ## Méthodes
 
+Le critère relatif à la méthode correspond à une comrpéhension/description du micro-monde dans lequel :
+
+-   L'intervention $X$ devient la variable indépendante (VI) avec les différents facteurs/modalités
+
+-   Le phénomène d'intérêt $Y$ devient la variable dépendante (VD) avec son mécanisme de mesure sensible, fiable et valide
+
+Les informations saillantes qui caractérisent le micro-monde sont également à noter, comme par exemple le public cible/participant-es, le type de tâche/stimuli, le matériel adopté, etc.
+
 ## Résultats
+
+Les résultats des expériences sont généralement divisés en deux types :
+
+-   La description de l'échantillon, c'est-à-dire les données observées/mesurées dans l'expérience
+
+-   Les statistiques inférentielles qui *généralisent* le micro-monde au macro-monde
+
+Dans les deux cas, l'analyse de résultats essaie d'établir :
+
+-   La présence de patterns dans les données au niveau de l'échantillon général et des stratifications/groupements par facteurs/conditions
+
+-   La plausibilité/fiabilité des résultats observés (e.g. *too good to be true*)
+
+-   La pertinence des tests/indices statistiques
+
+-   L'utilité des représentations graphiques de support (tableaux, graphiques, ...)
 
 ## Inférences
 
