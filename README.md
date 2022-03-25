@@ -217,7 +217,7 @@ La période 5 prévoit deux livrables (un individuel, un par groupes) et un comm
 
 -   Freinez vos ambitions : concevoir une expérience est une procédure complexe et qui nécessite du temps. Concentrez-vous sur les aspects logiques/causales qui détermine le rapport entre votre intervention (VI) et vos phénomènes d'intérêt (VD)
 
--   Il vous faudra lire des articles empiriques pour vous aider/inspirer. Référez-vous à la méthode QALMRI pour les comprendre
+-   Il vous faudra lire des articles empiriques pour vous aider/inspirer. Référez-vous à la ressources sur [la lecture et interprétation des sources expérimentales primaires](https://github.com/mafritz/methodo-exp-2122/blob/main/sources-experimentales-primaires/lire-et-interpreter-sources-experimentales-primaires.pdf) (c.f. méthode QALMRI)
 
 -   N'hésitez pas à reprendre des protocoles expérimentaux qui vous semblent intéressants et modifier des éléments (e.g. changer la VI/VD, le public cible, proposer une hypothèse alternative, etc.)
 
