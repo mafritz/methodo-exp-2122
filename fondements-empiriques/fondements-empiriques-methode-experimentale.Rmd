@@ -30,7 +30,9 @@ source(here::here("assets", "settings", "custom.R"))
 
 # Introduction {-}
 
-Ce chapitre offre un survol des fondements empiriques de la méthode expérimentale.
+Ce document offre un survol des fondements empiriques de la méthode expérimentale. 
+
+**Document en construction, pour l'instant se référer aux slides disponibles dans l'espace Moodle du cours**
 
 # Sources de la connaissance empirique
 
