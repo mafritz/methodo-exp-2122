@@ -11,3 +11,7 @@
 
 \usepackage{hyperref}
 \hypersetup{colorlinks=true,linkcolor=blue, linktocpage}
+
+\usepackage{etoolbox}
+\ifundef{\abstract}{}{\patchcmd{\abstract}%
+    {\quotation}{\quotation\noindent\ignorespaces}{}{}}

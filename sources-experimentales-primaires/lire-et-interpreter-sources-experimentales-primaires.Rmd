@@ -19,7 +19,8 @@ output:
       #after_body: "doc-suffix.tex"
 bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
-#abstract: "This is my abstract."
+abstract: |
+  Ce document propose des informations utiles pour s'initier à la lecture et interprétation de contributions expérimentales *primaires*, c'est-à-dire réportant l'ensemble du processus de génération, récolte, et analyse de données expérimentale. La première partie du document aborde la structure *standard* des contributions expérimentales primaires : Introduction, Méthode, Résultats, et Discussion. La deuxième partie introduit une méthode systèmatique pour lire, interpréter et éventuellement planifier une recherche expérimentale : la méthode QALMRI, acronyme de Question, Alternatives, Logique, Méthode, Résultats et Inférences.
 ---
 
 ```{r setup, include=FALSE}

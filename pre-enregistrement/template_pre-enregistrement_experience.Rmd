@@ -21,7 +21,8 @@ output:
       #after_body: "doc-suffix.tex"
 bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
-#abstract: "This is my abstract."
+abstract: |
+  Ce document introduit la pratique du pré-enregistrement d'une expérience à travers un template adapté de la plateforme *Open Science Framework* (OSF). Le document guide des étudiant-es sans expérience préalable en méthode expérimentale à spécifier les détails saillants pour planifier une expérience. Les implications pédagogiques et relatives à la philosphie *Open Science* sont également traitées brièvement.
 ---
 
 ```{r setup, include=FALSE}
