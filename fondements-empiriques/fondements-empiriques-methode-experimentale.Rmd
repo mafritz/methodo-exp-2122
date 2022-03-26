@@ -28,9 +28,9 @@ Sys.setlocale("LC_ALL", "French")
 source(here::here("assets", "settings", "custom.R"))
 ```
 
-# Introduction {-}
+# Introduction {.unnumbered}
 
-Ce document offre un survol des fondements empiriques de la méthode expérimentale. 
+Ce document offre un survol des fondements empiriques de la méthode expérimentale.
 
 **Document en construction, pour l'instant se référer aux slides disponibles dans l'espace Moodle du cours**
 
@@ -60,6 +60,8 @@ On peut identifier 4 étapes principales dans une expérience :
 3.  Le **processus génératif de données** qui consiste à créer un micro-monde dans lequel l'intervention puisse être menée dans des conditions qui visent à exclure, idéalement, toute autre source de variabilité potentielle
 
 4.  L'**inférence** qui combine des outils statistiques et des connaissances dans le domaine pour déterminer à quel point le processus génératif de données (le micro-monde) fourni des éléments utiles et fiables qu'on peut généraliser au contexte plus large (le macro-monde/la réalité)
+
+![Les 4 étaptes d'une recherche expérimentale](images/etapes-methode-experimentale.png "Les 4 étaptes d'une recherche expérimentale")
 
 # Justification
 
@@ -127,21 +129,87 @@ L'explication causale potentielle est la seule étape du processus qui n'est pas
 
 ## L'effet de *X* sur *Y*
 
-La plupart des recherches qui adoptent la méthode expérimentale s'intéressent donc à des mécanismes causales potentiels qui pourraient expliquer/prédire l'effet de l'intervention *X* sur un phénomène *Y*. D'un point de vue logique, on essaie d'établir une *fonction causale* selon laquelle le phénomène Y *écoute* l'intervention X pour déterminer son état. Nous avons donc une sorte de *fonction* similaire au principe de Input-Output en programmation :
+La plupart des recherches qui adoptent la méthode expérimentale s'intéressent donc à des mécanismes causales potentiels qui pourraient expliquer/prédire l'effet de l'intervention *X* sur un phénomène *Y*.
 
-$$Y = f(X)$$
-La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique, sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. la note à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiante a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). 
+$$
+X \rightarrow Y
+$$
+
+D'un point de vue logique, on essaie d'établir une *fonction causale* selon laquelle le phénomène Y *écoute* l'intervention X pour déterminer son état. Nous avons donc une sorte de *fonction* similaire au principe de Input-Output en programmation :
+
+$$Y = f(X)$$La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique [@pearl2016; @pearl2000; @rodgersEpistemologyMathematicalStatistical2010; @maxwell2017], sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. la note à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiante a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). En d'autres termes, on peut s'attendre à une *distribution* du phénomène Y qui dépend/est fonction de l'intervention X.
 
 D'un point de vue logique, la fonction causale est simple à déclarer en termes formelles. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile.
 
 ## Causalité en technologie éducative
 
-Le contexte de la technologie éducative est particulièrement sensible à cette complexité, car il regroupe plusieurs types d'interaction entre les technologies et les processus d'apprentissage.
+Le contexte de la technologie éducative est particulièrement sensible à cette complexité, car il regroupe plusieurs types d'interaction entre les technologies éducatives, les processus d'apprentissage, et des facteurs qui peuvent influencer les unes, les autres ou les deux en même temps. On peut néanmoins essayer, au moins conceptuellement, de synthétiser la recherche en technologie éducative d'un point de vue causale comme l'investigation des effets des technologies éducatives sur les processus d'apprentissage, avec des facteurs qui peuvent intervenir dans cette relation causale, comme illustré dans l'image ci-dessous.
 
+![Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation.](images/techno-educative-apprentissage.png "Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation.")
 
+Du côté des technologies éducatives on peut trouver les *Learning Management Systems*, les principes multimédia, les jeux vidéos pédagogiques, etc. L'apprentissage peut être à son tour divisé dans des processus tels que la compréhension, la capacité a collaborer, la résolution de problèmes, etc. Parmi les facteurs qui peuvent intervenir dans cette relation figurent les connaissances préalables, l'expérience utilisateur dans l'appropriation et utilisation des technologies, le niveau d'expertise, et ainsi de suite.
+
+La recherche expérimentale en technologie éducative consiste donc principalement à formuler des hypothèses sur les relations causales entre les technologie éducatives et les processus d'apprentissage, ainsi que sur les effets de facteurs qui peuvent faciliter, entraver ou modérer ces effets.
+
+## Difficulté à établir des relations causales
+
+À l'intérieur d'un système complexe, dans lequel les relations entre concepts peuvent s'influencer mutuellement, réussir à détecter un mécanisme causale qui détermine la direction d'un effet (i.e. c'est l'intervention X qui détermine le phénomène Y) s'avère très difficile [@mackieCausesConditions1965; @pearl2000; @pearl2016; @pearl2018book]. Il existe différentes mécanismes qui peuvent rendre la détection d'une mécanisme de cause à effet difficile. Cette liste, adaptée des travaux de Pearl [@pearl2000; @pearl2016; @pearl2018book] -- voir aussi @mcelreathStatisticalRethinkingBayesian2020 -- en propose 4 : un mécanisme de relation inverse, la présence d'une cause commune, la présence d'un médiateur, et la présence d'un effet de *collision*.
+
+### Un mécanisme de relation inverse
+
+Ce phénomène s'avère si on attribut un effet de X sur Y, lorsqu'en vérité c'est Y qui a un effet sur X.
+
+$$X \leftarrow Y$$
+
+On peut imaginer que l'utilisation de technologies de conception et fabrication assistées par ordinateur (CFAO) -- imprimantes 3D, broderie numérique, ... -- ont un effet sur la créativité des étudiant-es, mais il peut également être le cas que des étudiant-es avec à la base une créativité plus prononcée s'intéressent davantage à ce type de technologies.
+
+$$
+CFAO \rightarrow Créativité\space vs. \space CFAO \leftarrow Créativité
+$$
+
+### La présence d'une cause commune
+
+Ce phénomène s'avère si on attribut un effet de X sur Y, lorsqu'en vérité X et Y n'est sont pas en relation causale, mais l'illusion d'un effet émerge à cause de la présence d'un troisième facteur qui influence à la fois X et Y.
+
+$$X \leftarrow Z \rightarrow Y$$
+
+Par exemple, le fait qu'un-e étudiant-e ait ou pas des stickers sur son ordinateur portable ($X$) n'a en soi aucun effet sur ses capacités en programmation ($Y$). Cependant, les programmateurs ont souvent la tendance à mettre sur leurs propres ordinateurs des stickers des technologies ou langages de programmation adoptés ($Z$).
+
+$$
+Stickers \space ordinateur \leftarrow Personne \space programme \rightarrow  Compétences \space programmation
+$$
+
+Le fait d'avoir des stickers et d'avoir des compétences en programmation dérivent de la même cause (être programmeur). En revanche, si on considère pas cette cause commune et on se limite à observer que les étudiant-es avec les stickers ont des bonnes compétences en programmation, on pourrait faire l'hypothèse que les stickers ont un effet (e.g. motivation, rappel, ...).
+
+### La présence d'un médiateur
+
+Ce phénomène s'avère quand X et Y sont vraiment dans une relation causale, mais le mécanisme est transmis à travers un troisième facteur Z. À ce moment, le risque est que l'effet causale entre X et Y peut disparaître si le facteur Z n'est pas représenté correctement.
+
+$$X \rightarrow Z \rightarrow Y$$
+
+Imaginons que les responsables d'une formation en technologie éducative se questionne sur l'opportunité d'assigner aux étudiant-es des livrables intensifs d'un point de vue computationnel comme par exemple le montage vidéo, le rendering 3D, ou la modélisation de phénomène complexe avec des simulations Markov Chain Monte-Carlo ($X$). Ces livrables risque d'augmenter le temps de latence que les étudiant-es passe sans apprendre rien, mais qui les obligent à diminuer leur temps libre ($Y$). Cette relation est néanmoins médiée par la puissance des ordinateurs des étudiant-es ($Z$).
+
+$$
+Livrable \space computationnel \space \rightarrow Puissance \space ordinateur \rightarrow Temps \space libre
+$$
+
+Or, si les responsables de la formation prenaient en considération dans un test/sondage/entretien seulement des étudiant-es avec des ordinateurs très performants, cette médiation pourrait donner l'illusion qu'il n'y a pas de mécanisme de cause à effet entre les livrables intensifs d'un point de vue computationnel et le temps libre des étudiant-es.
+
+### La présence d'un effet de *collision*
+
+Ce phénomène s'avère lorsque X et Y ne sont pas en relation causale, mais les deux influencent le même facteur. Il peut s'avérer que sous certaines conditions spécifiques de Z, X et Y résultent associés.
+
+$$X \rightarrow Z \leftarrow Y$$
+
+Imaginons que pour être accepté-es dans un Master ($Z$) il faut soit avoir suivi un bachelor ($X$) ou avoir une idée de projet pertinente avec le type de formation dispensée ($Y$). Les deux variables ne sont pas liées : on peut avoir une bonne idée avec ou sans bachelor, et on peut avoir un bachelor avec ou sans une bonne idée de projet.
+
+$$
+Bachelor \rightarrow Admission \space Master \leftarrow Projet \space intérêt
+$$
+
+Imaginons que les responsables du Master émettent l'hypothèse que l'obtention du bachelor détermine la qualité du projet proposé. Pour cela ils ne prennent en considération que les étudiant-es qui ont été admis-es. À ce moment, les responsables vont croire qu'il y a en réalité un effet. Lorsque deux phénomène sont indépendants, la probabilité que l'un **et** l'autre se manifestent est plus faible par rapport à la manifestation de l'un **ou** l'autre individuellement. Si l'étudiant-e a un Bachelor, il/elle est admis-e même sans un projet intéressant. Il y a donc plus de chances que les étudiant-es avec bachelor aient proposé un projet pas très intéressant. La même chose s'applique par reflet aux étudiant-es admis-es avec un projet intéressant : ils ont moins de chances d'avoir un bachelor. En combinant les deux choses, il semble émerger un effet négatif du bachelor sur la qualité du projet, mais qui est dû à la sélection seulement des étudiant-es admis-es.
 
 ## L'échelle de causalité
-
 
 
 
@@ -149,5 +217,4 @@ Le contexte de la technologie éducative est particulièrement sensible à cette
 
 # Inférence
 
-# Références {-}
-
+# Références {.unnumbered}
