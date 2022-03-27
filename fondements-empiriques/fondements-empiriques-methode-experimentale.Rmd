@@ -23,7 +23,7 @@ csl: ../assets/settings/apa.csl
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 Sys.setlocale("LC_ALL", "French")
 source(here::here("assets", "settings", "custom.R"))
 ```
@@ -45,9 +45,9 @@ Les connaissances empiriques sont basées sur trois sources :
 3.  **Les expériences**\
     La « réalité » est sollicitée par une intervention active, pondérée et planifiée, dont l'effet est évalué sur un phénomène d'intérêt
 
-Il y a eu dans le passé la tendance à séparer nettement les trois sources, notamment au niveau de la distinction entre observations et expériences selon le principe "*correlation is not causation"*. Dans ce sens, les expériences sont identifiées comme le *golden standard* pour établir des mécanismes causales. Plus récemment, il y a la tendance à voir la causalité comme un effet émergent qui peut être établi également lorsque l'intervention n'est pas effectuée de manière active, mais inférer depuis des situations qui répondent à des critères spécifiques [@pearl2018book].
+Il y a eu dans le passé la tendance à séparer nettement les trois sources, notamment au niveau de la distinction entre observations et expériences selon le principe "*correlation is not causation"*. Dans ce sens, les expériences sont identifiées comme le *golden standard* pour établir des mécanismes causales. Plus récemment, il y a la tendance à voir la causalité comme un effet émergent qui peut être établi également lorsque l'intervention n'est pas effectuée de manière active, mais inférer depuis des situations qui répondent à des critères spécifiques [@pearl2000; @pearl2016; @pearl2018book; @rohrer2018].
 
-De plus, il existe des recouvrements entre les trois sources qui sont souvent utilisées de manière complémentaires pour maximiser la connaissance qu'on peut avoir sur un sujet. Le reste de cette section s'intéresse néanmoins aux expériences de manière plutôt *classique*, afin de fournir un aperçu conceptuel qui peut être ensuite décliné dans des *formats hybrides* plus complexes.
+De plus, il existe des recouvrements entre les trois sources qui sont souvent utilisées de manière complémentaires pour maximiser la connaissance qu'on peut avoir sur un sujet. Le reste de cette section s'intéresse néanmoins aux expériences de manière plutôt *classique* [@maxwell2017], afin de fournir un aperçu conceptuel qui peut être ensuite décliné dans des *formats hybrides* plus complexes.
 
 # Les étapes d'une expérience
 
@@ -101,21 +101,21 @@ L'introduction illustre la problématique, sa pertinence par rapport aux connais
 
 Le cadre théorique articule ce que la communauté scientifique connait (ou ne connait pas encore) à propos d'un sujet et comment ces connaissances ont été acquises : observations, simulations, expériences, mais aussi raisonnement, argumentation, synthèse de connaissances actuelles avec des revues de la littérature ou méta-analyses. Le cadre théorique met en général en relief des manques ou évidences ambivalentes qui justifient la nécessité de proposer une nouvelle expérience ou de répliquer une expérience déjà menée afin de *contrôler* la fiabilité et robustesse des résultats.
 
-La justification scientifique dépend des connaissances du domaine spécifique duquel l'intervention s'inspire et/ou s'applique.
+La justification scientifique dépend des connaissances du domaine spécifique duquel l'intervention s'inspire et/ou dans lequel elle s'applique.
 
 ## Justification éthique
 
 La justification éthique considère l'ensemble des implications internes et externes à l'expérience, surtout d'un point de vue des entités impliquées (e.g. les participant-es, les écoles, ...). Outre à la sensibilité de données recueillies qui est partagée aussi avec les études de type observation, les expériences sont caractérisées par une intervention active, décidée en amont par les chercheurs, qui peut par exemple être appliquée seulement à une partie des participant-es. Il faut donc pondérer à quel point l'intervention peut produire des effets *objectivement* ou *subjectivement* négatifs pour les participant-es.
 
-De plus, les implications éthiques ne concernent donc pas seulement ce qui est fait, mais également ce qui n'est pas fait (et aurait pu être fait). Si on imagine une intervention techno-pédagogique qui est censée apporter des bénéfices énormes au groupe qui peut en bénéficier, est-il acceptable d'un point de vue éthique d'avoir un *groupe contrôle* sous forme d'une classe qui n'aura pas accès à cette technologie ?
+De plus, les implications éthiques ne concernent pas seulement ce qui est fait, mais également ce qui n'est pas fait (et aurait pu être fait). Si on imagine une intervention techno-pédagogique qui est censée apporter des avantages énormes au groupe qui peut en bénéficier, est-il acceptable d'un point de vue éthique d'avoir un *groupe contrôle* sous forme d'une classe qui n'aura pas accès à cette technologie ?
 
-Ce type de dilemmes étant très délicat, les expériences doivent être acceptées par une commission éthique, à laquelle les chercheurs doivent fournir toute information utile, comme par exemple le public cible, le type d'intervention envisagée, la présence d'éventuels mécanismes cachés aux participant-es, etc.
+Ce type de dilemmes étant très délicats, les expériences doivent être acceptées par une commission éthique, à laquelle les chercheurs doivent fournir toute information utile, comme par exemple le public cible, le type d'intervention envisagée, la présence d'éventuels mécanismes cachés aux participant-es, etc.
 
 ## Question de recherche expérimentale
 
 La combinaison entre la justification scientifique (qu'est-ce qui est pertinent par rapport aux connaissances actuelles) et la justification éthique (qu'est-ce qui est raisonnable tester en respectant l'intégrité de toutes les parties prenantes) détermine la question de recherche expérimentale.
 
-Comparé à une question de recherche scientifique au sens plus large, une question de recherche expérimentale se caractérise généralement par la prédisposition à identifier l'intervention et le(s) phénomène(s) d'intérêt de manière la plus précise possible, souvent déjà à partir du titre de la contribution ou de l'article scientifique, comme illustré par exemple par ces sujets de mémoire du Master MALTT ayant fait recours à la méthode expérimentale :
+Comparé à une question de recherche scientifique au sens plus large, une question de recherche expérimentale se caractérise généralement par la prédisposition à identifier précisement l'intervention et le(s) phénomène(s) d'intérêt souvent déjà à partir du titre de la contribution ou de l'article scientifique. Ce mécanisme est d'ailleurs illustré par exemple dans ces sujets de mémoire du Master MALTT appliquant la méthode expérimentale :
 
 -   *The influence of background music on learning from text* ([Adam, 2019](https://tecfa.unige.ch/tecfa/maltt/memoire/Adam2019.pdf))
 -   Collaboration en environnement médiatisé par ordinateur : Des usages et de l'impact d'un outil de feedback émotionnel ([Perrier, 2017](https://tecfa.unige.ch/tecfa/maltt/memoire/Perrier2017.pdf))
@@ -137,13 +137,13 @@ $$
 
 D'un point de vue logique, on essaie d'établir une *fonction causale* selon laquelle le phénomène Y *écoute* l'intervention X pour déterminer son état. Nous avons donc une sorte de *fonction* similaire au principe de Input-Output en programmation :
 
-$$Y = f(X)$$La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique [@pearl2016; @pearl2000; @rodgersEpistemologyMathematicalStatistical2010; @maxwell2017], sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. la note à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiante a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). En d'autres termes, on peut s'attendre à une *distribution* du phénomène Y qui dépend/est fonction de l'intervention X.
+$$Y = f(X)$$La fonction causale $f(X)$ correspond en général à un modèle mathématique/statistique [@pearl2016; @pearl2000; @rodgersEpistemologyMathematicalStatistical2010; @maxwell2017], sujet qui sera traité dans les fondements statistiques de la méthode expérimentale. Pour l'instant, on peut retenir en termes logiques que l'état du phénomène Y (e.g. le résultat à un examen) est une *fonction* de l'intervention X (e.g. est-ce que l'étudiant-e a résumé ses notes sous forme de carte conceptuelle ou de résumé textuel ?). En d'autres termes, on peut s'attendre à un *pattern* dans la *distribution* du phénomène Y qui dépend/est fonction de l'intervention X. Par exemple : on s'attend à un effet de la modalité avec laquelle les notes d'un cours sont résumées (carte conceptuelle vs. résumé textuel) sur les notes obtenus à l'examen. Le *pattern* attendu consiste dans une distribution des notes obtenues par les étudiant-es ayant utilisé les cartes conceptuelles autour d'une moyenne plus élevée par rapport à la distribution des notes obtenus par les étudiant-es ayant utilisé le résumé textuel.
 
-D'un point de vue logique, la fonction causale est simple à déclarer en termes formelles. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile.
+D'un point de vue logique, la fonction causale est simple à déclarer en termes formels. En revanche, dans la pratique, déterminer un effet causal dans un environnement complexe est très difficile.
 
 ## Causalité en technologie éducative
 
-Le contexte de la technologie éducative est particulièrement sensible à cette complexité, car il regroupe plusieurs types d'interaction entre les technologies éducatives, les processus d'apprentissage, et des facteurs qui peuvent influencer les unes, les autres ou les deux en même temps. On peut néanmoins essayer, au moins conceptuellement, de synthétiser la recherche en technologie éducative d'un point de vue causale comme l'investigation des effets des technologies éducatives sur les processus d'apprentissage, avec des facteurs qui peuvent intervenir dans cette relation causale, comme illustré dans l'image ci-dessous.
+Le contexte de la technologie éducative est particulièrement sensible à cette complexité, car il regroupe plusieurs types d'interaction entre les technologies éducatives, les processus d'apprentissage, et des facteurs qui peuvent influencer les unes, les autres ou les deux en même temps. On peut néanmoins essayer de synthétiser la recherche en technologie éducative d'un point de vue causale comme l'investigation des effets des technologies éducatives sur les processus d'apprentissage, avec des facteurs qui peuvent intervenir dans cette relation causale, comme illustré dans l'image ci-dessous.
 
 ![Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation.](images/techno-educative-apprentissage.png "Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation.")
 
@@ -153,7 +153,7 @@ La recherche expérimentale en technologie éducative consiste donc principaleme
 
 ## Difficulté à établir des relations causales
 
-À l'intérieur d'un système complexe, dans lequel les relations entre concepts peuvent s'influencer mutuellement, réussir à détecter un mécanisme causale qui détermine la direction d'un effet (i.e. c'est l'intervention X qui détermine le phénomène Y) s'avère très difficile [@mackieCausesConditions1965; @pearl2000; @pearl2016; @pearl2018book]. Il existe différentes mécanismes qui peuvent rendre la détection d'une mécanisme de cause à effet difficile. Cette liste, adaptée des travaux de Pearl [@pearl2000; @pearl2016; @pearl2018book] -- voir aussi @mcelreathStatisticalRethinkingBayesian2020 -- en propose 4 : un mécanisme de relation inverse, la présence d'une cause commune, la présence d'un médiateur, et la présence d'un effet de *collision*.
+À l'intérieur d'un système complexe, dans lequel les relations entre concepts peuvent s'influencer mutuellement, réussir à détecter un mécanisme causale qui détermine la direction d'un effet (i.e. c'est l'intervention X qui détermine le phénomène Y) s'avère très difficile [@mackieCausesConditions1965; @pearl2000; @pearl2016; @pearl2018book]. Il existe différentes mécanismes qui peuvent rendre la détection d'une mécanisme de cause à effet compliquée. Cette liste, adaptée des travaux de Pearl [@pearl2000; @pearl2016; @pearl2018book] -- voir aussi @mcelreathStatisticalRethinkingBayesian2020 -- en propose 4 : un mécanisme de relation inverse, la présence d'une cause commune, la présence d'un médiateur, et la présence d'un effet de *collision*.
 
 ### Un mécanisme de relation inverse
 
@@ -163,23 +163,19 @@ $$X \leftarrow Y$$
 
 On peut imaginer que l'utilisation de technologies de conception et fabrication assistées par ordinateur (CFAO) -- imprimantes 3D, broderie numérique, ... -- ont un effet sur la créativité des étudiant-es, mais il peut également être le cas que des étudiant-es avec à la base une créativité plus prononcée s'intéressent davantage à ce type de technologies.
 
-$$
-CFAO \rightarrow Créativité\space vs. \space CFAO \leftarrow Créativité
-$$
-
 ### La présence d'une cause commune
 
 Ce phénomène s'avère si on attribut un effet de X sur Y, lorsqu'en vérité X et Y n'est sont pas en relation causale, mais l'illusion d'un effet émerge à cause de la présence d'un troisième facteur qui influence à la fois X et Y.
 
 $$X \leftarrow Z \rightarrow Y$$
 
-Par exemple, le fait qu'un-e étudiant-e ait ou pas des stickers sur son ordinateur portable ($X$) n'a en soi aucun effet sur ses capacités en programmation ($Y$). Cependant, les programmateurs ont souvent la tendance à mettre sur leurs propres ordinateurs des stickers des technologies ou langages de programmation adoptés ($Z$).
+Par exemple, le fait qu'un-e étudiant-e ait ou pas des stickers sur son ordinateur portable ($X$) n'a en soi aucun effet sur ses capacités en programmation ($Y$). Cependant, les programmateurs, qui ont donc des connaissances en programmation, ont souvent la tendance à mettre sur leurs propres ordinateurs des stickers des technologies ou langages de programmation adoptés ($Z$).
 
 $$
 Stickers \space ordinateur \leftarrow Personne \space programme \rightarrow  Compétences \space programmation
 $$
 
-Le fait d'avoir des stickers et d'avoir des compétences en programmation dérivent de la même cause (être programmeur). En revanche, si on considère pas cette cause commune et on se limite à observer que les étudiant-es avec les stickers ont des bonnes compétences en programmation, on pourrait faire l'hypothèse que les stickers ont un effet (e.g. motivation, rappel, ...).
+Le fait d'avoir des stickers et d'avoir des compétences en programmation dérivent de la même cause : être programmeur. En revanche, si on ne considère pas cette cause commune et on se limite à observer que les étudiant-es avec les stickers ont des bonnes compétences en programmation, on pourrait faire l'hypothèse que les stickers ont un effet sur les connaissances en programmation (e.g. motivation, rappel, ...).
 
 ### La présence d'un médiateur
 
@@ -187,7 +183,7 @@ Ce phénomène s'avère quand X et Y sont vraiment dans une relation causale, ma
 
 $$X \rightarrow Z \rightarrow Y$$
 
-Imaginons que les responsables d'une formation en technologie éducative se questionne sur l'opportunité d'assigner aux étudiant-es des livrables intensifs d'un point de vue computationnel comme par exemple le montage vidéo, le rendering 3D, ou la modélisation de phénomène complexe avec des simulations Markov Chain Monte-Carlo ($X$). Ces livrables risque d'augmenter le temps de latence que les étudiant-es passe sans apprendre rien, mais qui les obligent à diminuer leur temps libre ($Y$). Cette relation est néanmoins médiée par la puissance des ordinateurs des étudiant-es ($Z$).
+Imaginons que les responsables d'une formation en technologie éducative se questionnent sur l'opportunité d'assigner aux étudiant-es des livrables intensifs d'un point de vue computationnel comme par exemple le montage vidéo, le rendering 3D, ou la modélisation de phénomène complexe avec des simulations Markov Chain Monte-Carlo ($X$). Ces livrables risque d'augmenter le temps de latence que les étudiant-es passe en attendant la fin des processus computationnels, ce qui les obligent à diminuer leur temps libre ($Y$). Cette relation est néanmoins médiée par la puissance des ordinateurs des étudiant-es ($Z$).
 
 $$
 Livrable \space computationnel \space \rightarrow Puissance \space ordinateur \rightarrow Temps \space libre
@@ -211,7 +207,62 @@ Imaginons que les responsables du Master émettent l'hypothèse que l'obtention 
 
 ## L'échelle de causalité
 
+Dans ces travaux à propos de la causalité, Pearl [@pearl2000; @pearl2016; @pearl2018book] propose d'imaginer une échelle avec trois marche. Chaque marche qui est montée permet de s'approcher davantage à l'explication d'un mécanisme causale.
 
+![L'échelle de causalité avec trois marches. Adapté de @pearl2018book](images/echelle-causalite.png "L'échelle de causalité avec trois marches. Adapté de @pearl2018book")
+
+### Association
+
+La première marche en bas de l'échelle consiste dans l'association de deux (ou plusieurs) phénomènes qui ont la tendance à se manifester selon des patterns récurrents. Comme indiqué plus haut dans la section consacrée aux difficultés dans l'établissement d'un mécanisme causale, une *simple* association ne permet cependant pas ni de déterminer si un phénomène est la cause de l'autre ou vice-versa, ni d'exclure d'autres facteurs potentiels qui pourraient expliquer l'association (e.g. cause commune, médiateur ou effet de *collision*).
+
+Une association peut être déterminé de manière systématique par exemple à travers un sondage, comme dans l'exemple de l'image : 6 étudiant-es sur 10 demandent l'enregistrement vidéo des cours. On peut inférer depuis cette information que les étudiant-es associent l'enregistrement vidéo du cours à quelques formes de bénéfices pour leur apprentissage.
+
+Une autre manière de déterminer systématiquement une association consiste dans les études dites *corrélationnelles*, dans lesquelles le terme *association* est remplacé justement par le terme *corrélation* qui présente une connotation statistique précise. On peut en effet calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle :
+
+-   Un score s'approchant de -1 témoigne d'une corrélation *négative*, caractérisée par le fait que A et B ont la tendance à varier de manière opposée : une valeur élevé de A est associé à une faible valeur de B (ou vice-versa) ; ou une valeur faible de A est associée à une valeur élevée de B (ou vice-versa).
+
+-   Un score s'approchant de 0 témoigne l'absence d'une corrélation, c'est-à-dire que les deux phénomène ont la tendance à varier sans un pattern identifiable (e.g. si l'un est élevé, l'autre peut être parfois élevé aussi, parfois faible, et parfois moyen).
+
+-   Un score s'approchant de 1 témoigne d'une corrélation *positive*, caractérisée par le fait que A et B ont la tendance à varier de manière spéculaire : une valeur élevé de A est associé à une valeur élevé de B (ou vice-versa) et une faible valeur de A est associé à une faible valeur de B (ou vice-versa).
+
+```{r correlations-examples, fig.height=3, fig.width=6, fig.cap="Exemple de corrélations"}
+set.seed(3)
+library(scales)
+negative <- tibble(
+  type = "Negative",
+  x = 1:100,
+  y = rescale((100 - x)  + rnorm(100, 0, 15), to = c(1, 100))
+)
+
+absence <- tibble(
+  type = "Absence",
+  x =  rescale(rnorm(100, 0, 15), to = c(1, 100)),
+  y =  rescale(rnorm(100, 0, 15), to = c(1, 100))
+)
+
+positive <- tibble(
+  type = "Positive",
+  x = 1:100,
+  y = rescale(x + rnorm(100, 0, 15), to = c(1, 100))
+)
+
+correlations <- bind_rows(negative, absence, positive) |> 
+  mutate(
+    type = factor(type, levels = c("Negative", "Absence", "Positive"))
+  )
+
+ggplot(correlations, aes(x = x, y = y)) +
+  geom_point(color = "lightblue") +
+  geom_smooth(formula = y ~ x, method = "lm", se = FALSE) +
+  labs(x = "Phénomène B", y = "Phénomène A") +
+  facet_wrap(~type)
+
+```
+
+
+### Intervention
+
+### Contre-Factuels
 
 # Processus génératif des données
 
