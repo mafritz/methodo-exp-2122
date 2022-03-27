@@ -276,7 +276,45 @@ ggplot(correlations, aes(x = x, y = y)) +
 
 ### Intervention
 
-Une intervention est une action pondérée et planifiée qui est exécutée sur la réalité afin de produire un effet sur l'effet d'intérêt. Contrairement à l'association qui peut être potentiellement *bi-directionnelle*, l'intervention vise à séparer ce qui relève du mécanisme causale (l'intervention $X$) et ce qui relève du phénomène d'intérêt (le phénomène $Y$).
+Une intervention est une action pondérée et planifiée qui est exécutée sur la réalité afin de produire un effet sur le phénomène d'intérêt. Contrairement à l'association qui peut être potentiellement *bi-directionnelle*, l'intervention vise à séparer ce qui relève du mécanisme causale (l'intervention $X$) et ce qui relève du phénomène causé/déterminé (le phénomène d'intérêt $Y$).
+
+Comme indiqué plus haut, l'intervention peut-être interprétée de manière très flexible : elle peut concerner des aspects très spécifiques et localisée (e.g. la position d'une image dans un document de texte) ou des aspects plus généraux et holistiques (e.g. une théorie de l'apprentissage).
+
+En reprenant les exemples dans l'image de l'échelle proposée plus haut, on peut imaginer qu'un-e enseignant-e décide de mettre à disposition de étudiant-es l'enregistrement de l'intégralité de ses cours. Cette intervention est une action, pondérée et planifiée, qui vise modifier la réalité, c'est-à-dire obtenir un effet d'intérêt -- dans ce cas, faciliter l'apprentissage des contenus du cours.
+
+On peut imaginer que l'enseignant-e essaie d'évaluer l'effet de l'intervention en utilisant l'un des questionnaires standard d'évaluation des cours qui demandent aux étudiant-es de quantifier leurs connaissances avant et après le cours. On peut considérer en effet le cours comme une forme d'intervention.
+
+```{r intervention-before-after, fig.height=2.5, fig.width=4, fig.cap="Données simulées sur les connaissances avant et après le cours (intervention). Les barres représentent des intervalles de confiance à 95%."}
+before_after <- tibble(
+  participant = paste0("P", 1:50),
+  avant = rnorm(50, 3, 3),
+  apres = avant + rnorm(50, 4, 2)
+)
+
+before_after |>
+  pivot_longer(-participant, names_to = "quand", values_to = "evaluation") |>
+  mutate(
+    quand = factor(quand, levels = c("avant", "apres"), labels = c("Avant", "Après")),
+    evaluation = round(rescale(evaluation, to = c(1,7)))
+  ) |> 
+  ggplot(aes(x = quand, y = evaluation, color = quand)) +
+    geom_jitter(alpha = 0.2) +
+    stat_summary(fun.data = mean_cl_normal, geom = "errorbar", width = 0.3, position = position_dodge(width = 0.1)) +
+  stat_summary(fun = mean, geom = "point", size = 3, shape = 15, position = position_dodge(width = 0.6)) +
+  labs(x = NULL, y = "Connaissances") +
+  theme(legend.position = "none")
+    
+```
+
+Les deux distributions de données suggèrent qu'il existe un effet entre avant et après. Cependant, il n'est pas possible de déterminer si cet effet est dû à l'intervention *mettre à disposition l'enregistrement des cours*. En effet, on ne peut pas distinguer l'intervention d'autres facteurs. Le gain de connaissance pourrait être dû au cours en général, mais également à d'autres cours dans la même formation. On ne peut paradoxalement même pas écarter la possibilité que l'effet aurait été plus grand si les enregistrement vidéos n'étaient pas à disposition. Les étudiant-es auraient pu perdre du temps à regarder l'intégralité des enregistrement au lieu d'utiliser ce temps pour faire d'autres activités plus propice à l'apprentissage.
+
+L'intervention est l'élément centrale de la méthode expérimentale, mais elle n'est en soi pas suffisante pour établir un mécanisme de cause à effet. Cette marche de l'échelle est caractérisée par l'action planifiée et pondérée. Les questions qu'on peut se poser à ce stade sont par example :
+
+-   Comment je peux obtenir $Y$ ?
+
+-   Que se passe-t-il si je fais ... ?
+
+-   Est-ce que si je modifie *X*, *Y* va être affecté par cette modification ?
 
 ### Contre-Factuels
 
