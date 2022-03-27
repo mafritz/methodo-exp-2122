@@ -1,5 +1,5 @@
 ---
-title: "Fondements empiriques de la méthode expérimentale"
+title: "Fondements empiriques de la méthode expérimentale en technologie éducative"
 author:
   - Mattia A. Fritz
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
@@ -19,7 +19,8 @@ output:
       #after_body: "doc-suffix.tex"
 bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
-#abstract: "This is my abstract."
+abstract: |
+  La recherche expérimentale est l'une des méthodes de recherche utilisées en technologie éducative. Son intérêt principal réside dans la tentative d'expliquer ou prédire l'effet d'une intervention, pondérée et planifiée, sur un ou plusieurs phénomènes d'intérêt. Pour obtenir ce résultat, la méthode expérimentale utilise un *micro-monde* dans lequel les chercheurs *manipulent* une ou plusieurs variables dites indépendantes, pour en établir l'effet sur une mesure, dite variable dépendante, représentative d'un phénomène d'intérêt. Ce document propose l'illustration de la méthode expérimentale en quatre étapes : justification, explication causale potentielle, processus génératif des données, et inférence. Les avantages et limites de cette méthode sont enfin analysés de manière critique. Ce document est complété par un autre document qui s'intéresse plus spécifiquement au rapport entre méthode expérimentale et analyse statistique.
 ---
 
 ```{r setup, include=FALSE}
@@ -30,9 +31,17 @@ source(here::here("assets", "settings", "custom.R"))
 
 # Introduction {.unnumbered}
 
-Ce document offre un survol des fondements empiriques de la méthode expérimentale.
+Ce document offre un survol des fondements empiriques de la méthode expérimentale appliqué à la recherche en technologie éducative. D'abord, les différentes sources de connaissance issues de la recherche empirique -- observations, simulations et expériences -- sont brièvement comparées. Le document s'intéresse ensuite aux expériences, en identifiant quatre étapes principales dans un processus de recherche expérimentale : la justification, l'explication causale potentielle, le processus génératif des données, et l'inférence. Chaque étape sera illustrée à l'aide de concepts et exemples. En guide de conclusion, la méthode expérimentale sera analysée en fonction de ses avantages et désavantages épistémologiques.
 
-**Document en construction, pour l'instant se référer aux slides disponibles dans l'espace Moodle du cours**
+Ce document est destiné à des étudiant-es sans une expérience préalable en recherche expérimentale. Il s'intéresse principalement aux fondements empiriques de la méthode expérimentale, c'est-à-dire la logique épistémologique qui confère aux expériences la capacité -- sous certaines conditions et lorsque plusieurs expériences sont cumulées -- d'évaluer/expliquer/prédire l'effet d'une intervention sur un phénomène d'intérêt.
+
+Le document est complété par trois autres ressources :
+
+-   Fondements statistiques de la méthode expérimentale
+
+-   Lire et interpréter des contributions expérimentales \*primaires\*
+
+-   Introduction au pré-enregistrement d'une recherche expérimentale
 
 # Sources de la connaissance empirique
 
@@ -61,7 +70,7 @@ On peut identifier 4 étapes principales dans une expérience :
 
 4.  L'**inférence** qui combine des outils statistiques et des connaissances dans le domaine pour déterminer à quel point le processus génératif de données (le micro-monde) fourni des éléments utiles et fiables qu'on peut généraliser au contexte plus large (le macro-monde/la réalité)
 
-![Les 4 étaptes d'une recherche expérimentale](images/etapes-methode-experimentale.png "Les 4 étaptes d'une recherche expérimentale")
+![Les 4 étaptes d'une recherche expérimentale](images/etapes-methode-experimentale.png "Les 4 étaptes d'une recherche expérimentale"){width="13.2cm"}
 
 # Justification
 
@@ -145,7 +154,7 @@ D'un point de vue logique, la fonction causale est simple à déclarer en termes
 
 Le contexte de la technologie éducative est particulièrement sensible à cette complexité, car il regroupe plusieurs types d'interaction entre les technologies éducatives, les processus d'apprentissage, et des facteurs qui peuvent influencer les unes, les autres ou les deux en même temps. On peut néanmoins essayer de synthétiser la recherche en technologie éducative d'un point de vue causale comme l'investigation des effets des technologies éducatives sur les processus d'apprentissage, avec des facteurs qui peuvent intervenir dans cette relation causale, comme illustré dans l'image ci-dessous.
 
-![Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation.](images/techno-educative-apprentissage.png "Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation.")
+![Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation.](images/techno-educative-apprentissage.png "Relation causale entre technologies éducatives et processus d'apprentissage, avec des facteurs qui peuvent intervenir dans la relation."){width="15.6cm"}
 
 Du côté des technologies éducatives on peut trouver les *Learning Management Systems*, les principes multimédia, les jeux vidéos pédagogiques, etc. L'apprentissage peut être à son tour divisé dans des processus tels que la compréhension, la capacité a collaborer, la résolution de problèmes, etc. Parmi les facteurs qui peuvent intervenir dans cette relation figurent les connaissances préalables, l'expérience utilisateur dans l'appropriation et utilisation des technologies, le niveau d'expertise, et ainsi de suite.
 
@@ -207,9 +216,9 @@ Imaginons que les responsables du Master émettent l'hypothèse que l'obtention 
 
 ## L'échelle de causalité
 
-Dans ces travaux à propos de la causalité, Pearl [@pearl2000; @pearl2016; @pearl2018book] propose d'imaginer une échelle avec trois marche. Chaque marche qui est montée permet de s'approcher davantage à l'explication d'un mécanisme causale.
+Dans ces travaux à propos de la causalité, Pearl [@pearl2000; @pearl2016; @pearl2018book] propose d'imaginer une échelle avec trois marches nommées dans l'ordre depuis le bas de l'échelle **association**, **intervention**, et **contre-factuels**. Chaque marche qui est montée permet de s'approcher davantage à l'explication d'un mécanisme causale à travers des activités, questions et réponses potentielles différentes, comme illustré dans l'image ci-dessous.
 
-![L'échelle de causalité avec trois marches. Adapté de @pearl2018book](images/echelle-causalite.png "L'échelle de causalité avec trois marches. Adapté de @pearl2018book")
+![L'échelle de causalité avec trois marches. Adapté de @pearl2018book](images/echelle-causalite.png "L'échelle de causalité avec trois marches. Adapté de @pearl2018book"){width="11cm"}
 
 ### Association
 
@@ -219,11 +228,11 @@ Une association peut être déterminé de manière systématique par exemple à 
 
 Une autre manière de déterminer systématiquement une association consiste dans les études dites *corrélationnelles*, dans lesquelles le terme *association* est remplacé justement par le terme *corrélation* qui présente une connotation statistique précise. On peut en effet calculer la corrélation entre deux phénomènes mesurés quantitativement sur une échelle dans laquelle :
 
--   Un score s'approchant de -1 témoigne d'une corrélation *négative*, caractérisée par le fait que A et B ont la tendance à varier de manière opposée : une valeur élevé de A est associé à une faible valeur de B (ou vice-versa) ; ou une valeur faible de A est associée à une valeur élevée de B (ou vice-versa).
+-   Un score s'approchant de -1 témoigne d'une corrélation *négative*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière opposée : une valeur élevé de $X$ est associé à une faible valeur de $Y$ (ou vice-versa) ; ou une valeur faible de $X$ est associée à une valeur élevée de $Y$ (ou vice-versa).
 
 -   Un score s'approchant de 0 témoigne l'absence d'une corrélation, c'est-à-dire que les deux phénomène ont la tendance à varier sans un pattern identifiable (e.g. si l'un est élevé, l'autre peut être parfois élevé aussi, parfois faible, et parfois moyen).
 
--   Un score s'approchant de 1 témoigne d'une corrélation *positive*, caractérisée par le fait que A et B ont la tendance à varier de manière spéculaire : une valeur élevé de A est associé à une valeur élevé de B (ou vice-versa) et une faible valeur de A est associé à une faible valeur de B (ou vice-versa).
+-   Un score s'approchant de 1 témoigne d'une corrélation *positive*, caractérisée par le fait que $X$ et $Y$ ont la tendance à varier de manière spéculaire : une valeur élevé de $X$ est associé à une valeur élevé de $Y$ (ou vice-versa) et une faible valeur de $X$ est associé à une faible valeur de $Y$ (ou vice-versa).
 
 ```{r correlations-examples, fig.height=3, fig.width=6, fig.cap="Exemple de corrélations"}
 set.seed(3)
@@ -254,13 +263,20 @@ correlations <- bind_rows(negative, absence, positive) |>
 ggplot(correlations, aes(x = x, y = y)) +
   geom_point(color = "lightblue") +
   geom_smooth(formula = y ~ x, method = "lm", se = FALSE) +
-  labs(x = "Phénomène B", y = "Phénomène A") +
+  labs(x = "X", y = "Y") +
   facet_wrap(~type)
 
 ```
 
+À ce stade stade, l'activité typique du chercheur est d'observer/regarder attentivement le contexte ou les phénomènes d'intérêt et se poser des questions telles que :
+
+-   Que se passe-t-il si je vois/observe ... ?
+-   De quelle manière les phénomènes sont-ils reliées ?
+-   Comment voir $X$ permet de savoir quelques chose ou changer d'avis sur $Y$ ?
 
 ### Intervention
+
+Une intervention est une action pondérée et planifiée qui est exécutée sur la réalité afin de produire un effet sur l'effet d'intérêt. Contrairement à l'association qui peut être potentiellement *bi-directionnelle*, l'intervention vise à séparer ce qui relève du mécanisme causale (l'intervention $X$) et ce qui relève du phénomène d'intérêt (le phénomène $Y$).
 
 ### Contre-Factuels
 

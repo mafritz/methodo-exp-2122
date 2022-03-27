@@ -1,5 +1,5 @@
 ---
-title: "Template pour le pré-enregistrement d'une recherche expérimentale"
+title: "Introduction au pré-enregistrement d'une recherche expérimentale"
 author:
   - Mattia A. Fritz
 date: "`r format(Sys.time(), '%d/%m/%Y')`"
@@ -7,8 +7,6 @@ lang: fr
 linestretch: 1.2
 fontsize: 12pt
 output:
-  word_document:
-    number_sections: true
   pdf_document:
     toc: false
     toc_depth: 1
@@ -19,6 +17,8 @@ output:
       in_header: "../assets/settings/preamble.tex"
       before_body: "../assets/settings/before-body.tex"
       #after_body: "doc-suffix.tex"
+  word_document:
+    number_sections: true
 bibliography: ../assets/bib/references.bib
 csl: ../assets/settings/apa.csl
 abstract: |
