@@ -368,7 +368,7 @@ ggplot(idealized_experiment, aes(x = condition, y = apprentissage, color = condi
 
 ```
 
-En même temps, pour qu'on puisse parler d'un principe, il faudrait accompagner les données d'une explication causale qui illustre les raisons à la base du pattern de données obtenues. À ce stade de l'échelle de causalité, donc, les activités impliquées sont *imaginer*, *penser de manière rétrospective*, et *comprendre*. Les questions qu'on peut se poser à ce stade sont :
+À ce stade de l'échelle de causalité, donc, les activités impliquées sont *imaginer*, *penser de manière rétrospective*, et *comprendre*. Les questions qu'on peut se poser à ce stade sont :
 
 -   Que serait-il passé si j'avais fait différemment ?
 
@@ -376,9 +376,13 @@ En même temps, pour qu'on puisse parler d'un principe, il faudrait accompagner 
 
 -   Sans $X$, est-ce $Y$ se serait manifesté également ?
 
-Pour mettre en place une expérience *idéalisée* et essayer de répondre à ce type de questions contre-factuels, les chercheurs créent un *micro-monde* dans lequel générer, récolter et analyser des données de manière instrumentale aux objectifs de recherche. L'accumulation d'expériences *idéalisées* est censée permettre d'atteindre une meilleure capacité d'expliquer/prédire les effets des interventions sur les phénomènes d'intérêt. En même temps, un *micro-monde* est par nécessité une *simplification/réduction* de toute la compléxité présente dans la réalité/le *macro-monde*. Les choix épistémologiques et méthodologiques prises par les chercheurs individuellement et les communautés de recherche dans leur ensemble, ainsi que la reconnaissance des limites du *micro-monde* sont donc déterminantes.
+## Hypothèses théoriques/causales
 
-En synthèse, la méthode expérimentale facilite -- mais ne garantit pas -- la montée de l'échelle de causalité.
+L'échelle de causalité permet de penser en termes d'effets.
+
+L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes causales. En même temps, il sedonner une explication qui illustre les raisons à la base du pattern de données obtenues. À cet effet, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales.
+
+Pour mettre en place une expérience *idéalisée* et essayer de répondre à ce type de questions contre-factuels, les chercheurs créent un *micro-monde* dans lequel générer, récolter et analyser des données de manière instrumentale aux objectifs de recherche. L'accumulation d'expériences *idéalisées* est censée permettre d'atteindre une meilleure capacité d'expliquer/prédire les effets des interventions sur les phénomènes d'intérêt. En même temps, un *micro-monde* est par nécessité une *simplification/réduction* de toute la complexité présente dans la réalité/le *macro-monde*. Les choix épistémologiques et méthodologiques prises par les chercheurs individuellement et les communautés de recherche dans leur ensemble, ainsi que la reconnaissance des limites du *micro-monde* sont donc déterminantes.
 
 # Processus génératif des données
 
