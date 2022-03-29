@@ -10,10 +10,10 @@ theme_set(theme_modern())
 
 # Paramètres du macro-monde (que nous ne connaissons normalement pas !)
 moyenne_groupe_A <- 100
-ecart_type_groupe_A <- 40
+ecart_type_groupe_A <- 15
 
 moyenne_groupe_B <- 115
-ecart_type_groupe_B <- 40
+ecart_type_groupe_B <- 15
 
 # Paramètres du micro-monde
 n_participants_per_groupe <- 20
@@ -61,7 +61,8 @@ model <- t.test(
   data = data_combined,
   alternative = "two.sided",
   paired = FALSE,
-  var.equal = FALSE
+  var.equal = FALSE,
+  mu = 0
 )
 
 # Afficher les résultats "brutes"
