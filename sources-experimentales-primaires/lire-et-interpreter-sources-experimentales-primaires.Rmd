@@ -54,7 +54,7 @@ Les contributions expérimentales *primaires* sont assez facilement reconnaissab
 
 ## Introduction
 
-L'introduction sert à justifier la recherche en termes de sa contribution au réseau de connaissances qui composent la littérature scientifique. On peut résumer l'introduction en trois éléments étroitement liées :
+L'introduction sert à justifier la recherche en termes de sa contribution au réseau de connaissances qui composent la littérature scientifique. On peut résumer l'introduction en deux éléments étroitement liées :
 
 1.  **Qu'est-ce qu'on sait déjà et comment on le sait\
     **Si l'introduction prévoit de sous-sections, ces informations se trouvent souvent dans des sous-sections telles que :
@@ -144,7 +144,7 @@ ef_model <- effectsize(model)
 
 Les participant-es ont manifesté un intérêt moyen pour la sous-échelle *technology* du questionnaire STEM-CIS [@kier2014] de $M$ = `r data$stem_cis |> mean() |> printnum()` ($SD$ = `r data$stem_cis |> sd() |> printnum()`). Un résultat similaire au score observé par Kier et collègues (*ibid.*) qui a été de $M$ = 26.27 ($SD$=10.41). Dans le groupe branché, les participant-es ont manifesté un intérêt avec $M$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "B") |> pull(stem_cis) |> sd() |> printnum()`) ; dans le groupe débranché avec $M$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> mean() |> printnum()` ($SD$ = `r data |> filter(groupe == "D") |> pull(stem_cis) |> sd() |> printnum()`).
 
-Un *t*-test de Welch a été mené avec le score à la sous-échelle *technology* du questionnaire STEM-CIS (*ibid.*) comme variable dépendante et le type d'activité proposé à l'élève comme variable indépendante (branchée vs. débranchée). Les résultats indiquent que le groupe *branchée* a manifesté un mineur intérêt pour une carrière dans le domaine STEM comparé au groupe *débranché* : `r apa_print(model)$full_result`. La différence d'environ 3 points sur la sous-échelle STEM-CIS correspond à une taille de l'effet de Cohen's $d$ = `r printnum(ef_model$d)` [`r printnum(ef_model$CI_low)`; `r printnum(ef_model$CI_high)`].
+Un *t*-test de Welch a été mené avec le score à la sous-échelle *technology* du questionnaire STEM-CIS (*ibid.*) comme variable dépendante et le type d'activité proposé à l'élève comme variable indépendante (branchée vs. débranchée). Les résultats indiquent que le groupe *branchée* a manifesté un mineur intérêt pour une carrière dans le domaine STEM comparé au groupe *débranché* : `r apa_print(model)$full_result`. La différence d'environ 3 points sur la sous-échelle STEM-CIS correspond à une taille de l'effet de Cohen's $d$ = `r printnum(ef_model$d)` \[`r printnum(ef_model$CI_low)`; `r printnum(ef_model$CI_high)`\].
 
 ## Discussion
 
