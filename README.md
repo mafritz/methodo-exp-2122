@@ -15,7 +15,28 @@ Le cours s'intéresse à la méthode expérimentale appliquée à la technologie
 Le cours propose une introduction à la méthode expérimentale appliquée à la technologie éducative. Le cours est organisé en deux parties :
 
 1.  Fondements empiriques de la méthode expérimentale
+
+    -   [Slides de présentation](https://github.com/mafritz/methodo-exp-2122/blob/main/fondements-empiriques/slides-fondements-empiriques-methode-experimentale.pdf)
+
+    -   [Texte d'accompagnement](https://github.com/mafritz/methodo-exp-2122/blob/main/fondements-empiriques/fondements-empiriques-methode-experimentale.pdf) (en construction)
+
 2.  Fondements statistiques de la méthode expérimentale
+
+    -   Slides de présentation (en construction)
+
+    -   Texte d'accompagnement (en construction)
+
+Les deux parties sont complétées par des ressources/tutoriels :
+
+-   [Lire et interpréter des contributions expérimentales *primaires*](https://github.com/mafritz/methodo-exp-2122/blob/main/sources-experimentales-primaires/lire-et-interpreter-sources-experimentales-primaires.pdf)
+
+-   Introduction au pré-enregistrement d'une recherche
+
+    expérimentale
+
+    -   [Format .pdf pour lecture](https://github.com/mafritz/methodo-exp-2122/blob/main/pre-enregistrement/template_pre-enregistrement_experience.pdf)
+
+    -   [Format .docx éditable](https://github.com/mafritz/methodo-exp-2122/blob/main/pre-enregistrement/template_pre-enregistrement_experience.docx)
 
 ### Compétences et connaissances envisagées
 
@@ -322,6 +343,32 @@ La note finale est calculée de la manière suivante :
 -   La somme entre les points de la fiche de pré-enregistrement de votre propre expérience et les points du poster (de 0 à 6)
 
 -   L'auto-évaluation (de 0 à 0.5) sert en tant que bonus et sera ajoutée à la somme des deux livrables du groupe
+
+# Ressources
+
+Quelques ressources complémentaires ou pour aller plus loin. Les ressources sont organisées en ordre de *difficulté/spécialisation* croissante
+
+### MOOC
+
+-   [Exercer son esprit critique à l'ère informationnelle](https://www.coursera.org/learn/esprit-critique)
+
+-   [Philosophy of Science](https://www.coursera.org/learn/philosophy-of-science)
+
+-   [Improving Your Statistical Inferences](https://www.coursera.org/learn/statistical-inferences)
+
+-   [Improving Your Statistical Questions](https://www.coursera.org/learn/improving-statistical-questions)
+
+### Livres
+
+-   Pearl, J., & Mackenzie, D. (2018). *The book of why : The new science of cause and effect*. Basic Books.
+
+-   Pearl, J., Glymour, M., & Jewell, N. P. (2016). *Causal inference in statistics : A primer*. Wiley.
+
+-   Maxwell, S. E., Delaney, H. D., & Kelley, K. (2017). *Designing experiments and analyzing data : A model comparison perspective* (Third edition). Routledge.
+
+### Articles
+
+Différentes collections d'articles sont disponibles dans l'espace Moodle du cours.
 
 # Licence
 
