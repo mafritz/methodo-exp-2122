@@ -22,7 +22,7 @@ Le cours propose une introduction à la méthode expérimentale appliquée à la
 En combinant les deux parties du cours, vous allez acquérir les compétences et connaissances suivantes :
 
 -   Comprendre les présupposées épistémologiques de la méthode expérimentale comme outil de recherche transversale à différents domaines
--   Identifier des questions de recherche/hypothèses en recherche expérimentales comme des mécanismes causales potentiels qui expliquent l'effet d'une intervention, pondérée et planifiée, sur un phénomène d'intérêt
+-   Identifier des questions de recherche/hypothèses en recherche expérimentales comme des mécanismes causaux potentiels qui expliquent l'effet d'une intervention, pondérée et planifiée, sur un phénomène d'intérêt
 -   Comprendre les enjeux et limites dans la génération des données expérimentales en fonction des choix épistémologiques et méthodologiques (échantillon, plan expérimental, matériel, procédure, mesures valides, ...)
 -   Identifier des mécanismes d'inférence statistique et *pratique*, ainsi que la difficile articulation entre les deux
 -   S'initier à la lecture et interprétation des articles scientifiques reportant des expériences
@@ -36,7 +36,7 @@ Pour atteindre les objectifs pédagogiques du cours, vous allez produire les él
 
     -   justification scientifique et éthique de l'expérience ;
 
-    -   explication causale potentiel (hypothèse théorique) de l'effet d'une l'intervention sur un phénomène d'intérêt ;
+    -   explication causale potentielle (hypothèse théorique) de l'effet d'une l'intervention sur un phénomène d'intérêt ;
 
     -   planification méthodologique de la génération, récolte et analyse de données expérimentale vissant établir la présence (ou absence) d'un effet d'une variable indépendante (VI) sur une variable dépendante (VD)
 
@@ -71,7 +71,7 @@ Cette partie du cours introduit les contenus, objectifs et l'environnement d'app
 
 -   Illustration des objectifs
 
-### Présentation et activité sur le fondements empiriques de la méthode expérimentale
+### Présentation et activité sur les fondements empiriques de la méthode expérimentale
 
 Cette partie du cours présente les fondements empiriques de la méthode expérimentale à travers l'articulation d'une présentation avec une activité portant sur une thématique de recherche en technologie éducative : les effets du support de lecture (papier vs. écran) sur différents phénomènes liés à l'apprentissage (compréhension, capacité attentionnelle, etc.).
 
@@ -107,7 +107,7 @@ La présentation est précédée par la vision d'une courte vidéo, et ensuite d
 
     -   Déterminez vos deux variables dépendantes (**VD**) en spécifiant, même de manière abstraite, comment vous allez mesurer ces phénomènes
 
-    -   Faites un liste des éléments qui pourraient influencer/perturber l'expérience (e.g. variables à contrôler/neutraliser, précautions éthiques, ...)
+    -   Faites une liste des éléments qui pourraient influencer/perturber l'expérience (e.g. variables à contrôler/neutraliser, précautions éthiques, ...)
 
 ### Présentation d'une expérience en technologie éducative
 
@@ -211,13 +211,13 @@ La période 5 prévoit deux livrables (un individuel, un par groupes) et un comm
 
 -   Remplissez les sections/points de la fiche qui vous semblent appropriés, en sachant que les points 4.3 et 4.4, ainsi que la section 6 seront abordés dans les fondements statistiques en P6. Les plus ambitieux peuvent déjà se lancer si souhaité, de toute manière la première version est commentée par vos collègues et reçoit un feedback formative de l'équipe enseignante
 
+-   Il vous faudra explorer quelques articles empiriques et ensuite en lire deux ou trois en profondeur pour vous aider/inspirer. Référez-vous à la ressource sur [la lecture et interprétation des sources expérimentales primaires](https://github.com/mafritz/methodo-exp-2122/blob/main/sources-experimentales-primaires/lire-et-interpreter-sources-experimentales-primaires.pdf) (c.f. méthode QALMRI)
+
 -   Il n'y a pas de limites pour la longueur de la fiche, mais soyez raisonnable. Votre fiche sera commentée par vos collègues. Référez-vous à la fiche proposée par l'équipe enseignante après le premier livrable.
 
 **Conseils** :
 
 -   Freinez vos ambitions : concevoir une expérience est une procédure complexe et qui nécessite du temps. Concentrez-vous sur les aspects logiques/causales qui détermine le rapport entre votre intervention (VI) et vos phénomènes d'intérêt (VD)
-
--   Il vous faudra lire des articles empiriques pour vous aider/inspirer. Référez-vous à la ressources sur [la lecture et interprétation des sources expérimentales primaires](https://github.com/mafritz/methodo-exp-2122/blob/main/sources-experimentales-primaires/lire-et-interpreter-sources-experimentales-primaires.pdf) (c.f. méthode QALMRI)
 
 -   N'hésitez pas à reprendre des protocoles expérimentaux qui vous semblent intéressants et modifier des éléments (e.g. changer la VI/VD, le public cible, proposer une hypothèse alternative, etc.)
 
