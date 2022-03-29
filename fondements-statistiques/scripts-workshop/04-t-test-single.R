@@ -68,5 +68,5 @@ model <- t.test(
 # Afficher les résultats "brutes"
 print(model)
 
-# Afficher une synthèse textuelle (ignorer le warning)
-report(model)
+# Afficher une synthèse textuelle
+report(model, verbose = FALSE)
