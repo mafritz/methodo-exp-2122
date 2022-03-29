@@ -1,0 +1,6 @@
+set.seed(8923)
+library(tidyverse)
+library(see)
+library(effectsize)
+library(report)
+theme_set(theme_modern())
