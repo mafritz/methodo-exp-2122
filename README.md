@@ -30,9 +30,7 @@ Les deux parties sont complétées par des ressources/tutoriels :
 
 -   [Lire et interpréter des contributions expérimentales *primaires*](https://github.com/mafritz/methodo-exp-2122/blob/main/sources-experimentales-primaires/lire-et-interpreter-sources-experimentales-primaires.pdf)
 
--   Introduction au pré-enregistrement d'une recherche
-
-    expérimentale
+-   Introduction au pré-enregistrement d'une recherche expérimentale
 
     -   [Format .pdf pour lecture](https://github.com/mafritz/methodo-exp-2122/blob/main/pre-enregistrement/template_pre-enregistrement_experience.pdf)
 
@@ -42,7 +40,7 @@ Les deux parties sont complétées par des ressources/tutoriels :
 
 En combinant les deux parties du cours, vous allez acquérir les compétences et connaissances suivantes :
 
--   Comprendre les présupposées épistémologiques de la méthode expérimentale comme outil de recherche transversale à différents domaines
+-   Comprendre les présupposés épistémologiques de la méthode expérimentale comme outil de recherche transversale à différents domaines
 -   Identifier des questions de recherche/hypothèses en recherche expérimentales comme des mécanismes causaux potentiels qui expliquent l'effet d'une intervention, pondérée et planifiée, sur un phénomène d'intérêt
 -   Comprendre les enjeux et limites dans la génération des données expérimentales en fonction des choix épistémologiques et méthodologiques (échantillon, plan expérimental, matériel, procédure, mesures valides, ...)
 -   Identifier des mécanismes d'inférence statistique et *pratique*, ainsi que la difficile articulation entre les deux
@@ -348,7 +346,7 @@ La note finale est calculée de la manière suivante :
 
 Quelques ressources complémentaires ou pour aller plus loin. Les ressources sont organisées en ordre de *difficulté/spécialisation* croissante
 
-### MOOC
+## MOOC
 
 -   [Exercer son esprit critique à l'ère informationnelle](https://www.coursera.org/learn/esprit-critique)
 
@@ -358,7 +356,7 @@ Quelques ressources complémentaires ou pour aller plus loin. Les ressources son
 
 -   [Improving Your Statistical Questions](https://www.coursera.org/learn/improving-statistical-questions)
 
-### Livres
+## Livres
 
 -   Pearl, J., & Mackenzie, D. (2018). *The book of why : The new science of cause and effect*. Basic Books.
 
@@ -366,7 +364,7 @@ Quelques ressources complémentaires ou pour aller plus loin. Les ressources son
 
 -   Maxwell, S. E., Delaney, H. D., & Kelley, K. (2017). *Designing experiments and analyzing data : A model comparison perspective* (Third edition). Routledge.
 
-### Articles
+## Articles
 
 Différentes collections d'articles sont disponibles dans l'espace Moodle du cours.
 
