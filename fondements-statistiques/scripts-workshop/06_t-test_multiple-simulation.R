@@ -18,8 +18,6 @@ ecart_type_groupe_B <- 15
 # Paramètres du micro-monde
 n_participants_per_groupe <- 20
 
-
-
 # Effectuer 1000 t-tests de Welch avec hétérogénité de la variance
 
 replications <- replicate(1000, {

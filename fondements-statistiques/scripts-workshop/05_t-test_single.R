@@ -5,7 +5,6 @@ library(effectsize)
 library(report)
 theme_set(theme_modern())
 
-
 # Test inférentiel pour comparer deux groupes indépendants ----------------
 
 # Paramètres du macro-monde (que nous ne connaissons normalement pas !)
