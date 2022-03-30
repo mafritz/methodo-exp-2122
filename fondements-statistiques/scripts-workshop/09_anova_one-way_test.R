@@ -1,0 +1,89 @@
+set.seed(8923)
+library(tidyverse)
+library(see)
+library(effectsize)
+library(report)
+library(afex)
+library(emmeans)
+theme_set(theme_modern())
+
+# Test inférentiel pour comparer trois groupes indépendants ---------------
+
+# Paramètres du macro-monde (que nous ne connaissons normalement pas !)
+moyenne_groupe_A <- 100
+ecart_type_groupe_A <- 15
+
+moyenne_groupe_B <- 115
+ecart_type_groupe_B <- 15
+
+moyenne_groupe_C <- 130
+ecart_type_groupe_C <- 15
+
+# Paramètres du micro-monde
+n_participants_per_groupe <- 20
+
+# Génération données groupe A
+data_groupe_A <- tibble(
+  groupe = "A",
+  mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_A, sd = ecart_type_groupe_A)
+)
+
+# Génération données groupe B
+data_groupe_B <- tibble(
+  groupe = "B",
+  mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_B, sd = ecart_type_groupe_B)
+)
+
+# Génération données groupe C
+data_groupe_C <- tibble(
+  groupe = "C",
+  mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_C, sd = ecart_type_groupe_C)
+)
+
+# Mettre les trois groupes dans le même jeu de données et ajouter identifiant participant
+data_combined <- bind_rows(data_groupe_A, data_groupe_B, data_groupe_C) |>
+  mutate(
+    participant = paste0("P", 1:nrow(data_combined))
+  )
+
+# Montrer graphiquement les résultats
+ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
+  geom_jitter(alpha = 0.2) +
+  stat_summary(
+    fun.data = mean_cl_normal,
+    geom = "errorbar",
+    width = 0.3,
+    position = position_dodge(width = 0.1)
+  ) +
+  stat_summary(
+    fun = mean, geom = "point",
+    size = 3,
+    shape = 15,
+    position = position_dodge(width = 0.6)
+  ) +
+  labs(
+    x = "Modalité de la seule VI",
+    y = "Mesure", title = "Graphique du test. Barres = CI 95%"
+  ) +
+  scale_color_flat() +
+  theme(legend.position = "none")
+
+# Effectuer l'ANOVA one-way (omnibus) pour tester si au moins deux moyennes sont différentes
+
+model <- aov_car(
+  formula = mesure ~ groupe + Error(participant),
+  data = data_combined
+)
+
+# Voir le tableau de l'ANOVA
+nice(model)
+
+# Effectuer les comparaison entre les trois moyennes
+comparaisons <- emmeans(
+  object = model,
+  spec = pairwise ~ groupe,
+  adjust = "tukey" # Contrôler test multiples. Autre possibilité : "bonferroni"
+)
+
+# Voir moyennes marginales et contrastes inférentiels
+print(comparaisons)
