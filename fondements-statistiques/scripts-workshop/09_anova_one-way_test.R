@@ -71,8 +71,8 @@ ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
 
 # Effectuer l'ANOVA one-way (omnibus) pour tester si au moins deux moyennes sont différentes
 
-model <- aov_car(
-  formula = mesure ~ groupe + Error(participant),
+model <- aov_4(
+  formula = mesure ~ groupe + (1|participant),
   data = data_combined
 )
 

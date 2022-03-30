@@ -1,0 +1,100 @@
+set.seed(8923)
+library(tidyverse)
+library(see)
+library(effectsize)
+library(report)
+library(afex)
+library(emmeans)
+library(scales)
+theme_set(theme_modern())
+
+
+# Test inférentielle pour deux facteurs expérimentaux (2 X 2 ANOVA) -------
+
+# Paramètres du macro-monde (que nous ne connaissons normalement pas !)
+moyenne_groupe_0_0 <- 100
+ecart_type_groupe_0_0 <- 15
+
+moyenne_groupe_0_1 <- 115
+ecart_type_groupe_0_1 <- 15
+
+moyenne_groupe_1_0 <- 130
+ecart_type_groupe_1_0 <- 15
+
+moyenne_groupe_1_1 <- 160
+ecart_type_groupe_1_1 <- 15
+
+# Paramètres du micro-monde
+n_participants_per_groupe <- 20
+
+# Génération données groupe 00 (Sans Sans)
+data_groupe_0_0 <- tibble(
+  vi1 = 0,
+  vi2 = 0,
+  mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_0_0, sd = ecart_type_groupe_0_0)
+)
+
+# Génération données groupe 01 (Sans Avec)
+data_groupe_0_1 <- tibble(
+  vi1 = 0,
+  vi2 = 1,
+  mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_0_1, sd = ecart_type_groupe_0_1)
+)
+
+# Génération données groupe 10 (Avec Sans)
+data_groupe_1_0 <- tibble(
+  vi1 = 1,
+  vi2 = 0,
+  mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_1_0, sd = ecart_type_groupe_1_0)
+)
+
+# Génération données groupe 11 (Avec Avec)
+data_groupe_1_1 <- tibble(
+  vi1 = 1,
+  vi2 = 1,
+  mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_1_1, sd = ecart_type_groupe_1_1)
+)
+
+# Mettre les 4 groupes dans le même jeu de données et ajouter identifiant participant + ordre facteurs
+data_combined <- bind_rows(data_groupe_0_0, data_groupe_0_1, data_groupe_1_0, data_groupe_1_1)
+data_combined <- data_combined |>
+  mutate(
+    participant = paste0("P", 1:nrow(data_combined)),
+    vi1 = factor(vi1, labels = c("Sans", "Avec")), # Modifier les labels des modalités vi1
+    vi2 = factor(vi2, labels = c("Sans", "Avec")) # Modifier les labels de modalités vi2
+  )
+
+
+# Test avec interaction entre facteurs ------------------------------------
+
+model <- aov_4(
+  formula = mesure ~ vi1 * vi2 + (1|participant),
+  data = data_combined
+)
+
+# Voir les résultats du test
+nice(model)
+
+# Voir les données avec l'effet d'interaction possible
+afex_plot(model, x = "vi1", trace = "vi2")
+
+
+# Comparaisons/contrasts avec effet de l'interaction ----------------------
+
+comparison_with_interaction <- emmeans(
+  model,
+  specs = ~ vi1 * vi2
+) |> pairs()
+
+
+# Comparaisons/contrasts sans effet de l'interaction ----------------------
+
+main_effect_vi1 <- emmeans(
+  model,
+  specs = ~ vi1
+) |> pairs()
+
+main_effect_vi2 <- emmeans(
+  model,
+  specs = ~ vi2
+) |> pairs()

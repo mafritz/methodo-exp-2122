@@ -79,8 +79,8 @@ ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
 
 # Effectuer l'ANOVA one-way (omnibus) avec la troisième variable
 
-model <- aov_car(
-  formula = mesure ~ groupe + z + Error(participant),
+model <- aov_4(
+  formula = mesure ~ groupe + z + (1|participant),
   data = data_combined,
   factorize = FALSE
 )
