@@ -41,7 +41,8 @@ data_groupe_C <- tibble(
 )
 
 # Mettre les trois groupes dans le même jeu de données et ajouter identifiant participant
-data_combined <- bind_rows(data_groupe_A, data_groupe_B, data_groupe_C) |>
+data_combined <- bind_rows(data_groupe_A, data_groupe_B, data_groupe_C)
+data_combined <- data_combined |>
   mutate(
     participant = paste0("P", 1:nrow(data_combined))
   )
