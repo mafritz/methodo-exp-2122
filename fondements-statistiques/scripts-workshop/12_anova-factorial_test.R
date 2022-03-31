@@ -10,7 +10,7 @@ library(performance)
 theme_set(theme_modern())
 
 
-# Test inférentielle pour deux facteurs expérimentaux (2 X 2 ANOVA) -------
+# Test inférentiel pour deux facteurs expérimentaux (2 X 2 ANOVA) -------
 
 # Paramètres des donnés simulées ------------------------------------------
 
