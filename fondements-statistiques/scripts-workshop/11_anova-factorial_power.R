@@ -26,7 +26,7 @@ experimental_plan_design <- ANOVA_design(
   n = 50,
   # moyennes attendues/possibles
   mu = c(100, 115, 130, 160),
-  # écrat type attendu/possible
+  # écart type attendu/possible
   sd = 15,
   # labels facteurs/modalités
   labelnames = labels
