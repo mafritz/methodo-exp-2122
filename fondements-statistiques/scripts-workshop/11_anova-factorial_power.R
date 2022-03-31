@@ -10,7 +10,7 @@ theme_set(theme_modern())
 # 2. Les effets "principaux"
 # 3. Les effets d'interactions ?
 
-# On peut procéder avec une simulation des différentes factuers/modalités
+# On peut procéder avec une simulation des différentes facteurs/modalités
 
 labels <- c("VI1", "Sans", "Avec", "VI2", "Faible", "Forte")
 
