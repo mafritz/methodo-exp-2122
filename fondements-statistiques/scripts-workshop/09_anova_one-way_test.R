@@ -106,3 +106,4 @@ check_homogeneity(model)
 # Normalité des résidus
 plot(check_normality(model))
 plot(check_normality(model), type = "qq")
+plot(check_normality(model), type = "qq", detrend = TRUE)
