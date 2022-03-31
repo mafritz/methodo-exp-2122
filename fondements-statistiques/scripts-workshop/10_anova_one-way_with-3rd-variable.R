@@ -10,6 +10,8 @@ theme_set(theme_modern())
 
 # Test inférentiel avec troisième variable (e.g. contrôle) ---------------
 
+# Paramètres des donnés simulées ------------------------------------------
+
 # Paramètres du macro-monde (que nous ne connaissons normalement pas !)
 moyenne_groupe_A <- 100
 ecart_type_groupe_A <- 15
@@ -48,14 +50,18 @@ data_combined <- data_combined |>
     participant = paste0("P", 1:nrow(data_combined))
   )
 
-# Ajouter une troisième variable en relation avec la mesure
+
+# Ajouter une troisième variable en relation avec la mesure ---------------
+
 data_combined <- data_combined |>
   mutate(
     z = mesure + rnorm(nrow(data_combined), 100, 10), # Adapter le bruit pour voir ce qui change
     z = scale(z)[,1] # Centrer la variable M = 0, SD = 1
   )
 
-# Montrer graphiquement les résultats
+
+# Montrer graphiquement les résultats -------------------------------------
+
 ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
   geom_jitter(alpha = 0.2) +
   stat_summary(
@@ -77,7 +83,8 @@ ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
   scale_color_flat() +
   theme(legend.position = "none")
 
-# Effectuer l'ANOVA one-way (omnibus) avec la troisième variable
+
+# Effectuer l'ANOVA one-way (omnibus) avec la troisième variable ----------
 
 model <- aov_4(
   formula = mesure ~ groupe + z + (1|participant),
@@ -88,7 +95,9 @@ model <- aov_4(
 # Voir le tableau de l'ANOVA
 nice(model)
 
-# Effectuer les comparaison entre les trois moyennes
+
+# Effectuer les comparaison entre les trois moyennes ----------------------
+
 comparaisons <- emmeans(
   object = model,
   spec = pairwise ~ groupe,

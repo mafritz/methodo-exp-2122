@@ -6,6 +6,7 @@ library(report)
 library(afex)
 library(emmeans)
 library(scales)
+library(performance)
 theme_set(theme_modern())
 
 
@@ -98,3 +99,13 @@ main_effect_vi2 <- emmeans(
   model,
   specs = ~ vi2
 ) |> pairs()
+
+# Contrôler les postulats de l'ANOVA --------------------------------------
+
+# Homogénéité de la variance (les groupes ont une variance similaire) -> À utiliser avec précaution
+check_homogeneity(model)
+
+# Normalité des résidus
+plot(check_normality(model))
+plot(check_normality(model), type = "qq")
+plot(check_normality(model), type = "qq", detrend = TRUE)
