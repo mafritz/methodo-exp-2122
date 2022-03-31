@@ -5,9 +5,13 @@ library(effectsize)
 library(report)
 library(afex)
 library(emmeans)
+library(performance)
 theme_set(theme_modern())
 
 # Test inférentiel pour comparer trois groupes indépendants ---------------
+
+
+# Paramètres des donnés simulées ------------------------------------------
 
 # Paramètres du macro-monde (que nous ne connaissons normalement pas !)
 moyenne_groupe_A <- 100
@@ -47,7 +51,9 @@ data_combined <- data_combined |>
     participant = paste0("P", 1:nrow(data_combined))
   )
 
-# Montrer graphiquement les résultats
+
+# Montrer graphiquement les résultats -------------------------------------
+
 ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
   geom_jitter(alpha = 0.2) +
   stat_summary(
@@ -69,7 +75,8 @@ ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
   scale_color_flat() +
   theme(legend.position = "none")
 
-# Effectuer l'ANOVA one-way (omnibus) pour tester si au moins deux moyennes sont différentes
+
+# Effectuer l'ANOVA one-way (omnibus) -------------------------------------
 
 model <- aov_4(
   formula = mesure ~ groupe + (1|participant),
@@ -79,7 +86,9 @@ model <- aov_4(
 # Voir le tableau de l'ANOVA
 nice(model)
 
-# Effectuer les comparaison entre les trois moyennes
+
+# Effectuer les comparaison entre les trois moyennes ----------------------
+
 comparaisons <- emmeans(
   object = model,
   spec = pairwise ~ groupe,
@@ -88,3 +97,12 @@ comparaisons <- emmeans(
 
 # Voir moyennes marginales et contrastes inférentiels
 print(comparaisons)
+
+# Contrôler les postulats de l'ANOVA --------------------------------------
+
+# Homogénéité de la variance (les groupes ont une variance similaire) -> À utiliser avec précaution
+check_homogeneity(model)
+
+# Normalité des résidus
+plot(check_normality(model))
+plot(check_normality(model), type = "qq")
