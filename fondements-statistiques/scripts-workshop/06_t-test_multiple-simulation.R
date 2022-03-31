@@ -8,6 +8,8 @@ theme_set(theme_modern())
 
 # Simulation de plusieurs comparaisons entre deux moyennes ----------------
 
+# Paramètres des donnés simulées ------------------------------------------
+
 # Paramètres du macro-monde (que nous ne connaissons normalement pas !)
 moyenne_groupe_A <- 100
 ecart_type_groupe_A <- 15
@@ -18,7 +20,7 @@ ecart_type_groupe_B <- 15
 # Paramètres du micro-monde
 n_participants_per_groupe <- 20
 
-# Effectuer 1000 t-tests de Welch avec hétérogénité de la variance
+# Effectuer 1000 t-tests de Welch avec hétérogénité de la variance --------
 
 replications <- replicate(1000, {
   # Génération données groupe A
@@ -49,6 +51,8 @@ replications <- replicate(1000, {
   # Récupérer seulement la p-valeur
   model$p.value
 })
+
+# Afficher la distribution des p-valeurs obtenues à travers les tests -----
 
 hist(
   replications,

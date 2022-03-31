@@ -8,6 +8,8 @@ theme_set(theme_modern())
 
 # Test inférentiel pour tester l'équivalence de deux moyennes -------------
 
+# Paramètres des donnés simulées ------------------------------------------
+
 # Paramètres du macro-monde (que nous ne connaissons normalement pas !)
 moyenne_groupe_A <- 100
 ecart_type_groupe_A <- 15
@@ -36,7 +38,7 @@ data_groupe_B <- tibble(
 # Mettre les deux groupes dans le même jeu de données
 data_combined <- bind_rows(data_groupe_A, data_groupe_B)
 
-# Effectuer un test d'équivalence
+# Effectuer un test d'équivalence -----------------------------------------
 
 model <- TOSTtwo(
   m1 = mean(data_groupe_A$mesure),

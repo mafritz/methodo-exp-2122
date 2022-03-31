@@ -12,6 +12,8 @@ theme_set(theme_modern())
 
 # Test inférentielle pour deux facteurs expérimentaux (2 X 2 ANOVA) -------
 
+# Paramètres des donnés simulées ------------------------------------------
+
 # Paramètres du macro-monde (que nous ne connaissons normalement pas !)
 moyenne_groupe_0_0 <- 100
 ecart_type_groupe_0_0 <- 15

@@ -7,6 +7,8 @@ theme_set(theme_modern())
 
 # Test inférentiel pour comparer deux groupes indépendants ----------------
 
+# Paramètres des donnés simulées ------------------------------------------
+
 # Paramètres du macro-monde (que nous ne connaissons normalement pas !)
 moyenne_groupe_A <- 100
 ecart_type_groupe_A <- 15
@@ -32,7 +34,8 @@ data_groupe_B <- tibble(
 # Mettre les deux groupes dans le même jeu de données
 data_combined <- bind_rows(data_groupe_A, data_groupe_B)
 
-# Montrer graphiquement les résultats
+# Montrer graphiquement les résultats -------------------------------------
+
 ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
   geom_jitter(alpha = 0.2) +
   stat_summary(
@@ -54,7 +57,8 @@ ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
   scale_color_flat() +
   theme(legend.position = "none")
 
-# Effectuer un t-test de Welch avec hétérogénité de la variance
+# Effectuer un t-test de Welch avec hétérogénité de la variance -----------
+
 model <- t.test(
   formula = mesure ~ groupe,
   data = data_combined,
