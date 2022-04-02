@@ -107,3 +107,35 @@ check_homogeneity(model)
 plot(check_normality(model))
 plot(check_normality(model), type = "qq")
 plot(check_normality(model), type = "qq", detrend = TRUE)
+
+# Afficher la p-valeur en fonction de la distribution f -------------------
+
+curve(
+  df(x, df1 = model$Anova$Df[2], df2 = model$Anova$Df[3]),
+  from = 0,
+  to = model$Anova$`F value`[2] + 5,
+  main = paste0("Distribution f (df1 = ", model$Anova$Df[2], " df2 = ", model$Anova$Df[3] ,")"),
+  ylab = "Densité",
+  xlab = "Resultat de l'ANOVA",
+  lwd = 2,
+  col = "steelblue"
+)
+
+abline(v = qf(0.05, df1 = model$Anova$Df[2], df2 = model$Anova$Df[3], lower.tail = FALSE), lwd = 3, lty = 2)
+abline(v = model$Anova$`F value`[2], col = "red", lwd = 3)
+
+legend(
+  x = "topleft",
+  expression(paste(plain(alpha), " = 0.05  ")),
+  col = c("black"),
+  lwd = c(3),
+  lty = c(2)
+)
+legend(
+  y = 50,
+  x = "topright",
+  ifelse(model$Anova$`Pr(>F)`[2] < 0.001, "p < .001", paste("p", " = ", round(model$Anova$`Pr(>F)`[2], digits = 3))),
+  col = c("red"),
+  lwd = c(3),
+  lty = c(1)
+)
