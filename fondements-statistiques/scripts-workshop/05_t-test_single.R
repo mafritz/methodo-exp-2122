@@ -73,3 +73,37 @@ print(model)
 
 # Afficher une synthèse textuelle
 report(model, verbose = FALSE)
+
+
+# Afficher la p-valeur en fonction de la distribution t -------------------
+
+curve(
+  dt(x, df = model$parameter),
+  from = ifelse(model$statistic < -5, model$statistic - 1, -5),
+  to = ifelse(model$statistic > 5, model$statistic + 1, 5),
+  main = paste0("Distribution t (df = ", round(model$parameter, digits = 2), ")"),
+  ylab = "Densité",
+  xlab = "Resultat du test-t",
+  lwd = 2,
+  col = "steelblue"
+)
+
+abline(v = qt(0.025, df = model$parameter), lwd = 3, lty = 2)
+abline(v = qt(1 - 0.025, df = model$parameter), lwd = 3, lty = 2)
+abline(v = model$statistic, col = "red", lwd = 3)
+
+legend(
+  x = "topleft",
+  expression(paste(plain(alpha), " = 0.05  ")),
+  col = c("black"),
+  lwd = c(3),
+  lty = c(2)
+)
+legend(
+  y = 50,
+  x = "topright",
+  ifelse(model$p.value < 0.001, "p < .001", paste("p", " = ", round(model$p.value, digits = 3))),
+  col = c("red"),
+  lwd = c(3),
+  lty = c(1)
+)
