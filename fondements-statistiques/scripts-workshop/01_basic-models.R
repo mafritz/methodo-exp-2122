@@ -10,7 +10,7 @@ theme_set(theme_modern())
 # Données -----------------------------------------------------------------
 
 uniform_data <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-extreme_data <- c(0, 0, 0, 0, 0, 10, 10, 10, 10, 10)
+extreme_data <- c(0, 0, 0, 0, 0, 10, 10, 10, 10, 90)
 centered_data <- c(3, 4, 4, 5, 5, 5, 5, 6, 6, 7)
 simulated_data <- sample(1:10, 1000, replace = TRUE)
 your_data <- c(1, 2, 3)
