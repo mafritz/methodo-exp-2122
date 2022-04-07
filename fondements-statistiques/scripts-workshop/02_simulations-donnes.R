@@ -32,3 +32,30 @@ qplot(random_normal)
 random_exponential <- rexp(n = 1000, rate = 1)
 qplot(random_exponential)
 
+
+# Simuler  la randomization dans un jeu de données ------------------------
+
+n_participants <- 30
+
+random_data <- tibble(
+  participant = paste0("P", 1:n_participants),
+  groupe = sample(c("A", "B", "C"), n_participants, replace = TRUE),
+  age = runif(n = n_participants, min = 18, max = 65),
+  fatigue = sample(1:7, n_participants, replace = TRUE),
+  qi = rnorm(n_participants, 100, 15)
+)
+
+random_data |>
+  group_by(groupe) |>
+  summarise(
+    N = n(),
+    M_age = mean(age),
+    SD_age = sd(age),
+    M_fatigue = mean(fatigue),
+    SD_fatigue = sd(fatigue),
+    M_qi = mean(qi),
+    SD_qi = sd(qi)
+  )
+
+
+
