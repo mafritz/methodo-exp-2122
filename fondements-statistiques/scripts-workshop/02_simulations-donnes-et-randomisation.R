@@ -27,13 +27,13 @@ random_normal <- rnorm(n = 1000, mean = 100, sd = 10)
 qplot(random_normal)
 
 
-# Chiffres décimales depuis une distribution exponéntielle ----------------
+# Chiffres décimales depuis une distribution exponentielle ----------------
 
 random_exponential <- rexp(n = 1000, rate = 1)
 qplot(random_exponential)
 
 
-# Simuler  la randomization dans un jeu de données ------------------------
+# Simuler  la randomisation dans un jeu de données ------------------------
 
 n_participants <- 30
 
