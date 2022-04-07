@@ -44,6 +44,10 @@ Les résultats des exécutions vont s'afficher :
 
 ## Installation paquets R
 
-Le fichier `00-installation.R` contient une ligne de code qui permet d'installer les paquets externes de R utilisés dans les scripts. Vous pouvez l'exécuter avec les commandes illustrées plus haut, ou la copier/coller dans la console.
+Le fichier `00_installation.R` contient une ligne de code qui permet d'installer les paquets externes de R utilisés dans les scripts. Vous pouvez l'exécuter avec les commandes illustrées plus haut, ou la copier/coller dans la console.
 
 L'installation des paquets peut prendre quelques temps.
+
+## Modélisation de base
+
+Le fichier `01_basic-models.R`
