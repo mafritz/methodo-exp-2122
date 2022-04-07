@@ -2,7 +2,9 @@
 
 Ce document est accompagné par des fichiers/scripts en R qui permettent de découvrir et comprendre le fonctionnement des statistiques *fréquentistes*. Les fichiers sont numérotés de manière progressive et contient du code à exécuter/adapter en fonction des consignes illustrées dans ce document.
 
-## Logiciels nécessaires
+## Préparation et informations utiles
+
+### Logiciels nécessaires
 
 Pour exécuter le code les logiciels suivants sont nécessaires :
 
@@ -41,6 +43,16 @@ Les résultats des exécutions vont s'afficher :
 -   Dans la **console** en bas de l'interface RStudio (avec configuration standard de RStudio) pour les résultats des tests statistiques et autres informations textuelles
 
 -   Dans l'onglet **Plots** dans le côté inférieur à droite de l'interface (avec configuration standard de RStudio)
+
+### Présence d'un *seed* dans le code des fichiers
+
+Dans les scripts du workshop il a été inséré ce qu'on appelle un *seed* avec un code similaire à :
+
+`set.seed(8923)`
+
+Ce code permet d'obtenir toujours les mêmes résultats a des tests statistiques, car les ordinateurs utilisent des tables de chiffres pseudo-aléatoires pour simuler des données stochastiques/randomisées. Si vous voulez obtenir des résultats différents en essayant plusieurs fois le même scripts, vous pouvez commenter la ligne du *seed* avec un \# au début de la ligne :
+
+`# set.seed(8923)`
 
 ## Installation paquets R
 
