@@ -56,10 +56,18 @@ Ce code permet d'obtenir toujours les mêmes résultats a des tests statistiques
 
 ## Installation paquets R
 
-Le fichier `00_installation.R` contient une ligne de code qui permet d'installer les paquets externes de R utilisés dans les scripts. Vous pouvez l'exécuter avec les commandes illustrées plus haut, ou la copier/coller dans la console.
-
-L'installation des paquets peut prendre quelques temps.
+Le fichier `00_installation.R` contient une ligne de code qui permet d'installer les paquets externes de R utilisés dans les scripts. Vous pouvez l'exécuter avec les commandes illustrées plus haut, ou la copier/coller dans la console. L'installation des paquets peut prendre quelques temps.
 
 ## Modélisation de base
 
-Le fichier `01_basic-models.R`
+Le fichier `01_basic-models.R` contient des fonctions qui permettent de créer des modélisation de bases comme la moyenne, la médiane, la variance et l'écart type, ainsi que des graphiques pour voir la distribution de données.
+
+1.  Dans la première partie du code, dans la section **Données**, vous avez 5 vecteurs/jeu de données sous la forme `jeu_de_donnes <- c(1, 2, 3, 4, 5, ...)`. Le dernier de ces vecteurs/jeux des données s'appelle `your_data`. Modifiez le contenu du vecteur en ajoutant quelques chiffres de votre choix. Laissez les autres vecteurs/jeux de données intactes.
+
+2.  Parcourrez les différentes sections du script et exécuter le code de manière progressive. À travers l'exécution du code, essayez de répondre aux questions suivantes :
+
+    -   Quelle est la différence entre la moyenne et la médiane ?
+
+    -   Quel est le rapport entre la variance et la distribution des données ?
+
+    -   Quel est le rapport entre la variance et l'écart type ?
