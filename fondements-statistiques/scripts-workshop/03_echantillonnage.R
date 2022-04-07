@@ -66,3 +66,25 @@ qplot(sampling_uniform$moyenne, xlab = "Moyenne de chaque échantillon", main = 
 
 # Graphique de la distribution des écart type
 qplot(sampling_uniform$ecart_type, xlab = "Écart type de chaque échantillon", main = "Distribution des écarts types tirés d'une distribution uniforme", geom = "density")
+
+# Échantillonage depuis une distribution exponentielle -------------------------
+
+n_echantillon <- 100
+
+sampling_exponential <- data.frame(
+  moyenne = vector(length = 1000),
+  ecart_type = vector(length = 1000)
+)
+
+for (i in 1:1000) {
+  sample = rexp(n_echantillon, rate = 1)
+
+  sampling_exponential[i, 1] = mean(sample)
+  sampling_exponential[i, 2] = sd(sample)
+}
+
+# Graphique de la distribution des moyennes
+qplot(sampling_exponential$moyenne, xlab = "Moyenne de chaque échantillon", main = "Distribution des moyennes tirés d'une distribution exponentielle", geom = "density")
+
+# Graphique de la distribution des écart type
+qplot(sampling_exponential$ecart_type, xlab = "Écart type de chaque échantillon", main = "Distribution des écarts types tirés d'une distribution exponentielle", geom = "density")

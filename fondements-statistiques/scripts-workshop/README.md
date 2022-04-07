@@ -117,3 +117,19 @@ Le fichier `03_echantillonnage.R` introduit le concept d'échantillon, c'est-à-
 -   Introduire la différence entre la distribution des données tirées d'un seul échantillon et la distribution de plusieurs échantillon par rapport à une caractéristique comme la moyenne ou l'écart type
 
 -   Montrez de manière simulé/empirique le théorème de la limite centrale
+
+Le code du script est organisé en trois parties similaires :
+
+1.  Échantillonnage depuis une distribution normale. Au lieu de simuler un seul jeu de données/échantillon, la simulation est répétée 1'000 fois pour générer 1'000 échantillons depuis une distribution normale avec des caractéristiques à paramétrer dans le script. Pour chaque échantillon généré, le script calcule la moyenne et l'écart type de l'échantillon et le stocke dans un jeu de données. Ce jeu de données contient donc 1'000 observations, chacune représentative d'un échantillon. La distribution de ces moyennes et écarts types sont ensuite représentés graphiquement.
+
+2.  Le même mécanisme du point précédent est répliqué dans l'échantillonnage depuis une distribution uniforme.
+
+3.  Le même mécanisme est répliqué encore une fois depuis une distribution exponentielle.
+
+Sur la base de cette explication et en comparant les distributions des moyennes et écarts types obtenues :
+
+-   Est-ce que les distributions des moyennes et écarts types sont différentes ou similaires en fonction de la distribution *mère* depuis laquelle les échantillons sont tirés ?
+
+-   Est-ce que les distributions obtenues ont des formes reconnaissables ? Si oui, avec quel type de distribution on peut les identifier ?
+
+-   Qu'est-ce que vous pouvez en conclure ?
