@@ -109,3 +109,11 @@ Le code de cette activité prévoit :
     -   Qu'est-ce que vous en concluez sur la possibilité d'avoir des potentiels facteurs indépendants de la VI qui pourraient influencer la VD (pas présente dans ce jeu de données) ?
 
     -   Imaginez deux phénomènes en relation avec les technologies éducatives dans le MALTT (e.g. compétences techniques, intérêt pour les technologies, ...). Comment pensez-vous que ce phénomène est/serait distribué chez l'ensemble des apprenant-es (passé-es et futures) du MALTT ?
+
+## Échantillonnage
+
+Le fichier `03_echantillonnage.R` introduit le concept d'échantillon, c'est-à-dire un sous-groupe de l'espace/population de référence. L'objectif de l'activité est double :
+
+-   Introduire la différence entre la distribution des données tirées d'un seul échantillon et la distribution de plusieurs échantillon par rapport à une caractéristique comme la moyenne ou l'écart type
+
+-   Montrez de manière simulé/empirique le théorème de la limite centrale
