@@ -133,3 +133,28 @@ Sur la base de cette explication et en comparant les distributions des moyennes 
 -   Est-ce que les distributions obtenues ont des formes reconnaissables ? Si oui, avec quel type de distribution on peut les identifier ?
 
 -   Qu'est-ce que vous pouvez en conclure ?
+
+## Puissance statistique pour un test *t* de Welch
+
+Le fichier `04_t-test_power.R` permet de s'exercer au concept de puissance statistique dans le contexte de la comparaison entre deux groupes/moyennes. La puissance statistique est une fonction déterminée par 4 éléments :
+
+-   Le seuil de l'erreur de type I : le risque de *voir* dans le micro-monde un effet qui n'existe pas dans le macro-monde
+-   Le seuil de l'erreur de type II : le risque de *rater* dans le micro-monde un effet qui existe dans le macro-monde
+-   Le *Smallest Effect Size Of Interest* (SESOI) : la taille de l'effet minimal qui est considérée intéressante à chercher/déceler
+-   La taille de l'échantillon : nombre d'entités/observations/participants dans le micro-monde
+
+Lorsqu'on connait 3 de ces 4 éléments, on peut dériver le 4ème mathématiquement. On utilise cette fonction pour justifier/déterminer la taille de l'échantillon dans le test.
+
+En modifiant les trois premiers paramètres dans le script en question, répondez aux questions suivantes :
+
+-   Combien de participant-es seraient nécessaire pour détecter un SESOI de Cohen's d = 0.5, avec un erreur de type I de 0.05 et de type II de 0.8 ?
+
+-   En gardant type I = 0.05 et type II = 0.8, mais avec SESOI = 0.25, la taille de l'échantillon nécessaire et plus grande ou plus petite ? De ce fait, vous pouvez conclure que plus \_\_\_\_\_\_\_\_ est le SESOI, plus \_\_\_\_\_\_\_\_\_\_ sera l'échantillon nécessaire. Essayez d'expliquer ce phénomène.
+
+-   Mettez à nouveau le SESOI = 0.5, ensuite :
+
+    -   Augmentez d'abord le type I à 0.15, quelle variation observez vous sur la taille de l'échantillon nécessaire ? Puis diminuez le type I à 0.01, quelle variation observez vous maintenant ?
+
+    -   Remettez le type I à 0.05 et augmentez le type II à 0.9, quelle variation observez vous sur la taille de l'échantillon nécessaire ? Diminuez maintenant le type II à 0.6, quelle variation observez vous ?
+
+    -   Sur la base de ces changements, la variation de quel type d'erreur influence davantage la taille de l'échantillon ?
