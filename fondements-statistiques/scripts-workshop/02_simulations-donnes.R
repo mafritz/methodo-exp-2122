@@ -41,7 +41,7 @@ random_data <- tibble(
   participant = paste0("P", 1:n_participants),
   groupe = sample(c("A", "B", "C"), n_participants, replace = TRUE),
   age = runif(n = n_participants, min = 18, max = 65),
-  fatigue = sample(1:7, n_participants, replace = TRUE),
+  fatigue = rexp(n = n_participants, rate = 1),
   qi = rnorm(n_participants, 100, 15)
 )
 
