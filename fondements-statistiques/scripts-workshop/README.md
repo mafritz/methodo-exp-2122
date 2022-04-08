@@ -163,11 +163,11 @@ En modifiant les trois premiers paramètres dans le script en question, réponde
 
 Le fichier `05_t-test_single.R` permet de simuler des tests pour comparer deux moyennes/groupes à la recherche d'un effet, ici dans une perspective inter-sujets (i.e. à groupes indépendants). Le script permet de faire principalement 4 choses :
 
-1.  Essayer différents paramètres pour le macro-monde des deux groupes (moyennes et écarts types). C'est un mécansime de rétro-ingégnierie, car normalement ces paramètres sont ceux qu'on ne connait pas et qu'on veut justement estimer sur la base de l'expérience.
+1.  Essayer différents paramètres pour le macro-monde des deux groupes (moyennes et écarts types). C'est un mécanisme de rétro-ingénierie, car normalement ces paramètres sont ceux qu'on ne connait pas et qu'on veut justement estimer sur la base de l'expérience.
 
 2.  Montrer graphiquement la dispersion/distribution des données autour de la moyenne du groupe et des intervalles de confiance
 
-3.  Effectuer un test t de Welch et afficher le résultats avec les différents indicateurs (degrés de liberté, résultat du test statistique, p-valuer, taille de l'effet brute et standardisée)
+3.  Effectuer un test t de Welch et afficher le résultats avec les différents indicateurs (degrés de liberté, résultat du test statistique, p-valeur, taille de l'effet brute et standardisée)
 
 4.  Affichez la p-valeur en fonction de la distribution nulle pour une seuil de l'erreur de type I de 0.05 bilatéral
 
