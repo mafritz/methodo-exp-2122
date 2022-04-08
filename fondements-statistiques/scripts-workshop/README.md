@@ -155,6 +155,24 @@ En modifiant les trois premiers paramètres dans le script en question, réponde
 
     -   Augmentez d'abord le type I à 0.15, quelle variation observez vous sur la taille de l'échantillon nécessaire ? Puis diminuez le type I à 0.01, quelle variation observez vous maintenant ?
 
-    -   Remettez le type I à 0.05 et augmentez le type II à 0.9, quelle variation observez vous sur la taille de l'échantillon nécessaire ? Diminuez maintenant le type II à 0.6, quelle variation observez vous ?
+    -   Remettez le type I à 0.05 et augmentez le type II à 0.95, quelle variation observez vous sur la taille de l'échantillon nécessaire ? Diminuez maintenant le type II à 0.6, quelle variation observez vous ?
 
     -   Sur la base de ces changements, la variation de quel type d'erreur influence davantage la taille de l'échantillon ?
+
+## Effectuer une comparaison entre deux groupes/moyennes
+
+Le fichier `05_t-test_single.R` permet de simuler des tests pour comparer deux moyennes/groupes à la recherche d'un effet, ici dans une perspective inter-sujets (i.e. à groupes indépendants). Le script permet de faire principalement 4 choses :
+
+1.  Essayer différents paramètres pour le macro-monde des deux groupes (moyennes et écarts types). C'est un mécansime de rétro-ingégnierie, car normalement ces paramètres sont ceux qu'on ne connait pas et qu'on veut justement estimer sur la base de l'expérience.
+
+2.  Montrer graphiquement la dispersion/distribution des données autour de la moyenne du groupe et des intervalles de confiance
+
+3.  Effectuer un test t de Welch et afficher le résultats avec les différents indicateurs (degrés de liberté, résultat du test statistique, p-valuer, taille de l'effet brute et standardisée)
+
+4.  Affichez la p-valeur en fonction de la distribution nulle pour une seuil de l'erreur de type I de 0.05 bilatéral
+
+En adaptant les paramètres moyennes et écarts types des deux macro-mondes, ainsi que le nombre d'observations par groupe, essayez de tester/comprendre les scénarios suivants :
+
+-   Testez plusieurs combinaisons entre paramètres, par exemple en augmentant ou diminuant la différence entre les deux moyennes ou en explicitant des écarts types plus grands/petits ou hétérogènes entre les deux groupes. Modifiez aussi le nombre de participants par groupe. Notez si vous pensez trouver des *pattern* qui se manifestent (e.g. si j'augmente \_\_\_\_ alors \_\_\_\_\_\_).
+
+-   Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous observez ?
