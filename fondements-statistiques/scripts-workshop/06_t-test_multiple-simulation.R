@@ -14,11 +14,11 @@ theme_set(theme_modern())
 moyenne_groupe_A <- 100
 ecart_type_groupe_A <- 15
 
-moyenne_groupe_B <- 115
+moyenne_groupe_B <- 100
 ecart_type_groupe_B <- 15
 
 # Paramètres du micro-monde
-n_participants_per_groupe <- 20
+n_participants_per_groupe <- 30
 
 # Effectuer 1000 t-tests de Welch avec hétérogénité de la variance --------
 
@@ -56,7 +56,7 @@ replications <- replicate(1000, {
 
 hist(
   replications,
-  breaks = 20,
+  breaks = seq(from = 0, to = 1, by = 0.05),
   col = "lightblue",
   xlab = paste0("p-valeur < 0.05 ", round(sum(replications < 0.05) / 1000 * 100, 2), "% des fois"),
   ylab = "Fréquence/Puissance statistique",

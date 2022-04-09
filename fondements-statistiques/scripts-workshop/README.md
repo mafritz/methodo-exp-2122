@@ -175,4 +175,26 @@ En adaptant les paramètres moyennes et écarts types des deux macro-mondes, ain
 
 -   Testez plusieurs combinaisons entre paramètres, par exemple en augmentant ou diminuant la différence entre les deux moyennes ou en explicitant des écarts types plus grands/petits ou hétérogènes entre les deux groupes. Modifiez aussi le nombre de participants par groupe. Notez si vous pensez trouver des *pattern* qui se manifestent (e.g. si j'augmente \_\_\_\_ alors \_\_\_\_\_\_).
 
--   Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous observez ?
+-   Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?
+
+## Simuler plusieurs comparaisons entre groupes/moyennes tirés du même macro-monde
+
+Le fichier `06_test_multiple-simulation.R` est une extension de l'activité précédente qui permet de mener une simulation de 1'000 test *t* de Welch dont les échantillons sont à chaque fois tirés depuis le même macro-monde. En d'autres termes, la différence du résultat entre un t-test et l'autre dans les 1'000 qui sont simulés est dû exclusivement à l'effet de l'échantillonnage qui crée des variations parmi les groupes/moyennes. Le code du script propose les éléments suivants :
+
+1.  Comme pour le script précédent, il est possible de modifier les paramètres comme les moyennes et écarts types et le nombre d'observations/participants dans l'échantillon
+
+2.  Le code ensuite simule 1'000 t-test sur 1'000 échantillons tirés selon les paramètres du point précédent. Pour chaque test, la *p*-valeur est stocké dans un jeu de données qui contiendra donc 1'000 *p*-valeurs.
+
+3.  Enfin, la distribution des 1'000 p-valeurs obtenues est affichées sous forme d'histogrammes, avec une ligne rouge en tirets qui séparent les *p*-valeurs conventionnellement considérée comme inférieur au seuil alpha = 0.05. Le graphique indique également le pourcentage de *p*-valeurs qui sont inférieures à ce seuil en bas de l'image.
+
+En utilisant le code du fichier, effectuez les manipulations et répondez aux questions suivantes :
+
+-   Laissez les valeurs indiquées dans le fichier original (M1 = 100, SD1 = 15 ; M2 = 115, SD2 = 15 ; N = 20) et faites les 1'000 simulations. Depuis le graphique que vous obtenez, essayez de mettre en perspective les résultats :
+
+    -   Comment expliquez-vous que *seulement* 86.2% des tests donnent une *p*-valeur \< 0.05 ?
+
+    -   Le 13.8% des *p*-valeurs > 0.05 correspondent à quel type de phénomène dans un test d'hypothèse basé sur un modèle *nul* ?
+
+-   Laissez les valeurs du macro-monde courants et augmentez le nombre de participants de 20 à 30. Lancez la simulation. Combien des *p*-valeurs \< 0.05 observez à ce moment ? Quelle conclusion pouvez-vous en tirer ?
+
+-   Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 100. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait ?
