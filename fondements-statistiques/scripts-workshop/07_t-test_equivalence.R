@@ -14,14 +14,14 @@ theme_set(theme_modern())
 moyenne_groupe_A <- 100
 ecart_type_groupe_A <- 15
 
-moyenne_groupe_B <- 115
+moyenne_groupe_B <- 105
 ecart_type_groupe_B <- 15
 
 # Paramètres du micro-monde
-n_participants_per_groupe <- 100
+n_participants_per_groupe <- 50
 
-sesoi_lower_d = -0.5 # Limite inférieur de la taille de l'effet considéré équivalent
-sesoi_upper_d = 0.5 # Limite supérieur de la taille de l'effet considéré équivalent
+sesoi_lower_d = -0.5 # Limite inférieur de la taille brute de l'effet considéré équivalent
+sesoi_upper_d = 0.5 # Limite supérieur de la taille brute de l'effet considéré équivalent
 
 # Génération données groupe A
 data_groupe_A <- tibble(
@@ -36,21 +36,26 @@ data_groupe_B <- tibble(
 )
 
 # Mettre les deux groupes dans le même jeu de données
-data_combined <- bind_rows(data_groupe_A, data_groupe_B)
+data_combined <- bind_rows(data_groupe_A, data_groupe_B) |>
+  mutate(
+    groupe = factor(groupe)
+  )
 
 # Effectuer un test d'équivalence -----------------------------------------
 
-model <- TOSTtwo(
-  m1 = mean(data_groupe_A$mesure),
-  sd1 = sd(data_groupe_A$mesure),
-  m2 = mean(data_groupe_B$mesure),
-  sd2 = sd(data_groupe_B$mesure),
-  n1 = nrow(data_groupe_A),
-  n2 = nrow(data_groupe_B),
-  low_eqbound_d = sesoi_lower_d,
-  high_eqbound_d = sesoi_upper_d,
+model <- t_TOST(
+  formula = mesure ~ groupe,
+  data = data_combined,
+  paired = FALSE,
+  var_equal = FALSE,
+  hypothesis = "EQU",
+  low_eqbound = sesoi_lower_d,
+  high_eqbound = sesoi_upper_d,
+  eqbound_type = "SMD",
   alpha = 0.05,
-  var.equal = FALSE,
-  plot = TRUE,
-  verbose = TRUE
+  mu = 0,
+  bias_correction = TRUE
 )
+
+print(model)
+plot(model, type = "cd", ci_shades = c(.9,.95))

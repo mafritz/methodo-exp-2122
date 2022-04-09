@@ -197,4 +197,14 @@ En utilisant le code du fichier, effectuez les manipulations et répondez aux qu
 
 -   Laissez les valeurs du macro-monde courants et augmentez le nombre de participants de 20 à 30. Lancez la simulation. Combien des *p*-valeurs \< 0.05 observez à ce moment ? Quelle conclusion pouvez-vous en tirer ?
 
--   Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 100. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait ?
+-   Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 100. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait, notamment en relation avec la problématique de la replicabilité des résultats en sciences sociales ?
+
+## Équivalence entre deux groupes/moyennes
+
+Le fichier `07_t-test_equivalence.R` diffère des fichiers sur le test *t* précédents car ici l'enjeu n'est pas de détecter la présence d'un effet entre les deux groupes/moyennes, mais plutôt établir qu'il n'existe pas de différence. En effet, obtenir une *p*-valeur \> alpha (e.g. 0.05) ne signifie par qu'il n'y a pas de différence : *Absence of Evidence Is Not Evidence of Absence*. Or, pour définir l'absence d'un effet il y a deux problématique à considérer :
+
+1.  Techniquement, même si dans le macro-monde il n'y a aucune différence entre les groupes/moyennes, dû au phénomène de l'échantillonnage il est pratiquement impossible que la différence entre deux moyennes soit précisément de 0 (i.e. M1 - M2 == 0). Il est beaucoup plus probable que la différence sera normalement distribuée autour de 0, mais avec des variations plus ou moins prononcées.
+
+2.  Sémantiquement, selon le contexte spécifique de la recherche (i.e. connaissances du domaine), le chercheur peut considérer comme *négligeable* une différence aussi plus élevée de +/- 0. Par exemple, les chercheurs pourraient considérer que si la différence est inférieur à +/- 10 unités sur l'échelle de la VD, alors on peut considérer qu'il y a sémantiquement absence d'effet, même si mathématiquement l'effet n'est pas 0.
+
+Pour effectuer un test d'équivalente il faut donc établir les limites inférieur et supérieurs d'un effet, ce qui peut se faire en taille brute selon l'échelle de la VD ou en taille standardisée (e.g. Cohens'd).
