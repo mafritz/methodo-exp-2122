@@ -334,7 +334,37 @@ On ne peut pas répondre à ces questions directement avec des faits, car les é
 
 Ce qui serait utile à cet effet serait plutôt un *principe* qui nous indique si et sous quelles conditions les capsules vidéos sont plus propices à l'apprentissage par rapport à un enregistrement vidéos d'un cours ex-cathedra ou à pas de vidéos de support du tout. Pour obtenir ce type de principe, une manière de procéder est celle de mener une expérience *idéalisée* qui soit (1) représentative de la problématique qu'on veut aborder, et (2) présente des éléments *prototypiques* qui puissent être généralisés à un maximum de situations similaires.
 
-La question contre-factuel à laquelle ce type d'expérience essaie de répondre peut se synthétiser de la manière suivante : est-ce que **la même** personne quelconque, indépendamment de ses caractéristiques ou connaissances préalable, peut bénéficier davantage au niveau de l'apprentissage si elle peut avoir accès à un enregistrement vidéo ou à des capsules vidéos ? Pour répondre à cette question, une possibilité est celle de comparer la distribution d'une mesure représentative de l'apprentissage qui est une fonction du type de support utilisé (sans vidéo, playback intégral ou capsules vidéos).
+La question contre-factuel à laquelle ce type d'expérience essaie de répondre peut se synthétiser de la manière suivante : est-ce que **la même** personne bénéficie davantage d'une intervention plutôt que d'une autre par rapport au phénomène d'intérêt ? Ou est-ce que les interventions s'équivaut, dans le sens ou le phénomène d'intérêt se manifesterait *exactement* de la même manière -- ou avec des différences négligeables -- sur **la même** personne, indépendamment du type d'intervention qu'elle aurait reçu ?
+
+À ce stade de l'échelle de causalité, donc, les activités impliquées sont *imaginer*, *penser de manière rétrospective*, et *comprendre*. Les questions qu'on peut se poser à ce stade sont :
+
+-   Que serait-il passé si j'avais fait différemment ?
+
+-   Est-ce que c'est vraiment $X$ qui a causé $Y$ ?
+
+-   Sans $X$, est-ce $Y$ se serait manifesté également ?
+
+## Hypothèses théoriques/causales
+
+L'échelle de causalité permet de penser en termes d'effets.
+
+L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes causales. En même temps, il sedonner une explication qui illustre les raisons à la base du pattern de données obtenues. À cet effet, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales.
+
+Pour mettre en place une expérience *idéalisée* et essayer de répondre à ce type de questions contre-factuels, les chercheurs créent un *micro-monde* dans lequel générer, récolter et analyser des données de manière instrumentale aux objectifs de recherche. L'accumulation d'expériences *idéalisées* est censée permettre d'atteindre une meilleure capacité d'expliquer/prédire les effets des interventions sur les phénomènes d'intérêt. En même temps, un *micro-monde* est par nécessité une *simplification/réduction* de toute la complexité présente dans la réalité/le *macro-monde*. Les choix épistémologiques et méthodologiques prises par les chercheurs individuellement et les communautés de recherche dans leur ensemble, ainsi que la reconnaissance des limites du *micro-monde* sont donc déterminantes.
+
+# Processus génératif des données
+
+### Analyse des données et hypothèses opérationnelles
+
+L'analyse des données sera traitée de manière plus détaillée dans les fondements statistiques de la méthode expérimentale. Mais d'un point de vue empirique, l'analyse des données est également liée à ce qu'on appelle des hypothèses opérationnelles. Ces hypothèses sont l'application au *micro-monde* des éventuelles explications causales potentielles exprimées à travers les hypothèses théoriques. La différence concerne le fait que les hypothèses opérationnelles sont exprimées sur la base des variables indépendantes et dépandantes retenues pour représenter l'intervention et le phénomène d'intérêt.
+
+Donc dans l'exemple sur l'effet du support vidéo sur l'apprentissage, l'hypothèse théorique sera exprimée sur la base de l'effet des modalités/conditions de la VI (lecture d'un texte, enregistrement d'un cours ex-cathedra de 30 minutes, et vision de 3 capsules vidéos de 5 minutes chaque) sur la mesure de l'apprentissage identifiée comme le score à un quizz sur le contenu du support. Une hypothèse opérationnelle possible consisterait par exemple à avancer prévoir/s'attendre à distribution des scores au test de compréhension (VD) autour de moyennes ordonnées de la manière suivante :
+
+-   La moyenne des scores de compréhension dans la modalité *capsules* est plus élevée de la moyenne dans la modalités *texte*
+
+-   La moyenne des scores de compréhension dans la modalité *texte* est plus élevée de la moyenne dans la modalité *enregistrement*
+
+-   La moyenne des scores de compréhension dans la modalité *capsules* est plus élevée de la moyenne dans la modalité *texte*
 
 ```{r idealized-experiment, fig.height=3, fig.width=5, fig.cap="Données simulées sur une potentielle expérience idéalisée. Les barres représentent des intervalles de confiance à 95%."}
 sans <- tibble(
@@ -354,7 +384,7 @@ capsules <- tibble(
 
 idealized_experiment <- bind_rows(sans, playback, capsules) |> 
   mutate(
-    condition = factor(condition, levels = c("Sans vidéo", "Playback", "Capsules")),
+    condition = factor(condition, levels = c("Texte", "Enregistrement", "Capsules")),
     apprentissage = rescale(apprentissage, to = c(0, 100))
   )
 
@@ -368,23 +398,7 @@ ggplot(idealized_experiment, aes(x = condition, y = apprentissage, color = condi
 
 ```
 
-À ce stade de l'échelle de causalité, donc, les activités impliquées sont *imaginer*, *penser de manière rétrospective*, et *comprendre*. Les questions qu'on peut se poser à ce stade sont :
-
--   Que serait-il passé si j'avais fait différemment ?
-
--   Est-ce que c'est vraiment $X$ qui a causé $Y$ ?
-
--   Sans $X$, est-ce $Y$ se serait manifesté également ?
-
-## Hypothèses théoriques/causales
-
-L'échelle de causalité permet de penser en termes d'effets.
-
-L'échelle de causalité permet de penser en termes d'effets et maximise donc la possibilité de pouvoir distinguer des mécanismes causales. En même temps, il sedonner une explication qui illustre les raisons à la base du pattern de données obtenues. À cet effet, les chercheurs émettent souvent -- mais pas toujours -- des hypothèses théoriques/causales.
-
-Pour mettre en place une expérience *idéalisée* et essayer de répondre à ce type de questions contre-factuels, les chercheurs créent un *micro-monde* dans lequel générer, récolter et analyser des données de manière instrumentale aux objectifs de recherche. L'accumulation d'expériences *idéalisées* est censée permettre d'atteindre une meilleure capacité d'expliquer/prédire les effets des interventions sur les phénomènes d'intérêt. En même temps, un *micro-monde* est par nécessité une *simplification/réduction* de toute la complexité présente dans la réalité/le *macro-monde*. Les choix épistémologiques et méthodologiques prises par les chercheurs individuellement et les communautés de recherche dans leur ensemble, ainsi que la reconnaissance des limites du *micro-monde* sont donc déterminantes.
-
-# Processus génératif des données
+Le type d'analyse statistique à mener dépend de plusieurs facteurs, notamment le plan expérimental choisi, le nombre des VI et de modalités à l'intérieur de chaque VI, la présence d'autres mesures corollaires, ainsi que la distribution attendue de la VD.
 
 # Inférence
 
