@@ -22,7 +22,7 @@ Le cours propose une introduction à la méthode expérimentale appliquée à la
 
 2.  Fondements statistiques de la méthode expérimentale
 
-    -   Slides de présentation (en construction)
+    -   [Slides de présentation](https://github.com/mafritz/methodo-exp-2122/blob/main/fondements-statistiques/slides-fondements-statistiques-methode-experimentale.pdf)
 
     -   Texte d'accompagnement (en construction)
 
@@ -171,6 +171,36 @@ Il peut y avoir des informations manquantes, peu claires ou incomplètes. Essaye
 Voir la section "Livrables et critères d'évaluation" plus bas.
 
 ## Mardi 10 mai 2022
+
+|    Horaire    | Contenus                                            |
+|:-------------:|-----------------------------------------------------|
+| 09h00 - 10h00 | Fondements statistiques de la méthode expérimentale |
+| 10h00 - 10h30 | Mise en place des logiciels pour le workshop        |
+| 10h30 - 11h00 | Pause                                               |
+| 11h00 - 12h15 | Workshop avec R                                     |
+| 12h15 - 12h30 | Présentation des livrables P6                       |
+
+### Présentation sur les fondements statistiques de la méthode expérimentale
+
+Les statistiques sont une partie intégrante de la méthode expérimentale, mais le rapport entre expérience et statistiques est complexe au niveau épistémologique et pratique. La présentation proposée dans cette partie du cours donne un aperçu de la complexité de ce lien et se focalise ensuite sur une manière spécifique d'utiliser les statistiques dites *fréquentistes* dans le cadre d'un test d'hypothèse.
+
+Matériel de support utilisé dans cette partie :
+
+-   [Slides sur le fondements statistiques de la méthode expérimentale](https://github.com/mafritz/methodo-exp-2122/blob/main/fondements-statistiques/slides-fondements-statistiques-methode-experimentale.pdf)
+
+### Workshop statistiques avec R
+
+Pour mieux comprendre et consolider les informations sur les fondements statistiques de la méthode expérimentale, cette partie du cours propose une activité *hands-on* à effectuer par binômes. L'activité consiste à decouvrir/manipuler des concepts statistiques à travers le langage de programmation R et le logiciel RStudio Desktop.
+
+L'activité est divisée dans une série de scripts/fichiers R déjà codés qui sont accompagnés par des informations/instructions sur leur utilisation et manipulation. Des questions de compréhension complètent l'activité sur chaque script.
+
+Le matériel et les instructions pour cette partie du cours sont disponibles dans le dossier `fondements-statistiques/scripts-workshop`. Le README de ce dossier propose les instructions pour suivre le workshop :
+
+-   [Lien vers les fichiers du workshop avec README/instructions](https://github.com/mafritz/methodo-exp-2122/tree/main/fondements-statistiques/scripts-workshop)
+
+### Illustration des livrables
+
+Voir la section "Livrables et critères d'évaluation" plus bas.
 
 # Livrables et critères d'évaluation
 
