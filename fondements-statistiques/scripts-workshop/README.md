@@ -136,7 +136,7 @@ Sur la base de cette explication et en comparant les distributions des moyennes 
 
 ## Puissance statistique pour un test *t* de Welch
 
-Le fichier `04_t-test_power.R` permet de s'exercer au concept de puissance statistique dans le contexte de la comparaison entre deux groupes/moyennes. La puissance statistique est une fonction déterminée par 4 éléments :
+Le fichier `04_t-test_power.R` permet de s'exercer au concept de puissance statistique dans le contexte de la comparaison entre deux moyennes/groupes. La puissance statistique est une fonction déterminée par 4 éléments :
 
 -   Le seuil de l'erreur de type I : le risque de *voir* dans le micro-monde un effet qui n'existe pas dans le macro-monde
 -   Le seuil de l'erreur de type II : le risque de *rater* dans le micro-monde un effet qui existe dans le macro-monde
@@ -159,7 +159,7 @@ En modifiant les trois premiers paramètres dans le script en question, réponde
 
     -   Sur la base de ces changements, la variation de quel type d'erreur influence davantage la taille de l'échantillon ?
 
-## Effectuer une comparaison entre deux groupes/moyennes
+## Effectuer une comparaison entre deux moyennes/groupes
 
 Le fichier `05_t-test_single.R` permet de simuler des tests pour comparer deux moyennes/groupes à la recherche d'un effet, ici dans une perspective inter-sujets (i.e. à groupes indépendants). Le script permet de faire principalement 4 choses :
 
@@ -177,9 +177,9 @@ En adaptant les paramètres moyennes et écarts types des deux macro-mondes, ain
 
 -   Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?
 
-## Simuler plusieurs comparaisons entre groupes/moyennes tirés du même macro-monde
+## Simuler plusieurs comparaisons entre moyennes/groupes tirés du même macro-monde
 
-Le fichier `06_test_multiple-simulation.R` est une extension de l'activité précédente qui permet de mener une simulation de 1'000 test *t* de Welch dont les échantillons sont à chaque fois tirés depuis le même macro-monde. En d'autres termes, la différence du résultat entre un t-test et l'autre dans les 1'000 qui sont simulés est dû exclusivement à l'effet de l'échantillonnage qui crée des variations parmi les groupes/moyennes. Le code du script propose les éléments suivants :
+Le fichier `06_test_multiple-simulation.R` est une extension de l'activité précédente qui permet de mener une simulation de 1'000 test *t* de Welch dont les échantillons sont à chaque fois tirés depuis le même macro-monde. En d'autres termes, la différence du résultat entre un t-test et l'autre dans les 1'000 qui sont simulés est dû exclusivement à l'effet de l'échantillonnage qui crée des variations parmi les moyennes/groupes. Le code du script propose les éléments suivants :
 
 1.  Comme pour le script précédent, il est possible de modifier les paramètres comme les moyennes et écarts types et le nombre d'observations/participants dans l'échantillon
 
@@ -199,11 +199,11 @@ En utilisant le code du fichier, effectuez les manipulations et répondez aux qu
 
 -   Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 100. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait, notamment en relation avec la problématique de la replicabilité des résultats en sciences sociales ?
 
-## Équivalence entre deux groupes/moyennes
+## Équivalence entre deux moyennes/groupes
 
-Le fichier `07_t-test_equivalence.R` diffère des fichiers sur le test *t* précédents car ici l'enjeu n'est pas de détecter la présence d'un effet entre les deux groupes/moyennes, mais plutôt établir qu'il n'existe pas de différence. En effet, obtenir une *p*-valeur \> alpha (e.g. 0.05) ne signifie par qu'il n'y a pas de différence : *Absence of Evidence Is Not Evidence of Absence*. Or, pour définir l'absence d'un effet il y a deux problématique à considérer :
+Le fichier `07_t-test_equivalence.R` diffère des fichiers sur le test *t* précédents car ici l'enjeu n'est pas de détecter la présence d'un effet entre les deux moyennes/groupes, mais plutôt établir qu'il n'existe pas de différence. En effet, obtenir une *p*-valeur \> alpha (e.g. 0.05) ne signifie par qu'il n'y a pas de différence : *Absence of Evidence Is Not Evidence of Absence*. Or, pour définir l'absence d'un effet il y a deux problématique à considérer :
 
-1.  Techniquement, même si dans le macro-monde il n'y a aucune différence entre les groupes/moyennes, dû au phénomène de l'échantillonnage il est pratiquement impossible que la différence entre deux moyennes soit précisément de 0 (i.e. M1 - M2 == 0). Il est beaucoup plus probable que la différence sera normalement distribuée autour de 0, mais avec des variations plus ou moins prononcées.
+1.  Techniquement, même si dans le macro-monde il n'y a aucune différence entre les moyennes/groupes, dû au phénomène de l'échantillonnage il est pratiquement impossible que la différence entre deux moyennes soit précisément de 0 (i.e. M1 - M2 == 0). Il est beaucoup plus probable que la différence sera normalement distribuée autour de 0, mais avec des variations plus ou moins prononcées.
 
 2.  Sémantiquement, selon le contexte spécifique de la recherche (i.e. connaissances du domaine), les chercheurs peuvent considérer comme *négligeable* une différence aussi plus grande de +/- 0. Par exemple, les chercheurs pourraient considérer que si la différence est inférieur à +/- 10 unités sur l'échelle de la VD, alors on peut considérer qu'il y a sémantiquement *absence* d'un effet qui a des implications théoriques/pratiques, même si mathématiquement l'effet n'est pas 0.
 
@@ -223,7 +223,7 @@ En modifiant les paramètres du script (moyennes et écarts types ainsi que le n
 
 ## Puissance statistique pour une ANOVA simple
 
-Lorsque le plan expérimental prévoit une seule variable indépendante (VI) mais avec plus de deux modalités, on utilise une Analyse de la Variance (ANOVA) dites *simple* ou *One-way ANOVA* an anglais. Le fichier `08_anova_one-way_power.R` permet d'effectuer une analyse de puissance statistique pour déterminer l'échantillon nécessaire à détecter un effet dans la comparaison des trois ou plusieurs moyennes/groupes. La présence de 3 ou plusieurs moyennes/groupes nécessite aussi d'un type de mesure de la taille de l'effet différente au Cohen's d lorsqu'on a à faire avec deux moyennes/groupes, comme par exemple le Cohen's f qui généralise à plusieurs moyennes/groupes. Les détails de ce passage sont trop techniques pour le contexte introductif du cours, mais le script peut néanmoins donner une idée des échantillons nécessaires pour mener des ANOVA simple informatives.
+Lorsque le plan expérimental prévoit une seule variable indépendante (VI) mais avec plus de deux modalités, on utilise une Analyse de la Variance (ANOVA) dites *simple* ou *One-way ANOVA* an anglais. Le fichier `08_anova-one-way_power.R` permet d'effectuer une analyse de puissance statistique pour déterminer l'échantillon nécessaire à détecter un effet dans la comparaison des trois ou plusieurs moyennes/groupes. La présence de 3 ou plusieurs moyennes/groupes nécessite aussi d'un type de mesure de la taille de l'effet différente au Cohen's d lorsqu'on a à faire avec deux moyennes/groupes, comme par exemple le Cohen's f qui généralise à plusieurs moyennes/groupes. Les détails de ce passage sont trop techniques pour le contexte introductif du cours, mais le script peut néanmoins donner une idée des échantillons nécessaires pour mener des ANOVA simple informatives.
 
 En variant les paramètres du fichier, essayez de répondre aux questions suivantes :
 
@@ -231,4 +231,20 @@ En variant les paramètres du fichier, essayez de répondre aux questions suivan
 
 -   Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme.
 
--   
+## Effectuer une comparaison entre trois moyennes/groupes (ou plus)
+
+Le fichier `09_anova-one-way_test.R` permet d'effectuer des ANOVA *simples* ou *One-Way ANOVA* à l'occurrence avec trois moyennes/groupes, mais le principe peut être élargie à *k* moyennes/groupes du moment où une seule VI est impliquée. Dans une ANOVA *simple* on distingue généralement entre deux types de tests :
+
+-   L'*omnibus ANOVA*, c'est-à-dire le test entre toutes les moyennes/groupes impliqués, qui sert généralement à identifier l'effet général de la VI sur la VD et, parfois, est utilisé pour déterminer si faire des comparaisons/contrastes ultérieurs (voir point suivant).
+
+-   Des comparaisons/contrastes entre des moyennes/groupes spécifiques. Ces comparaisons ou contrastes peuvent être spécifiés avant de voir les données, comme partie par exemple d'une hypothèse théorique/opérationnelle, ou une fois les données observées (i.e., *post-hoc*).
+
+Dans le passé, il y avait la tendance à effectuer des comparaisons/contrastes seulement si le résultat du *omnibus* test était \< alpha. Aujourd'hui il y a plutôt la tendance, surtout dans une perspective test d'hypothèse, de planifier à l'avance les comparaisons/contrastes ou des les effectuer *post-hoc* selon l'intérêt pratique/théorique et indépendamment du résultat du test *omnibus*.
+
+Le script est organisé en 6 sections principales :
+
+1.  Les paramètres des données simulées permettent de déterminer les moyennes, écarts types et nombre d'entités/participant-es dans 3 modalités/conditions expérimentales
+
+2.  Les données sont ensuite affichées graphiquement pour comprendre la distribution des observations autours des moyennes des conditions/groupes
+
+3.  L'*omnibus* test est effectué à travers le paquet `afex` utilisé souvent dans des analyses de type ANOVA. Le résultat est affiché en forme de tableau ANOVA avec le *generalised effect size* (GES) comme taille de l'effet.

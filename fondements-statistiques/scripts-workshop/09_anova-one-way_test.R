@@ -86,28 +86,6 @@ model <- aov_4(
 # Voir le tableau de l'ANOVA
 nice(model)
 
-
-# Effectuer les comparaison entre les trois moyennes ----------------------
-
-comparaisons <- emmeans(
-  object = model,
-  spec = pairwise ~ groupe,
-  adjust = "tukey" # Contrôler test multiples. Autre possibilité : "bonferroni"
-)
-
-# Voir moyennes marginales et contrastes inférentiels
-print(comparaisons)
-
-# Contrôler les postulats de l'ANOVA --------------------------------------
-
-# Homogénéité de la variance (les groupes ont une variance similaire) -> À utiliser avec précaution
-check_homogeneity(model)
-
-# Normalité des résidus
-plot(check_normality(model))
-plot(check_normality(model), type = "qq")
-plot(check_normality(model), type = "qq", detrend = TRUE)
-
 # Afficher la p-valeur en fonction de la distribution f -------------------
 
 curve(
@@ -139,4 +117,25 @@ legend(
   lwd = c(3),
   lty = c(1)
 )
+
+# Contrôler les postulats de l'ANOVA --------------------------------------
+
+# Homogénéité de la variance (les groupes ont une variance similaire) -> À utiliser avec précaution
+check_homogeneity(model)
+
+# Normalité des résidus
+plot(check_normality(model))
+plot(check_normality(model), type = "qq")
+plot(check_normality(model), type = "qq", detrend = TRUE)
+
+# Effectuer les comparaison entre les trois moyennes ----------------------
+
+comparaisons <- emmeans(
+  object = model,
+  spec = pairwise ~ groupe,
+  adjust = "tukey" # Contrôler test multiples. Autre possibilité : "bonferroni"
+)
+
+# Voir moyennes marginales et contrastes inférentiels
+print(comparaisons)
 
