@@ -52,7 +52,7 @@ data_combined <- data_combined |>
   )
 
 
-# Montrer graphiquement les résultats -------------------------------------
+# Montrer graphiquement les données -------------------------------------
 
 ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
   geom_jitter(alpha = 0.2) +
@@ -139,3 +139,4 @@ legend(
   lwd = c(3),
   lty = c(1)
 )
+
