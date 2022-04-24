@@ -14,14 +14,14 @@ theme_set(theme_modern())
 moyenne_groupe_A <- 100
 ecart_type_groupe_A <- 15
 
-moyenne_groupe_B <- 105
+moyenne_groupe_B <- 100
 ecart_type_groupe_B <- 15
 
 # Paramètres du micro-monde
-n_participants_per_groupe <- 50
+n_participants_per_groupe <- 20
 
-sesoi_lower_d = -0.5 # Limite inférieur de la taille brute de l'effet considéré équivalent
-sesoi_upper_d = 0.5 # Limite supérieur de la taille brute de l'effet considéré équivalent
+sesoi_lower_d = -0.5 # Limite inférieur de la taille standardisée de l'effet considéré équivalent
+sesoi_upper_d = 0.5 # Limite supérieur de la taille standardisée de l'effet considéré équivalent
 
 # Génération données groupe A
 data_groupe_A <- tibble(

@@ -193,7 +193,7 @@ En utilisant le code du fichier, effectuez les manipulations et répondez aux qu
 
     -   Comment expliquez-vous que *seulement* 86.2% des tests donnent une *p*-valeur \< 0.05 ?
 
-    -   Le 13.8% des *p*-valeurs > 0.05 correspondent à quel type de phénomène dans un test d'hypothèse basé sur un modèle *nul* ?
+    -   Le 13.8% des *p*-valeurs \> 0.05 correspondent à quel type de phénomène dans un test d'hypothèse basé sur un modèle *nul* ?
 
 -   Laissez les valeurs du macro-monde courants et augmentez le nombre de participants de 20 à 30. Lancez la simulation. Combien des *p*-valeurs \< 0.05 observez à ce moment ? Quelle conclusion pouvez-vous en tirer ?
 
@@ -205,6 +205,18 @@ Le fichier `07_t-test_equivalence.R` diffère des fichiers sur le test *t* préc
 
 1.  Techniquement, même si dans le macro-monde il n'y a aucune différence entre les groupes/moyennes, dû au phénomène de l'échantillonnage il est pratiquement impossible que la différence entre deux moyennes soit précisément de 0 (i.e. M1 - M2 == 0). Il est beaucoup plus probable que la différence sera normalement distribuée autour de 0, mais avec des variations plus ou moins prononcées.
 
-2.  Sémantiquement, selon le contexte spécifique de la recherche (i.e. connaissances du domaine), le chercheur peut considérer comme *négligeable* une différence aussi plus élevée de +/- 0. Par exemple, les chercheurs pourraient considérer que si la différence est inférieur à +/- 10 unités sur l'échelle de la VD, alors on peut considérer qu'il y a sémantiquement absence d'effet, même si mathématiquement l'effet n'est pas 0.
+2.  Sémantiquement, selon le contexte spécifique de la recherche (i.e. connaissances du domaine), les chercheurs peuvent considérer comme *négligeable* une différence aussi plus grande de +/- 0. Par exemple, les chercheurs pourraient considérer que si la différence est inférieur à +/- 10 unités sur l'échelle de la VD, alors on peut considérer qu'il y a sémantiquement *absence* d'un effet qui a des implications théoriques/pratiques, même si mathématiquement l'effet n'est pas 0.
 
-Pour effectuer un test d'équivalente il faut donc établir les limites inférieur et supérieurs d'un effet, ce qui peut se faire en taille brute selon l'échelle de la VD ou en taille standardisée (e.g. Cohens'd).
+Pour effectuer un test d'équivalence il faut donc établir les limites inférieur et supérieurs d'un effet, ce qui peut se faire en taille brute selon l'échelle de la VD ou en taille standardisée (e.g. Cohens's d).
+
+Le test d'équivalence peut être effectué avec un test *classique* qui cherche de détecter la présence d'un effet. À ce moment, on peut avoir 4 résultats possibles :
+
+-   Le test d'équivalence et le test *classique* donnent une p-valeur \> alpha. Dans ce cas, on ne peut ni corroborer, ni rejeter la présence ou l'absence d'un effet.
+
+-   Le test d'équivalence donne une p-valeur \< alpha, et le test classique une p-valeur \> alpha. Dans ce cas, on peut corroborer l'hypothèse qu'il n'existe pas un effet supérieur ou inférieur au SESOI et que l'effet peut potentiellement être de 0 (car le test classique est \> alpha).
+
+-   Le test d'équivalence donne une p-valeur \> alpha, et le test classique une p-valeur \< alpha. Dans ce cas, on peut corroborer l'hypothèse qu'il existe un effet supérieur ou inférieur au SESOI.
+
+-   Le test d'équivalence et le test *classique* donnent une p-valeur \< 0.05. Ce ci semble un paradoxe, s'explique en réalité par le fait que l'effet peut-être dans les limites inférieurs et supérieurs des SESOI, mais en même temps être différent de 0. Dans ce cas on peut donc corroborer l'hypothèse que la différence entre les deux moyennes ne dépasse pas les limites, mais que les deux moyennes ne sont potentiellement pas *strictement* équivalentes (e.g. avec une différence de 0).
+
+En modifiant les paramètres du script (moyennes et écarts types ainsi que le nombre de participant-es), tester différentes cas de figures et essayez de déterminer à quelle cas de figure correspond le résultat parmi les quatre possibilités.
