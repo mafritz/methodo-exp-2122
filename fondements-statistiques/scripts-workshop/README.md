@@ -220,3 +220,15 @@ Le test d'équivalence peut être effectué avec un test *classique* qui cherche
 -   Le test d'équivalence et le test *classique* donnent une p-valeur \< 0.05. Ce ci semble un paradoxe, s'explique en réalité par le fait que l'effet peut-être dans les limites inférieurs et supérieurs des SESOI, mais en même temps être différent de 0. Dans ce cas on peut donc corroborer l'hypothèse que la différence entre les deux moyennes ne dépasse pas les limites, mais que les deux moyennes ne sont potentiellement pas *strictement* équivalentes (e.g. avec une différence de 0).
 
 En modifiant les paramètres du script (moyennes et écarts types ainsi que le nombre de participant-es), tester différentes cas de figures et essayez de déterminer à quelle cas de figure correspond le résultat parmi les quatre possibilités.
+
+## Puissance statistique pour une ANOVA simple
+
+Lorsque le plan expérimental prévoit une seule variable indépendante (VI) mais avec plus de deux modalités, on utilise une Analyse de la Variance (ANOVA) dites *simple* ou *One-way ANOVA* an anglais. Le fichier `08_anova_one-way_power.R` permet d'effectuer une analyse de puissance statistique pour déterminer l'échantillon nécessaire à détecter un effet dans la comparaison des trois ou plusieurs moyennes/groupes. La présence de 3 ou plusieurs moyennes/groupes nécessite aussi d'un type de mesure de la taille de l'effet différente au Cohen's d lorsqu'on a à faire avec deux moyennes/groupes, comme par exemple le Cohen's f qui généralise à plusieurs moyennes/groupes. Les détails de ce passage sont trop techniques pour le contexte introductif du cours, mais le script peut néanmoins donner une idée des échantillons nécessaires pour mener des ANOVA simple informatives.
+
+En variant les paramètres du fichier, essayez de répondre aux questions suivantes :
+
+-   En utilisant les paramètres de base k = 3, alpha = 0.05 et puissance 0.8, combien d'entités/participant-es sont nécessaires par groupes avec un SESOI de Cohen's f = 0.25 ?
+
+-   Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme.
+
+-   
