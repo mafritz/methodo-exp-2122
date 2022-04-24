@@ -247,4 +247,26 @@ Le script est organisé en 6 sections principales :
 
 2.  Les données sont ensuite affichées graphiquement pour comprendre la distribution des observations autours des moyennes des conditions/groupes
 
-3.  L'*omnibus* test est effectué à travers le paquet `afex` utilisé souvent dans des analyses de type ANOVA. Le résultat est affiché en forme de tableau ANOVA avec le *generalised effect size* (GES) comme taille de l'effet.
+3.  L'*omnibus* test est effectué à travers le paquet `afex` utilisé souvent dans des analyses de type ANOVA. Le résultat est affiché en forme de tableau ANOVA avec le *generalised effect size* (ges) comme taille de l'effet. Par exemple :
+
+    | Effect | df    | MSE    | F     | ges  | p.value |
+    |:-------|:------|:-------|:------|:-----|:--------|
+    | groupe | 2, 57 | 216.14 | 21.91 | .435 | \<.001  |
+
+4.  L'affichage de la p-valeur observée en fonction du modèle *nul*. Le modèle nul correspond à l'hypothèse que **toutes** les moyennes sont les mêmes (e.g. M1 = M2 = M3 ... = M*k*).
+
+5.  Le respect des postulats de l'ANOVA. Pour que le test puisse être considéré fiable, il est nécessaire que certaines conditions soient respectées.
+
+6.  Les comparaisons entre les trois moyennes en utilisant le paquet `emmeans`. La comparaison permet de dire parmi les moyennes lesquelles diffèrent suffisamment pour établir qu'il y a un effet de la VI sur les deux. Chaque comparaison a sa propre p-valeur qui est corrigé pour éviter de *gonfler* l'erreur de type I (plus de tests on fait, plus on a la probabilité d'avoir des résultats \< alpha seulement à cause de l'effet d'échantillonnage). Par exempe :
+
+    | contrast |  estimate |       SE |  df |   t.ratio | p.value |
+    |:---------|----------:|---------:|----:|----------:|--------:|
+    | A - B    | -13.46438 | 4.649127 |  57 | -2.896109 |  0.0146 |
+    | A - C    | -30.69853 | 4.649127 |  57 | -6.603073 | \<0.001 |
+    | B - C    | -17.23415 | 4.649127 |  57 | -3.706964 |   0.001 |
+
+En utilisant le script, essayez de répondre aux questions suivantes :
+
+-   En laissant les données disponibles de base dans le fichier, observez les différentes représentations textuelles et graphiques et essayez de repérer toutes les informations importantes. Concentrez-vous ensuite sur les postulats : sont-ils respectés à votre avis ?
+
+-   Modifiez les paramètres pour le groupe C afin qu'il est la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?

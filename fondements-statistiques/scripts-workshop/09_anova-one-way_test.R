@@ -24,7 +24,7 @@ moyenne_groupe_C <- 130
 ecart_type_groupe_C <- 15
 
 # Paramètres du micro-monde
-n_participants_per_groupe <- 20
+n_participants_per_groupe <- 50
 
 # Génération données groupe A
 data_groupe_A <- tibble(
