@@ -284,3 +284,37 @@ Le fichier `10_anova_oneway_with-other-variable.R` permet de simuler une ANCOVA 
 ## Puissance statistique d'une ANOVA factorielle
 
 Un autre type de test qui est souvent utilisé dans la littérature expérimentale en sciences sociales est l'ANOVA factorielle qui résulte de l'implémentation de deux VI ou plus. L'ANOVA factorielle peut se décliner également sous forme d'ANCOVA, car il s'agit encore une fois du même modèle linéaire.
+
+Lorsqu'on ajoute une deuxième (ou plus) VI, la complexité du modèle augmente de manière exponentielle. On peut prendre à exemple le cas d'une ANOVA factorielle dite 2x2, très commune en sciences sociales, c'est-à-dire un ANOVA avec deux VI, chacune avec deux modalités. Par exemple on peut imaginer un plan expérimentale inter-sujets avec :
+
+-   Une VI qui détermine la présence (Avec) ou l'absence (Sans) d'un dispositif numérique de soutien à une tâche d'aprentissage
+
+-   Une VI qui détermine le niveau de difficulté de la tâche (Faible ou Forte)
+
+Il en résulte un plan avec 4 conditions possibles en croisant les deux VI :
+
+1.  Avec dispositif / Difficulté faible
+
+2.  Avec dispositif / Difficulté forte
+
+3.  Sans dispositif / Diffuculté faible
+
+4.  Sans dispositif / Difficulté forte
+
+Or, dans ce cas de figure, le test statistique peut s'intéresser :
+
+-   À les 6 comparaisons possibles entre les 4 conditions. C'est ce qu'on appelle des **effets simples**
+
+-   Au deux effets des VI singulièrement, c'est-à-dire indépendamment/en moyennant l'autre VI. C'est ce qu'on appelle des **effets principaux** :
+
+    -   est-ce que la présence/absence du dispositif a un effet indépendamment de la difficulté de la tâche ?
+
+    -   est-ce que la difficulté de la tâche a un effet indépendamment de la présence/absence du dispositif ?
+
+-   À ce qu'on appelle l'**effet d'interaction/modération** entre les deux VI, par exemple : est-ce que l'effet du dispositif est plus grand/petit si la difficulté de la tâche est faible plutôt que forte ?
+
+Pour déterminer la taille de l'échantillon nécessaire à une ANOVA factorielle il faut donc établir à l'avance à quel phénomène/type de test on s'intéresse en particulier : les effets simples, les effets principaux ou l'effet d'interaction ? En général, les effets d'interactions nécessitent de beaucoup plus d'observations/participant-es. De plus, les effets d'interactions sont souvent mal compris par les chercheurs. En tout cas, pour déterminer la taille de l'échantillon, on utilise des simulations sur la base des moyennes et écarts types attendus pour les 4 conditions expérimentales. Le fichier `11_anova-factorial_power.R` permet d'effectuer ces simulations à l'aide du paquet Superpower de R. Utilisez le script pour répondre aux questions suivantes :
+
+-   Laissez les paramètres de base du script et effectuer la simulation de la puissance statistique. Quelle est la puissance statistique pour les différents effets (simples, principaux et interaction) ?
+
+-   Modifiez comme vous voulez les 4 moyennes des conditions expérimentales et menez à nouveau les simulations. Quels patterns pouvez-vous identifier ?

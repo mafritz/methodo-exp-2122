@@ -30,28 +30,28 @@ ecart_type_groupe_1_1 <- 15
 # Paramètres du micro-monde
 n_participants_per_groupe <- 20
 
-# Génération données groupe 00 (Sans Sans)
+# Génération données groupe 00 (Sans Faible)
 data_groupe_0_0 <- tibble(
   vi1 = 0,
   vi2 = 0,
   mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_0_0, sd = ecart_type_groupe_0_0)
 )
 
-# Génération données groupe 01 (Sans Avec)
+# Génération données groupe 01 (Sans Forte)
 data_groupe_0_1 <- tibble(
   vi1 = 0,
   vi2 = 1,
   mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_0_1, sd = ecart_type_groupe_0_1)
 )
 
-# Génération données groupe 10 (Avec Sans)
+# Génération données groupe 10 (Avec Faible)
 data_groupe_1_0 <- tibble(
   vi1 = 1,
   vi2 = 0,
   mesure = rnorm(n_participants_per_groupe, mean = moyenne_groupe_1_0, sd = ecart_type_groupe_1_0)
 )
 
-# Génération données groupe 11 (Avec Avec)
+# Génération données groupe 11 (Avec Forte)
 data_groupe_1_1 <- tibble(
   vi1 = 1,
   vi2 = 1,
@@ -64,7 +64,7 @@ data_combined <- data_combined |>
   mutate(
     participant = paste0("P", 1:nrow(data_combined)),
     vi1 = factor(vi1, labels = c("Sans", "Avec")), # Modifier les labels des modalités vi1
-    vi2 = factor(vi2, labels = c("Sans", "Avec")) # Modifier les labels de modalités vi2
+    vi2 = factor(vi2, labels = c("Faible", "Forte")) # Modifier les labels de modalités vi2
   )
 
 

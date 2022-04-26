@@ -1,4 +1,5 @@
 set.seed(8923)
+library(tidyverse)
 library(Superpower)
 library(see)
 theme_set(theme_modern())
