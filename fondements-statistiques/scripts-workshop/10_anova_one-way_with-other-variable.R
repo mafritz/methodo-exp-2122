@@ -8,7 +8,7 @@ library(emmeans)
 library(scales)
 theme_set(theme_modern())
 
-# Test inférentiel avec troisième variable (e.g. contrôle) ---------------
+# Test inférentiel avec une autre variable (e.g. contrôle) ---------------
 
 # Paramètres des donnés simulées ------------------------------------------
 

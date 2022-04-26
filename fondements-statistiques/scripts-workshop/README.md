@@ -267,6 +267,16 @@ Le script est organisé en 6 sections principales :
 
 En utilisant le script, essayez de répondre aux questions suivantes :
 
--   En laissant les données disponibles de base dans le fichier, observez les différentes représentations textuelles et graphiques et essayez de repérer toutes les informations importantes. Concentrez-vous ensuite sur les postulats : sont-ils respectés à votre avis ?
+-   En laissant les données disponibles de base dans le fichier, observez les différentes représentations textuelles et graphiques et essayez de repérer toutes les informations importantes. Quel est le résultat du *omnibus* test ? Quels sont les résultats des comparaisons ? Concentrez-vous ensuite sur les postulats : sont-ils respectés à votre avis ?
 
--   Modifiez les paramètres pour le groupe C afin qu'il est la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?
+-   Modifiez les paramètres pour le groupe C afin qu'il ait la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?
+
+## Effectuer une ANOVA avec une autre variable (ANCOVA)
+
+Dans la littérature en sciences sociales on a souvent des tests appelés ANCOVA, acronyme de Analayse de Co-Variance, mais en réalité il s'agit toujours de l'application du modèle linéaire. Le principe d'un point de vue scientifique est d'ajouter à la VI de l'ANOVA un co-varié, c'est-à-dire une variable continue mesurée de la même manière pour toutes les entités/participant-es soumis-es à la VI. Il existe dans l'utilisation de l'ANCOVA souvent des mauvaises interprétations sur l'utilité de cette action. On parle souvent de *contrôler* pour cette variable. D'un point de vue causale, ce mécanisme se justifie lorsqu'on sait du modèle scientifique que ce co-varié peut influencer la VD. En utilisant la régression linéaire, on peut a ce moment *diviser* l'effet de la VI de l'effet du co-varié, pour tester quel est l'effet de la VI en moyennant sur les différents valeurs du co-varié. L'explication technique de ce passage dépasse le cadre introductif du cours et l'ANCOVA est présentée ici car elle est souvent citée dans les articles scientifiques.
+
+Le fichier `10_anova_oneway_with-other-variable.R` permet de simuler une ANCOVA avec une seule VI comme dans l'ANOVA *simple*, plus un co-varié qui est simulé avec un rapport avec la VD. Ce rapport mathématique est influencé par du *bruit* qu'on peut paramétrer. En utilisant le script :
+
+-   Effectuez d'abord le test avec les données disponibles dans le script et essayé d'interpréter les résultats, notamment en fonction au tableau de l'ANOVA *simple* du point précédent
+
+-   Modifiez le *bruit* de la variable `z` à travers le script. Plus de bruit signifie que la varible z et la VD sont moins en relation l'une avec l'autre. Que se passe-t-il au niveau des résultats lorsque vous augmentez le bruit ? Comment expliqueriez-vous ce résultat ?
