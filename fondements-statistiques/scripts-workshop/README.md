@@ -287,7 +287,7 @@ Un autre type de test qui est souvent utilisé dans la littérature expérimenta
 
 Lorsqu'on ajoute une deuxième (ou plus) VI, la complexité du modèle augmente de manière exponentielle. On peut prendre à exemple le cas d'une ANOVA factorielle dite 2x2, très commune en sciences sociales, c'est-à-dire un ANOVA avec deux VI, chacune avec deux modalités. Par exemple on peut imaginer un plan expérimentale inter-sujets avec :
 
--   Une VI qui détermine la présence (Avec) ou l'absence (Sans) d'un dispositif numérique de soutien à une tâche d'aprentissage
+-   Une VI qui détermine la présence (Avec) ou l'absence (Sans) d'un dispositif numérique de soutien à une tâche d’apprentissage
 
 -   Une VI qui détermine le niveau de difficulté de la tâche (Faible ou Forte)
 
@@ -318,3 +318,5 @@ Pour déterminer la taille de l'échantillon nécessaire à une ANOVA factoriell
 -   Laissez les paramètres de base du script et effectuer la simulation de la puissance statistique. Quelle est la puissance statistique pour les différents effets (simples, principaux et interaction) ?
 
 -   Modifiez comme vous voulez les 4 moyennes des conditions expérimentales et menez à nouveau les simulations. Quels patterns pouvez-vous identifier ?
+
+## Effectuer une ANOVA factorielle
