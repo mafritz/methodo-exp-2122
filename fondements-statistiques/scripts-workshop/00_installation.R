@@ -14,6 +14,7 @@ install.packages(
     "TOSTER",
     "performance",
     "qqplotr",
-    "Superpower"
+    "Superpower",
+    "scales"
   )
 )
