@@ -1,6 +1,6 @@
 # Workshop fondements statistiques
 
-Ce document est accompagné par des fichiers/scripts en R qui permettent de découvrir et comprendre le fonctionnement des statistiques *fréquentistes*. Les fichiers sont numérotés de manière progressive et contient du code à exécuter/adapter en fonction des consignes illustrées dans ce document.
+Ce document est accompagné par des fichiers/scripts en R qui permettent de découvrir et comprendre le fonctionnement des statistiques fréquentielles. Les fichiers sont numérotés de manière progressive et contient du code à exécuter/adapter en fonction des consignes illustrées dans ce document.
 
 ## Préparation et informations utiles
 
@@ -94,7 +94,7 @@ Le code de cette activité prévoit :
 
     -   Age : avec un chiffre représentant les années (avec décimaux) du participant
 
-    -   Fatigue : un indicateur auto-reporté de fatigue avant d'entamer ue tâche mesuré à travers un hypothétique *slider* allant de pas du tout fatigué-e à extrêmement fatigué-e
+    -   Fatigue : un indicateur auto-reporté de fatigue avant d'entamer une tâche mesuré à travers un hypothétique *slider* allant de pas du tout fatigué-e à extrêmement fatigué-e
 
     -   QI : une mesure psychométrique de l'intelligence selon un test de type performance
 
@@ -197,7 +197,7 @@ En utilisant le code du fichier, effectuez les manipulations et répondez aux qu
 
 -   Laissez les valeurs du macro-monde courants et augmentez le nombre de participants de 20 à 30. Lancez la simulation. Combien des *p*-valeurs \< 0.05 observez à ce moment ? Quelle conclusion pouvez-vous en tirer ?
 
--   Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 100. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait, notamment en relation avec la problématique de la replicabilité des résultats en sciences sociales ?
+-   Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 15. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait, notamment en relation avec la problématique de la replicabilité des résultats en sciences sociales ?
 
 ## Équivalence entre deux moyennes/groupes
 
@@ -207,7 +207,7 @@ Le fichier `07_t-test_equivalence.R` diffère des fichiers sur le test *t* préc
 
 2.  Sémantiquement, selon le contexte spécifique de la recherche (i.e. connaissances du domaine), les chercheurs peuvent considérer comme *négligeable* une différence aussi plus grande de +/- 0. Par exemple, les chercheurs pourraient considérer que si la différence est inférieur à +/- 10 unités sur l'échelle de la VD, alors on peut considérer qu'il y a sémantiquement *absence* d'un effet qui a des implications théoriques/pratiques, même si mathématiquement l'effet n'est pas 0.
 
-Pour effectuer un test d'équivalence il faut donc établir les limites inférieur et supérieurs d'un effet, ce qui peut se faire en taille brute selon l'échelle de la VD ou en taille standardisée (e.g. Cohens's d).
+Pour effectuer un test d'équivalence il faut donc établir les limites inférieur et supérieurs d'un effet, ce qui peut se faire en taille brute selon l'échelle de la VD ou en taille standardisée (e.g. Cohen's d).
 
 Le test d'équivalence peut être effectué avec un test *classique* qui cherche de détecter la présence d'un effet. À ce moment, on peut avoir 4 résultats possibles :
 
@@ -257,13 +257,13 @@ Le script est organisé en 6 sections principales :
 
 5.  Le respect des postulats de l'ANOVA. Pour que le test puisse être considéré fiable, il est nécessaire que certaines conditions soient respectées.
 
-6.  Les comparaisons entre les trois moyennes en utilisant le paquet `emmeans`. La comparaison permet de dire parmi les moyennes lesquelles diffèrent suffisamment pour établir qu'il y a un effet de la VI sur les deux. Chaque comparaison a sa propre p-valeur qui est corrigé pour éviter de *gonfler* l'erreur de type I (plus de tests on fait, plus on a la probabilité d'avoir des résultats \< alpha seulement à cause de l'effet d'échantillonnage). Par exempe :
+6.  Les comparaisons entre les trois moyennes en utilisant le paquet `emmeans`. La comparaison permet de dire parmi les moyennes lesquelles diffèrent suffisamment pour établir qu'il y a un effet de la VI sur les deux. Chaque comparaison a sa propre p-valeur qui est corrigé pour éviter de *gonfler* l'erreur de type I (plus de tests on fait, plus on a la probabilité d'avoir des résultats \< alpha seulement à cause de l'effet d'échantillonnage). Par exemple :
 
-    | contrast |  estimate |       SE |  df |   t.ratio | p.value |
-    |:---------|----------:|---------:|----:|----------:|--------:|
-    | A - B    | -13.46438 | 4.649127 |  57 | -2.896109 |  0.0146 |
-    | A - C    | -30.69853 | 4.649127 |  57 | -6.603073 | \<0.001 |
-    | B - C    | -17.23415 | 4.649127 |  57 | -3.706964 |   0.001 |
+    | contraste |  estimate |       SE |  df |   t.ratio | p.value |
+    |:----------|----------:|---------:|----:|----------:|--------:|
+    | A - B     | -13.46438 | 4.649127 |  57 | -2.896109 |  0.0146 |
+    | A - C     | -30.69853 | 4.649127 |  57 | -6.603073 | \<0.001 |
+    | B - C     | -17.23415 | 4.649127 |  57 | -3.706964 |   0.001 |
 
 En utilisant le script, essayez de répondre aux questions suivantes :
 
@@ -273,13 +273,13 @@ En utilisant le script, essayez de répondre aux questions suivantes :
 
 ## Effectuer une ANOVA avec une autre variable (ANCOVA)
 
-Dans la littérature expérimentale en sciences sociales on a souvent des tests appelés ANCOVA, acronyme de Analayse de Co-Variance, mais en réalité il s'agit toujours de l'application du modèle linéaire. Le principe d'un point de vue scientifique est d'ajouter à la VI de l'ANOVA un co-varié, c'est-à-dire une variable continue mesurée de la même manière pour toutes les entités/participant-es soumis-es à la VI. Il existe dans l'utilisation de l'ANCOVA souvent des mauvaises interprétations sur l'utilité de cette action. On parle notamment de *contrôler* pour cette variable. D'un point de vue causale, ce mécanisme se justifie lorsqu'on sait du modèle scientifique que ce co-varié peut influencer la VD. En utilisant la régression linéaire, on peut a ce moment *diviser* l'effet de la VI de l'effet du co-varié, pour tester quel est l'effet de la VI en moyennant sur les différents valeurs du co-varié. L'explication technique de ce passage dépasse le cadre introductif du cours et l'ANCOVA est présentée ici car elle est souvent citée dans les articles scientifiques.
+Dans la littérature expérimentale en sciences sociales on a souvent des tests appelés ANCOVA, acronyme de Analyse de Co-Variance, mais en réalité il s'agit toujours de l'application du modèle linéaire. Le principe d'un point de vue scientifique est d'ajouter à la VI de l'ANOVA un co-varié, c'est-à-dire une variable continue mesurée de la même manière pour toutes les entités/participant-es soumis-es à la VI. Il existe dans l'utilisation de l'ANCOVA souvent des mauvaises interprétations sur l'utilité de cette action. On parle notamment de *contrôler* pour cette variable. D'un point de vue causale, ce mécanisme se justifie lorsqu'on sait du modèle scientifique que ce co-varié peut influencer la VD. En utilisant la régression linéaire, on peut a ce moment *diviser* l'effet de la VI de l'effet du co-varié, pour tester quel est l'effet de la VI en moyennant sur les différents valeurs du co-varié. L'explication technique de ce passage dépasse le cadre introductif du cours et l'ANCOVA est présentée ici car elle est souvent citée dans les articles scientifiques.
 
 Le fichier `10_anova_oneway_with-other-variable.R` permet de simuler une ANCOVA avec une seule VI comme dans l'ANOVA *simple*, plus un co-varié qui est simulé avec un rapport avec la VD. Ce rapport mathématique est influencé par du *bruit* qu'on peut paramétrer. En utilisant le script :
 
 -   Effectuez d'abord le test avec les données disponibles dans le script et essayé d'interpréter les résultats, notamment en fonction au tableau de l'ANOVA *simple* du point précédent
 
--   Modifiez le *bruit* de la variable `z` à travers le script. Plus de bruit signifie que la varible z et la VD sont moins en relation l'une avec l'autre. Que se passe-t-il au niveau des résultats lorsque vous augmentez le bruit ? Comment expliqueriez-vous ce résultat ?
+-   Modifiez le *bruit* de la variable `z` à travers le script. Plus de bruit signifie que la variable z et la VD sont moins en relation l'une avec l'autre. Que se passe-t-il au niveau des résultats lorsque vous augmentez le bruit ? Comment expliqueriez-vous ce résultat ?
 
 ## Puissance statistique d'une ANOVA factorielle
 
@@ -297,7 +297,7 @@ Il en résulte un plan avec 4 conditions possibles en croisant les deux VI :
 
 2.  Avec dispositif / Difficulté forte
 
-3.  Sans dispositif / Diffuculté faible
+3.  Sans dispositif / Difficulté faible
 
 4.  Sans dispositif / Difficulté forte
 
@@ -323,7 +323,7 @@ Pour déterminer la taille de l'échantillon nécessaire à une ANOVA factoriell
 
 Le fichier `12_anova-factorial_test.R` permet de mener des ANOVA 2x2 avec des données simulées. La complexité d'ajouter une deuxième VI et l'effet d'interaction dans un test se traduit également dans des résultats plus compliqués à interpréter, notamment au niveau des comparaisons entre conditions expérimentales. On peut synthétiser l'interprétation des résultats avec une sorte d'algorithme décisionnel qui dépend du résultat de l'effet d'interaction :
 
--   Si l'effet d'interaction est détecté avec p-valuer \< alpha, alors on s'intéresse aux effets simples, car les effets principaux sont influencés par l'interaction/modération d'une VI sur l'autre
+-   Si l'effet d'interaction est détecté avec p-valeur \< alpha, alors on s'intéresse aux effets simples, car les effets principaux sont influencés par l'interaction/modération d'une VI sur l'autre
 
 -   Si l'effet d'interaction n'est pas détecté avec p-valeur \> alpha, alors on s'intéresse aux effets principaux des VI
 
