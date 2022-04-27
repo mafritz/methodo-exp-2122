@@ -368,12 +368,12 @@ Donc dans l'exemple sur l'effet du support vidéo sur l'apprentissage, l'hypoth�
 
 ```{r idealized-experiment, fig.height=3, fig.width=5, fig.cap="Données simulées sur une potentielle expérience idéalisée. Les barres représentent des intervalles de confiance à 95%."}
 sans <- tibble(
-  condition = "Sans vidéo",
+  condition = "Texte",
   apprentissage = rnorm(200, 80, 35)
 )
 
 playback <- tibble(
-  condition = "Playback",
+  condition = "Enregistrement",
   apprentissage = rnorm(200, 60, 20)
 )
 
