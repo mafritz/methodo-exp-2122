@@ -8,7 +8,7 @@ Ce document est accompagné par des fichiers/scripts en R qui permettent de déc
 
 Pour exécuter le code les logiciels suivants sont nécessaires :
 
--   [R](https://www.r-project.org/) version 4.0.0 ou supérieur
+-   [R](https://www.r-project.org/) version 4.1.0 ou supérieur
 
 -   [RStudio desktop](https://www.rstudio.com/products/rstudio/) version RStudio 2021.09.0 ou supérieur. En alternative, un compte [RStudio cloud](https://rstudio.cloud). Pour plus d'informations sur RStudio, voir [la page EduTechWiki homonyme](https://edutechwiki.unige.ch/fr/RStudio).
 
