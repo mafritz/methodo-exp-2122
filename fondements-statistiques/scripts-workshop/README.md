@@ -355,3 +355,17 @@ Il en résulte qu'on peut obtenir potentiellement 8 combinaisons possibles depui
 | 6   | Oui                 | Non                 | Oui                 |
 | 7   | Oui                 | Oui                 | Non                 |
 | 8   | Oui                 | Oui                 | Oui                 |
+
+En utilisant le script, essayez de répondre aux questions suivantes :
+
+-   Avec les données de base du script, effectué le test de l'ANOVA et regardez le tableau avec les effets principaux et d'interaction.
+
+    -   Est-ce que l'effet d'interaction et détecté ou non ? Regardez également le graphique pour vous aider dans la décision.
+
+    -   Selon la réponse, menez les comparaisons successives en accord avec le résultat du test de l'interaction.
+
+    -   Essayez de comprendre les différents indicateurs et de donner du sens aux résultats. Que signifie-t-il un effet d'interaction dans ce cas ? Qu'est-ce que les comparaisons successives nous disent ?
+
+-   Modifiez les 4 moyennes des conditions expérimentales selon vos choix et essayez de reproduire le même mécanisme du point précédent : tester pour l'interaction et effectuez ensuite les comparaisons correspondantes.
+
+-   À votre avis, qu'est-ce qu'il faudrait faire dans le cas où il n'y a aucun effet (ni effets principaux, ni interaction) ?
