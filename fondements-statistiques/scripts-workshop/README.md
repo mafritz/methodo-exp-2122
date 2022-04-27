@@ -320,3 +320,38 @@ Pour déterminer la taille de l'échantillon nécessaire à une ANOVA factoriell
 -   Modifiez comme vous voulez les 4 moyennes des conditions expérimentales et menez à nouveau les simulations. Quels patterns pouvez-vous identifier ?
 
 ## Effectuer une ANOVA factorielle
+
+Le fichier `12_anova-factorial_test.R` permet de mener des ANOVA 2x2 avec des données simulées. La complexité d'ajouter une deuxième VI et l'effet d'interaction dans un test se traduit également dans des résultats plus compliqués à interpréter, notamment au niveau des comparaisons entre conditions expérimentales. On peut synthétiser l'interprétation des résultats avec une sorte d'algorithme décisionnel qui dépend du résultat de l'effet d'interaction :
+
+-   Si l'effet d'interaction est détecté avec p-valuer \< alpha, alors on s'intéresse aux effets simples, car les effets principaux sont influencés par l'interaction/modération d'une VI sur l'autre
+
+-   Si l'effet d'interaction n'est pas détecté avec p-valeur \> alpha, alors on s'intéresse aux effets principaux des VI
+
+On peut déterminer s'il existe des effets principaux et/ou d'interaction de manière intuitive grâce aux moyennes des conditions expérimentales à travers ce qu'on appelle les **moyennes marginales** (MM), car elles figurent sur les marges d'un tableau. Par exemple :
+
+|                | VI2 - Faible | VI2 - Forte | *VI1 - MM* |
+|:--------------:|:------------:|:-----------:|:----------:|
+| **VI1 - Sans** |      10      |     20      |    *15*    |
+| **VI1 - Avec** |      15      |     35      |    *25*    |
+| ***VI2 - MM*** |    *12.5*    |   *27.5*    |            |
+
+Les moyennes marginales sont simplement les moyennes des lignes et colonnes d'un tableau avec les moyennes des conditions expérimentales. À travers ces moyennes on peut déterminer en tant que *rule of thumb* :
+
+-   La présence d'un effet principal de la VI1 si la différence (absolue) entre les moyennes marginales de cette VI1 (donc la toute dernière colonne sur la droite) n'est pas 0. Dans l'exemple nous avons 15 - 25 = \|10\|
+
+-   La présence d'un effet principal de la VI2 si la différence (absolue) entre les moyennes marginales de cette VI2 (donc la toute dernière ligne en bas) n'est pas 0. Dans l'exemple nous avons 12.5 - 27.5 = \|15\|
+
+-   La présence d'un effet d'interaction si la différence entre les moyennes marginales de la VI1 (donc 15 - 25) n'est pas égale à la différence entre les moyennes marginales de la VI2 (donc 12.5 - 27.5). Dans ce cas nous avons \|10\| et \|15\|, ce qui suggère la présence d'un effet d'interaction.
+
+Il en résulte qu'on peut obtenir potentiellement 8 combinaisons possibles depuis une ANOVA factorielle 2x2 :
+
+|     | Effet principal VI1 | Effet principal VI2 | Effet d'interaction |
+|-----|:--------------------|:--------------------|:--------------------|
+| 1   | Non                 | Non                 | Non                 |
+| 2   | Non                 | Non                 | Oui                 |
+| 3   | Non                 | Oui                 | Non                 |
+| 4   | Non                 | Oui                 | Oui                 |
+| 5   | Oui                 | Non                 | Non                 |
+| 6   | Oui                 | Non                 | Oui                 |
+| 7   | Oui                 | Oui                 | Non                 |
+| 8   | Oui                 | Oui                 | Oui                 |
