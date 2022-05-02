@@ -30,4 +30,3 @@ source(here::here("assets", "settings", "custom.R"))
 
 ```{r, child=c('../README.md')}
 ```
-

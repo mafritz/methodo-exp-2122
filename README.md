@@ -348,6 +348,20 @@ La période 5 prévoit deux livrables par groupes.
 
 -   Le poster doit indiquer clairement qu'il ne s'agit pas d'une expérience qui a été menée réellement !
 
+-   Dans le poster mettez seulement les indicateurs statistiques pertinents et illustrez dans une pièce-jointe/autre document les analyses que vous avez menées (output Jamovi, script R, ...). Vous êtes libres de choisir le logiciel que vous préférez/maîtrisez mieux. Le output des analyses doit présenter pour chaque VD :
+
+    -   Description de l'échantillon avec N, M et SD pour l'ensemble des observations et pour chaque groupe/condition expérimentale
+
+    -   Au moins une représentation graphique des données pertinentes
+
+    -   Degrés de liberté et résultat du test statistique
+
+    -   *p*-valeur associée au test
+
+    -   Taille de l'effet brute et/ou standardisée avec intervalles de confiance à 95%
+
+    -   Si pertinent, des éléments qui témoignent que les postulats du test sont respectées (e.g. pour ANOVA simple ou factorielle)
+
 **Conseils** :
 
 -   Référez-vous aux ressources sur EduTechWiki dans le module [Communiquer efficacement : principes et astuces en communication visuelle](https://edutechwiki.unige.ch/fr/Communiquer_efficacement_:_principes_et_astuces_en_communication_visuelle)
