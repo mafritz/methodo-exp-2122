@@ -309,6 +309,10 @@ La période 5 prévoit deux livrables par groupes.
 **Contraintes** :
 
 -   Même contraintes que pour la première version
+-   En plus, dans le message qui publie votre fiche afin d'obtenir les données de synthèse, vous devez donner des informations utiles sur les deux VD en termes numériques, par exemple :
+    -   Donner une idée de l'étendu de la mesure (e.g. échelle de Lickert de 1 à 7), mesure en seconds qui peut aller de 30 à 90 environ, ...
+
+    -   Si possible, la moyenne et l'écart type de la mesure. Si vous utilisez une mesure validée dans la littérature, parfois ces informations sont disponibles directement dans l'article. Si ce n'est pas le cas, essayez quand même de vous imaginer une *distribution* potentielle de vos mesures, c'est un exercice utile au niveau pédagogique
 
 **Conseils** :
 
