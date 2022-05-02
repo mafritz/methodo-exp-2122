@@ -10,7 +10,7 @@ Le cours s'intéresse à la méthode expérimentale appliquée à la technologie
 
 -   [**Mariem Jaouadi**](https://tecfa.unige.ch/perso/jaouadi/) Assistante d'enseignement et de recherche à TECFA, UNIGE
 
-## Objectifs
+## Objectifs et ressources pédagogiques
 
 Le cours propose une introduction à la méthode expérimentale appliquée à la technologie éducative. Le cours est organisé en deux parties :
 
