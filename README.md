@@ -10,7 +10,7 @@ Le cours s'intéresse à la méthode expérimentale appliquée à la technologie
 
 -   [**Mariem Jaouadi**](https://tecfa.unige.ch/perso/jaouadi/) Assistante d'enseignement et de recherche à TECFA, UNIGE
 
-## Objectifs
+## Objectifs et ressources pédagogiques
 
 Le cours propose une introduction à la méthode expérimentale appliquée à la technologie éducative. Le cours est organisé en deux parties :
 
@@ -347,6 +347,20 @@ La période 5 prévoit deux livrables par groupes.
 -   Votre poster doit citer au moins deux articles scientifiques en format bref (auteurs et date). Les références complètes sont à insérer dans le message avec lequel vous rendez le livrable
 
 -   Le poster doit indiquer clairement qu'il ne s'agit pas d'une expérience qui a été menée réellement !
+
+-   Dans le poster mettez seulement les indicateurs statistiques pertinents et illustrez dans une pièce-jointe/autre document les analyses que vous avez menées (output Jamovi, script R, ...). Vous êtes libres de choisir le logiciel que vous préférez/maîtrisez mieux. Le output des analyses doit présenter pour chaque VD :
+
+    -   Description de l'échantillon avec N, M et SD pour l'ensemble des observations et pour chaque groupe/condition expérimentale
+
+    -   Au moins une représentation graphique des données pertinentes
+
+    -   Degrés de liberté et résultat du test statistique
+
+    -   *p*-valeur associée au test
+
+    -   Taille de l'effet brute et/ou standardisée avec intervalles de confiance à 95%
+
+    -   Si pertinent, des éléments qui témoignent que les postulats du test sont respectées (e.g. pour ANOVA simple ou factorielle)
 
 **Conseils** :
 
