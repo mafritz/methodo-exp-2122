@@ -4,7 +4,7 @@ library(see)
 theme_set(theme_modern())
 # Modélisation de base ----------------------------------------------------
 
-# La modélisation de base de données concerne des statistiques comme la moyenne, la médianne, la variance et l'écart type
+# La modélisation de base de données concerne des statistiques comme la moyenne, la médiane, la variance et l'écart type
 
 
 # Données -----------------------------------------------------------------
