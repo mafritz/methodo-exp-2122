@@ -15,7 +15,6 @@ install.packages(
     "performance",
     "qqplotr",
     "Superpower",
-    "scales",
-    "skimr"
+    "scales"
   )
 )

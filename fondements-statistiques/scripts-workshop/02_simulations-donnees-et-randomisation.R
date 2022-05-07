@@ -45,6 +45,8 @@ random_data <- tibble(
   qi = rnorm(n_participants, 100, 15)
 )
 
+# Créer les indicateurs avec les fonctions
+
 random_data |>
   group_by(groupe) |>
   summarise(
@@ -56,6 +58,3 @@ random_data |>
     M_qi = mean(qi),
     SD_qi = sd(qi)
   )
-
-
-
