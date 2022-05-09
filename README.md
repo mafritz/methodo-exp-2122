@@ -26,6 +26,8 @@ Le cours propose une introduction à la méthode expérimentale appliquée à la
 
     -   Texte d'accompagnement (en construction)
 
+    -   [Workshop/scripts R avec simulations de différents tests statistiques](https://github.com/mafritz/methodo-exp-2122/tree/main/fondements-statistiques/scripts-workshop)
+
 Les deux parties sont complétées par des ressources/tutoriels :
 
 -   [Lire et interpréter des contributions expérimentales *primaires*](https://github.com/mafritz/methodo-exp-2122/blob/main/sources-experimentales-primaires/lire-et-interpreter-sources-experimentales-primaires.pdf)
