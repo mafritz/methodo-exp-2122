@@ -369,3 +369,11 @@ En utilisant le script, essayez de répondre aux questions suivantes :
 -   Modifiez les 4 moyennes des conditions expérimentales selon vos choix et essayez de reproduire le même mécanisme du point précédent : tester pour l'interaction et effectuez ensuite les comparaisons correspondantes.
 
 -   À votre avis, qu'est-ce qu'il faudrait faire dans le cas où il n'y a aucun effet (ni effets principaux, ni interaction) ?
+
+## Modèle multi-niveaux
+
+Le fichier `13_modele-multiniveaux.R` propose une modélisation plus avancée qui tient compte par exemple d'éléments hiérarchiques (e.g. classes, binômes, ...) ou à mesure répétée. Pour plus d'informations voir par exemple [l'article de Brown (2021)](https://journals.sagepub.com/doi/full/10.1177/2515245920960351) disponible aussi dans les ressources supplémentaires.
+
+## Méta-analyse
+
+Le fichier `14_meta-analysis.R` propose un exemple de méta-analyse sur des expériences prévoyant deux groupes (e.g. groupe contrôle vs. traitement). Il est donné à titre d'exemple, vous pouvez modifier les différentes valeurs des expériences ou insérer des données depuis des articles de méta-analyses publiés.
