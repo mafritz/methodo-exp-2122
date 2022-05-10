@@ -14,11 +14,11 @@ theme_set(theme_modern())
 moyenne_groupe_A <- 100
 ecart_type_groupe_A <- 15
 
-moyenne_groupe_B <- 100
+moyenne_groupe_B <- 115
 ecart_type_groupe_B <- 15
 
 # Paramètres du micro-monde
-n_participants_per_groupe <- 30
+n_participants_per_groupe <- 20
 
 # Effectuer 1000 t-tests de Welch avec hétérogénité de la variance --------
 
