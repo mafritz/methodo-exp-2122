@@ -99,3 +99,25 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 
 **Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?\
 **D'un point de vue mathématique, il est garanti qu'une différence entre deux moyennes à un certain moment devienne *statistiquement* significative, mais cela ne signifie pas qu'elle est *pratiquement* digne de note. Ici nous ne savons pas à quoi correspondent les deux unités de différence entre 100 et 102. Si on parle par exemple d'une intervention qui vise à réduire des problèmes psychologiques dans les étudiant-es, 2 personnes sont une différence importante d'un point de vue pratique. Si on parle de millisecondes pour télécharger un fichier dans une utilisation habituelle, alors cette différence n'a pas vraiment d'impact pratique.
+
+## 06 Simuler plusieurs comparaisons entre moyennes/groupes tirés du même macro-monde
+
+**Laissez les valeurs indiquées dans le fichier original (M1 = 100, SD1 = 15 ; M2 = 115, SD2 = 15 ; N = 20) et faites les 1'000 simulations. Depuis le graphique que vous obtenez, essayez de mettre en perspective les résultats :**
+
+-   **Comment expliquez-vous que *seulement* 86.2% des tests donnent une *p*-valeur \< 0.05 ?\
+    **À cause de la variabilité dans l'échantillonnage, dans 13.8% des échantillons les deux groupes ont des données qui ne sont suffisamment pas divergentes pour reproduire l'effet qui existe dans le macro-monde.
+
+-   **Le 13.8% des *p*-valeurs \> 0.05 correspondent à quel type de phénomène dans un test d'hypothèse basé sur un modèle *nul* ?\
+    **Il s'agit de tests qui appartiennent à l'outcome Erreur de type II dans le test d'une hypothèse : on commet l'erreur de ne pas rejeter l'hypothèse nulle, lorsqu'en réalité il faudra la rejeter, car il existe dans la réalité/macro-monde un effet de l'intervention.
+
+**Laissez les valeurs du macro-monde courants et augmentez le nombre de participants de 20 à 30. Lancez la simulation. Combien des *p*-valeurs \< 0.05 observez à ce moment ? Quelle conclusion pouvez-vous en tirer ?\
+**Le pourcentage augmente à 96.4%. Avec plus d'observations/participant-es, on diminue le risque d'avoir des erreurs de type II.
+
+**Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 15. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait, notamment en relation avec la problématique de la replicabilité des résultats en sciences sociales ?\
+**Lorsqu'il n'y a pas d'effet dans le macro-monde, la distribution des p-valeurs s'approche d'une distribution normale. En d'autres termes, le test a plus ou moins les mêmes probabilités de donner toutes les p-valeurs possibles, y compris une p-valeur qui est *significative*. Dans ce cas, il s'agirait d'un erreur de type I.
+
+Le problème avec une seule expérience/un seul test est que nous n'avons pas les moyens de savoir si une p-valeur \< alpha (e.g. 0.05) *appartient* est l'exception d'une distribution uniforme (un faux positif ou erreur de type I), ou c'est la *normalité* d'une distribution qui favorise des p-valeurs plus proche de 0. Pour cette raison, on essaie de répliquer les expériences à fin de corroborer les résultats. Si déjà deux expériences menées par deux équipes indépendantes dans les mêmes conditions présentent des tests statistiquement significatifs, alors on peut être beaucoup plus rassuré-es qu'il ne s'agit pas d'une erreur de type I.
+
+## 07 Équivalence entre deux moyennes/groupes
+
+Aucune réponse spécifique. Les tests d'équivalence sont assez récents et donc ne sont pas fréquents dans la littérature. En général, on a besoin de beaucoup d'observations/participant-es pour déterminer l'équivalence d'un t test, surtout si on vise une petite intervalle autour de 0.
