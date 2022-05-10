@@ -161,7 +161,23 @@ En modifiant les trois premiers paramètres dans le script en question, réponde
 
 ## Effectuer une comparaison entre deux moyennes/groupes
 
-Le fichier `05_t-test_single.R` permet de simuler des tests pour comparer deux moyennes/groupes à la recherche d'un effet, ici dans une perspective inter-sujets (i.e. à groupes indépendants). Le script permet de faire principalement 4 choses :
+Le fichier `05_t-test_single.R` permet de simuler des tests pour comparer deux moyennes/groupes à la recherche d'un effet, ici dans une perspective inter-sujets (i.e. à groupes indépendants). L'hypothèse nulle dans un t-test de ce type correspond à dire qu'il n'y a pas de différence entre les deux moyennes, ou en d'autres termes que l'effet résultant de la soustraction des deux moyennes est égale à 0 :
+
+-   M(groupe A) = M(groupe B)
+
+-   M(groupe A) - M(groupe B) = 0
+
+L'hypothèse alternative peut être :
+
+-   M(groupe A) ≠ M(groupe B), ce qui équivaut à une hypothèse non-directionnelle ou bi-directionnelle
+
+-   M(groupe A) \> M(groupe B), ce qui équivaut à une hypothèse directionnelle
+
+-   M(groupe A) \< M(groupe B), ce qui équivaut à une hypothèse directionnelle
+
+Lorsqu'on pose une hypothèse directionnelle, on peut utiliser un test-t unilatéral au lieu d'un test bilatéral, mais cette possibilité n'est pas abordée. Le test mené dans le script est bilatéral, ce qui peut-être utilisé pour les trois types hypothèses alternatives.
+
+Le script permet de faire principalement 4 choses :
 
 1.  Essayer différents paramètres pour le macro-monde des deux groupes (moyennes et écarts types). C'est un mécanisme de rétro-ingénierie, car normalement ces paramètres sont ceux qu'on ne connait pas et qu'on veut justement estimer sur la base de l'expérience.
 
