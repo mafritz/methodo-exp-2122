@@ -107,7 +107,7 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 -   Vous augmentez le nombre d'observations/participant-es
 
 **Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?\
-**D'un point de vue mathématique, il est garanti qu'une différence entre deux moyennes à un certain moment devienne *statistiquement* significative, mais cela ne signifie pas qu'elle est *pratiquement* digne de note. Ici nous ne savons pas à quoi correspondent les deux unités de différence entre 100 et 102. Si on parle par exemple d'une intervention qui vise à réduire des problèmes psychologiques dans les étudiant-es, 2 personnes sont une différence importante d'un point de vue pratique. Si on parle de millisecondes pour télécharger un fichier dans une utilisation habituelle, alors cette différence n'a pas vraiment d'impact pratique.
+**D'un point de vue mathématique, il est garanti qu'une différence entre deux moyennes à un certain moment devienne *statistiquement* significative, mais cela ne signifie pas qu'elle est *pratiquement* digne de note. Ici nous ne savons pas à quoi correspondent les deux unités de différence entre 100 et 102. C'est la connaissance du domaine qui nous permet de définir/discuter l'effet de l'intervention en termes pratiques ou théoriques.
 
 ## 06 Simuler plusieurs comparaisons entre moyennes/groupes tirés du même macro-monde
 
