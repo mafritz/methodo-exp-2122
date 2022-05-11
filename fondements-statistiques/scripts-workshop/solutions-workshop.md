@@ -165,4 +165,5 @@ Les comparaisons indiquent que les trois moyennes sont différentes les unes des
 
 Enfin, les graphiques des postulats montre que le test respecte les caractéristiques attendues pour que la modélisation de l'ANOVA puisse être utilisée dans le contexte d'un test d'hypothèse.
 
-**Modifiez les paramètres pour le groupe C afin qu'il ait la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?**
+**Modifiez les paramètres pour le groupe C afin qu'il ait la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?\
+**La taille de l'effet diminue à 0.31 [0.21, 1.00], tandis que maintenant seulement deux comparaisons/moyennes sur trois sont différentes (A vs. B, et A vs. C), tandis que la comparaison entre B et C n'atteigne pas le seuil alpha.
