@@ -5,7 +5,7 @@ Ce document propose les réponses aux questions proposées dans le README.md du 
 ## 01 Modélisation de base
 
 **Quelle est la différence entre la moyenne et la médiane ?**\
-Il s'agit de deux modélisation de données de type *tendance centrale*, c'est-à-dire qui essaie de représenter un échantillon à travers un indice qui maximise le *groupement* des données. La moyenne est calculé sur la base de la somme des mesures divisée par le nombre :
+Il s'agit de deux modélisation de données de type *tendance centrale*, c'est-à-dire qui essaient de représenter un échantillon à travers un indice qui maximise le *groupement* des données. La moyenne est calculée sur la base de la somme des mesures divisée par le nombre d'observations/items :
 
 -   *M*{1, 2, 3, 4, 10} = (1 + 2 + 3 + 4 + 10) / 5 = 4
 
@@ -15,20 +15,41 @@ La médiane dispose chaque mesure en ordre croissant et s'intéresse à l'observ
 
 En général, la moyenne est plus sensible aux valeurs extrêmes comparé à la médiane.
 
-**Plus l'écart type entre données est grance, plus la variance est \_\_\_\_\_\_ ?**\
+**Plus l'écart entre données est grande, plus la variance est \_\_\_\_\_\_ ?**\
 Grande. La variance est la somme de la différence entre chaque observation et la moyenne de l'échantillon au carré. L'utilisation de la puissance au carré a deux conséquences importantes :
 
-1.  Tous les différences deviennent positives et donc des valeurs supérieurs à la moyenne ne s'annulent pas dans la somme avec des valeurs inférieurs à la moyenne
+1.  Toutes les différences deviennent positives et donc des valeurs supérieures à la moyenne ne s'annulent pas avec des valeurs inférieurs à la moyenne
 
 2.  La puissance au carré donne plus de poids aux valeurs extrêmes : une différence de 2 unités par rapport à la moyenne a un poids de 4 unités de variance, tandis qu'une différence de 3 unités a un poids de 9 unités de variance.
 
 **Quel est le rapport entre la variance et l'écart type ?**\
-L'écart type est la racine carrée de la variance. Ceci permet de re-transformer l'écart type dans la même unité de la mesure (e.g. en seconds). Contrairement à la moyenne ou médiane qui sont des mesures de tendance centrale, l'écart type mesure la dispersion des données dans un échantillon : le plus l'écart type est élévé, le plus les données sont *disséminées*/hétérogènes.
+L'écart type est la racine carrée de la variance. Ceci permet de re-transformer l'écart type dans la même unité de la mesure (e.g. en seconds). Contrairement à la moyenne ou médiane qui sont des mesures de tendance centrale, l'écart type mesure la dispersion des données dans un échantillon : le plus l'écart type est élevé, le plus les données sont *disséminées*/hétérogènes.
 
 ## 02 Simulations des données et randomisation
 
 **Si on utilise une attribution totalement aléatoire, les trois groupes/modalités auront toujours le même nombre de participant-es ?**\
-Non. Une randomisation totale signifie que chaque groupe/modalité a à chaque tirage exactement les mêmes chances d'être attribué. Par conséquent, nous n'avons aucune garantie que chaque groupe/modalité ait le même nombre d'observations. Pour ce faire, il faut utiliser des mécanismes qui balancent les observations.
+Non. Une randomisation totale signifie que chaque groupe/modalité a à chaque tirage exactement les mêmes chances d'être attribué. Par conséquent, nous n'avons aucune garantie que chaque groupe/modalité ait le même nombre d'observations. Pour ce faire, il faut utiliser des mécanismes qui balancent les observations. Vous pouvez adapter ce simple script et le lancer dans RStudio pour obtenir une assignation aléatoire mais balancée des participant-es.
+
+    library(tidyverse)
+
+    n_participants = 48
+    participants_code = paste0("P", 1:n_participants)
+    vi_conditions = c("Groupe A", "Groupe B", "Groupe C")
+
+    if(n_participants %% length(vi_conditions) == 0) {
+      random_assignment = tibble(
+        vi_conditions = rep(vi_conditions, (n_participants/length(vi_conditions)))
+      ) |>
+        transmute(
+          order = row_number(),
+          participant = paste0("P", order),
+          groupe = sample(vi_conditions, n_participants, replace = FALSE),
+        ) |>
+        arrange(order)
+      View(random_assignment)
+    } else {
+      print("Le nombre de participant-es doit être un multiple du nombre de conditions dans la vi_conditions.")
+    }
 
 **Quelles mesures sont plus similaires/différentes dans les trois groupes ? Est-ce qu'il y a un rapport entre la distribution depuis laquelle les données sont tirées et la similarité des moyennes/écarts types ?**\
 C'est difficile à dire depuis les données car elles ne sont pas sur la même échelle. Il faut se méfier des analyses *à l'œil nu.* Il faudrait à la rigueur transformer les données dans une échelle comparable, par exemple en les standardisant (les transformer dans une moyenne de 0 et un écart type de 1). D'un point de vue logique, des données uniformes sont potentiellement plus éloignés car toutes ont la même fréquence potentielle. Les distributions normales et exponentielles, au contraire, présentent des *sommets*, ce qui augmente la probabilité d'avoir des données plus proches.
