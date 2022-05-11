@@ -273,7 +273,7 @@ Le script est organisé en 6 sections principales :
 
 5.  Le respect des postulats de l'ANOVA. Pour que le test puisse être considéré fiable, il est nécessaire que certaines conditions soient respectées.
 
-6.  Les comparaisons entre les trois moyennes en utilisant le paquet `emmeans`. La comparaison permet de dire parmi les moyennes lesquelles diffèrent suffisamment pour établir qu'il y a un effet de la VI sur les deux. Chaque comparaison a sa propre p-valeur qui est corrigé pour éviter de *gonfler* l'erreur de type I (plus de tests on fait, plus on a la probabilité d'avoir des résultats \< alpha seulement à cause de l'effet d'échantillonnage). Par exemple :
+6.  Les comparaisons entre les trois moyennes en utilisant le paquet `emmeans`. La comparaison permet de dire parmi les moyennes lesquelles diffèrent suffisamment pour établir qu'il y a un effet de la VI sur la VD au niveau de ces groupes. Chaque comparaison a sa propre p-valeur qui est corrigée pour éviter de *gonfler* l'erreur de type I (plus de tests on fait, plus on a la probabilité d'avoir des résultats \< alpha seulement à cause de l'effet d'échantillonnage). Par exemple :
 
     | contraste |  estimate |       SE |  df |   t.ratio | p.value |
     |:----------|----------:|---------:|----:|----------:|--------:|

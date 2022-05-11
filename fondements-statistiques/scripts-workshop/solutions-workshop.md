@@ -121,3 +121,48 @@ Le problème avec une seule expérience/un seul test est que nous n'avons pas le
 ## 07 Équivalence entre deux moyennes/groupes
 
 Aucune réponse spécifique. Les tests d'équivalence sont assez récents et donc ne sont pas fréquents dans la littérature. En général, on a besoin de beaucoup d'observations/participant-es pour déterminer l'équivalence d'un t test, surtout si on vise une petite intervalle autour de 0.
+
+## 08 Puissance statistique pour une ANOVA simple
+
+**En utilisant les paramètres de base k = 3, alpha = 0.05 et puissance 0.8, combien d'entités/participant-es sont nécessaires par groupes avec un SESOI de Cohen's f = 0.25 ?\
+**53 participant-es x 3 groupes, c'est-à-dire 159 au total.
+
+**Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme.\
+**40 participant-es x 5 groupes, c'est-à-dire 200 au total. En proportion, il faut moins de participant-es par groupes comparé à une ANOVA avec 3 groupes. Cela s'explique par le fait qu'une ANOVA simple test si au moins deux moyennes/groupes sont différents, ce qui est plus probable si on a 5 plutôt que *seulement* 3 groupes. En revanche, effectuer des ANOVA avec plusieurs groupes est assez rare en méthode expérimentale, car même si en proportion moins de participant-es sont nécessaires, le nombre total devient rapidement assez conséquent en termes de temps et éventuellement de budget.
+
+## 09 Effectuer une comparaison entre trois moyennes/groupes (ou plus)
+
+**En laissant les données disponibles de base dans le fichier, observez les différentes représentations textuelles et graphiques et essayez de repérer toutes les informations importantes. Quel est le résultat du *omnibus* test ? Quels sont les résultats des comparaisons ? Concentrez-vous ensuite sur les postulats : sont-ils respectés à votre avis ?\
+**Le résultat du omnibus test est contenu dans le tableau de l'ANOVA qu'on reporte souvent dans des contributions scientifiques car il contient toutes les informations utiles (degrés de liberté, résultat du test statistique, p-valeur et taille de l'effet standardisé). Au niveau de la taille de l'effet, il serait idéalement mieux d'y ajouter aussi les intervalles de confiance à 95% :
+
+| Effect | df     | MSE    | F     | ges               | p.value |
+|:-------|:-------|:-------|:------|:------------------|:--------|
+| groupe | 2, 147 | 220.91 | 80.94 | .524 [0.43, 1.00] | \<.001  |
+
+Dans le tableau sont contenus les informations suivantes :
+
+-   La première colonne identifie la VI, elle peut donc s'appeler en fonction du plan expérimentale.
+
+-   La deuxième colonne illustre les deux types de degrés de liberté (df). Le 2 consiste dans les df de l'intervention qui sont estimés à travers les groupes selon la formule *k - 1*, où *k* représente le nombre de groupes. Dans cette ANOVA nous en avons 3, donc les df sont 3 - 1 = 2. Le 147 consiste dans les df résiduelles, c'est-à-dire liés au nombre d'observations selon la formule *N - k*, où *N* est le nombre d'observations (150 ici) et *k* encore une fois le nombre de groupes (donc 150 - 3). Comme indiqué dans le cours, la compréhension des degrés de liberté est plutôt complexe. Les plus ambitieux-euses peuvent lire l'article de Rodgers (2019) qui utilise un métaphore économique assez compréhensible.
+
+-   La troisième colonne illustre la moyenne de l'erreur standard (Mean Standard Error). Il s'agit d'une mesure de variabilité à l'intérieur du groupe qui est utilisé dans le test statistique. Comme pour les df, il s'agit d'éléments techniques qui ne sont pas traités dans ce cours.
+
+-   La quatrième colonne reporte le résultat du test statistique en termes de la valeur F. L'interprétation naïve de F est que le plus il s'éloigne de 1, le plus les données observées sont incompatible avec l'hypothèse nulle que toutes les moyennes sont égales.
+
+-   La cinquième colonne illustre la taille de l'effet standardisée. Il existe différentes taille de l'effet pour les tests statistiques. Ici le Generalized Effect Size est utilisé. En général, pour l'ANOVA simple on utilise souvent l'éta carré ou l'éta carré partiel, mais dans ce spécifique il n'y a pas de différence car dans l'ANOVA simple les trois tailles de l'effet sont exactement les mêmes. On peut calcuer les intervalles de confiance autour de la taille de l'effet pour donner une idée de l'incertitude : plus l'intervalle est large, plus la mesure est incertaine.
+
+-   La sixième colonne illustre enfin la p-valeur, c'est-à-dire la probabilité d'obtenir des données autant ou encore plus incompatibles avec le modèle nul sous-jacent, c'est-à-dire celui basé sur le principe qu'il n'y a pas d'effet/différence entre les moyennes. Selon le seuil alpha choisi en amont pour le test, on peut rejeter l'hypothèse nulle et favoriser l'hyothèse alternative si p-valeur \< alpha (e.g. 0.05)
+
+L'ANOVA simple indique si au moins deux moyennes sont différentes, mais ne nous dit pas lesquelles. Les comparaisons/contrastes multiples nous permettent de se focaliser sur les différences entre groupes :
+
+| contrast | estimate |    SE |  df | t.ratio |  p.value |
+|:---------|---------:|------:|----:|--------:|---------:|
+| A - B    |  -18.887 | 2.973 | 147 |  -6.354 | \< 0.001 |
+| A - C    |  -37.820 | 2.973 | 147 | -12.723 | \< 0.001 |
+| B - C    |  -18.933 | 2.973 | 147 |  -6.369 | \< 0.001 |
+
+Les comparaisons indiquent que les trois moyennes sont différentes les unes des autres. La colonne estimate corresponde à la soustraction entre la moyenne du premier groupe et la moyenne du deuxième groupe (e.g. moyenne groupe A - moyenne groupe B pour la première ligne). Donc on peut voir que entre le groupe A et le groupe B il y a -18.9 unités de VD de différence, c'est-à-dire que le groupe B a obtenu une moyenne supérieur de 18.9 unités de la VD.
+
+Enfin, les graphiques des postulats montre que le test respecte les caractéristiques attendues pour que la modélisation de l'ANOVA puisse être utilisée dans le contexte d'un test d'hypothèse.
+
+**Modifiez les paramètres pour le groupe C afin qu'il ait la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?**

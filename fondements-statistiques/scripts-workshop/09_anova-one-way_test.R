@@ -86,6 +86,9 @@ model <- aov_4(
 # Voir le tableau de l'ANOVA
 nice(model)
 
+# Intervalles de confiance sur la taille de l'effet
+effectsize(model)
+
 # Afficher la p-valeur en fonction de la distribution f -------------------
 
 curve(
