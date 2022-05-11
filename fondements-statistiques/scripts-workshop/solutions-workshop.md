@@ -88,12 +88,21 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 
 ## 05 Effectuer une comparaison entre deux moyennes/groupes
 
-**Testez plusieurs combinaisons entre paramètres, par exemple en augmentant ou diminuant la différence entre les deux moyennes ou en explicitant des écarts types plus grands/petits ou hétérogènes entre les deux groupes. Modifiez aussi le nombre de participants par groupe. Notez si vous pensez trouver des *pattern* qui se manifestent (e.g. si j'augmente \_\_\_\_ alors \_\_\_\_\_\_).\
+**Testez d'abord le script avec les valeurs initiales et essayez de donner une signification aux différentes éléments graphiques et textuels que vous obtenez.\
+**Le test t compare deux moyennes/groupes sous réserve que la différence entre les deux moyennes est égale à un certain écart, ce qui dans la plupart des cas correspond à un écart de 0, c'est-à-dire pas de différence entre les deux moyennes/groupes (M1 - M2 = 0). Le résultat d'un t test nous informe donc :
+
+1.  Des moyennes obtenus par les deux groupes, c'est-à-dire 96.2 pour le groupe A et 109.7 pour le groupe B
+
+2.  De la différence entre les deux moyennes sous forme d'estimation précise (moyenne A - moyenne B) qui correspond à 96.2 - 109.7 = -13.5 et d'intervalle de confiance autour de cette estimation [-22.10, -4.74]. Cette intervalle dépend de la variabilité (i.e. variance et écart types) de l'échantillon et des deux groupes respectivement. Ici on peut voir que l'estimation peut aller de -22.1 à -4.74, c'est-à-dire que potentiellement le groupe B peut avoir un score plus élevé sur la VD de 22 points, mais également *seulement* de 4. En termes standardisés, cette différence correspond à Cohen's d = -1.09 avec un intervalle de confiance de [-1.82, -0.35].
+
+3.  À quel point cette différence est compatible avec l'hypothèse nulle qui prend la forme de la distribution t avec les degrés de liberté associés au test (df = 32.99) ? La différence observée dans l'échantillon est transformée dans le résultat t(32.99) = -3.14, ce qui correspond à une p-valeur de 0.004. En d'autres termes, il y a une probabilité de seulement 0.004 (ou 0.4%) d'observer des données similaires ou encore plus incompatibles avec la distribution nulle. De ce fait, le chercheur prend le risque de favoriser l'hypothèse alternative selon laquelle les deux moyennes sont différentes et conclure donc en termes expérimentales que ce qui a été observé dans le macro-monde en termes de VI-VD puisse s'appliquer au macro-monde en termes d'intervention-phénomène d'intérêt. Comme indiqué en cours selon l'approche Neyman-Pearson, le chercheur ne peut néanmoins pas savoir si cela correspond ou pas à la *vérité*.
+
+**Testez plusieurs combinaisons entre paramètres, par exemple en augmentant ou diminuant la différence entre les deux moyennes, en explicitant des écarts types plus grands/petits ou hétérogènes entre les deux groupes. Modifiez aussi le nombre de participants par groupe. Notez si vous pensez trouver des *pattern* qui se manifestent (e.g. si j'augmente \_\_\_\_ alors \_\_\_\_\_\_).\
 **En règle générale vous maximiser la chance de pouvoir détecter un effet, c'est-à-dire une différence *statistiquement* significative entre les deux moyennes, si :
 
 -   La différence entre les deux moyennes est grande
 
--   L'écart type des deux groupes est petit et similaire pour les deux groupes
+-   L'écart type est petit et similaire pour les deux groupes
 
 -   Vous augmentez le nombre d'observations/participant-es
 

@@ -189,6 +189,8 @@ Le script permet de faire principalement 4 choses :
 
 En adaptant les paramètres moyennes et écarts types des deux macro-mondes, ainsi que le nombre d'observations par groupe, essayez de tester/comprendre les scénarios suivants :
 
+-   Testez d'abord le script avec les valeurs initiales et essayez de donner une signification aux différentes éléments graphiques et textuels que vous obtenez.
+
 -   Testez plusieurs combinaisons entre paramètres, par exemple en augmentant ou diminuant la différence entre les deux moyennes ou en explicitant des écarts types plus grands/petits ou hétérogènes entre les deux groupes. Modifiez aussi le nombre de participants par groupe. Notez si vous pensez trouver des *pattern* qui se manifestent (e.g. si j'augmente \_\_\_\_ alors \_\_\_\_\_\_).
 
 -   Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?
