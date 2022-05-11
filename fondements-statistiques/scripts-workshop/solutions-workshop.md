@@ -199,3 +199,47 @@ Comme indiqué dans la partie du cours sur les fondements expérimentaux, la dé
 
 **Modifiez le *bruit* de la variable `z` à travers le script. Plus de bruit signifie que la variable z et la VD sont moins en relation l'une avec l'autre. Que se passe-t-il au niveau des résultats lorsque vous augmentez le bruit ? Comment expliqueriez-vous ce résultat ?\
 **Si vous diminuez la relation entre *z* et la VD, par exemple en augmentant l'écart type à 50 à la ligne 58, la VI (groupe) devient significative comme c'était le cas si vous enleviez *z.* Ce changement s'explique par le fait que la force de la relation entre la VI et la VD est maintenant plus forte que la relation entre *z* et la VD.
+
+## 11 Puissance statistique d'une ANOVA factorielle
+
+**Laissez les paramètres de base du script et effectuer la simulation de la puissance statistique. Quelle est la puissance statistique pour les différents effets (simples, principaux et interaction) ?\
+**Nous avons en général une puissance très élevée, avec 100% pour les effets simples (pairwise comparisons avec t-test), les deux effets principaux (deux première ligne du tableau de l'ANOVA), et 94% pour l'effet d'interaction (troisième ligne du tableau de l'ANOVA).
+
+**Modifiez comme vous voulez les 4 moyennes des conditions expérimentales et menez à nouveau les simulations. Quels patterns pouvez-vous identifier ?\
+**De manière général, il est plus difficile d'avoir assez de puissance statistique pour détecter l'interaction comparé aux effets principaux ou simples. Par conséquent, il faut généralement beaucoup plus d'observations/participant-es si on est intéressé-es à un effet d'interaction.
+
+## 12 Effectuer une ANOVA factorielle
+
+**Avec les données de base du script, effectué le test de l'ANOVA et regardez le tableau avec les effets principaux et d'interaction.**
+
+-   **Est-ce que l'effet d'interaction et détecté ou non ? Regardez également le graphique pour vous aider dans la décision.**\
+    Oui, l'effet d'interaction est détecté. On peut le voir depuis le tableau de l'ANOVA qui propose les deux effets principaux ainsi que l'effet d'interaction.
+
+    | Effect  | df    | MSE    | F             | ges  | p.value |
+    |:--------|:------|:-------|:--------------|:-----|:--------|
+    | vi1     | 1, 76 | 191.64 | 187.70 \*\*\* | .712 | \<.001  |
+    | vi2     | 1, 76 | 191.64 | 66.14 \*\*\*  | .465 | \<.001  |
+    | vi1:vi2 | 1, 76 | 191.64 | 14.31 \*\*\*  | .158 | \<.001  |
+
+    On peut le voir également depuis le graphique de l'ANOVA factorielle : les deux lignes qui connectent les points ne sont pas parallèle. Notamment, on peut voir que l'effet de la VI1 est modéré par la VI2, car le gain entre la condition VI1_sans et VI1_avec est plus élevé (la ligne est plua raide) si on combine la VI1 avec la modalité VI2_forte comparé à la modalité VI2_faible. D'un point de vue conceptuel, cela se traduit par l'affirmation suivante : les apprenant-es bénéficient de la présence d'un dispositif numérique, et ce bénéfice est d'autant plus important si la difficulté de la tâche est forte.
+
+-   **Selon la réponse, menez les comparaisons successives en accord avec le résultat du test de l'interaction.\
+    **Tenu compte de la présence de l'interaction, on peut tester les 6 effets simples à travers la comparaison/le contraste entre les 4 conditions expérimentales.
+
+    | contrast                  | estimate |    SE |  df | t.ratio | p.value |
+    |:--------------------------|---------:|------:|----:|--------:|--------:|
+    | Sans Faible - Avec Faible |  -30.699 | 4.378 |  76 |  -7.013 | \<0.001 |
+    | Sans Faible - Sans Forte  |  -13.464 | 4.378 |  76 |  -3.076 |   0.015 |
+    | Sans Faible - Avec Forte  |  -67.583 | 4.378 |  76 | -15.438 | \<0.001 |
+    | Avec Faible - Sans Forte  |   17.234 | 4.378 |  76 |   3.937 |   0.001 |
+    | Avec Faible - Avec Forte  |  -36.885 | 4.378 |  76 |  -8.426 | \<0.001 |
+    | Sans Forte - Avec Forte   |  -54.119 | 4.378 |  76 | -12.363 | \<0.001 |
+
+-   **Essayez de comprendre les différents indicateurs et de donner du sens aux résultats. Que signifie-t-il un effet d'interaction dans ce cas ? Qu'est-ce que les comparaisons successives nous disent ?\
+    **Comme indiqué au point précédent, un effet d'interaction détermine que l'effet d'une variable peut-être plus ou moins prononcé selon le croisement avec l'autre variable. Les deux effets principaux restent intéressants, mais leur quantification dépende de l'interaction entre les deux VI. Les comparaisons successives entre les quatre modalités suggèrent que toutes les conditions sont différentes les unes des autres, avec des effets aussi large que 68 unités de la VD dans le cas de la comparaisons Sans/Faible vs. Avec/Forte.
+
+**Modifiez les 4 moyennes des conditions expérimentales selon vos choix et essayez de reproduire le même mécanisme du point précédent : tester pour l'interaction et effectuez ensuite les comparaisons correspondantes.\
+**Comme il arrive souvent en statistiques, la procédure correcte à effectuer selon la présence ou l'absence de l'interaction peut varier d'article en article. Il peut donc arriver que les effets principaux soient discutés/traités en même temps que l'effet de l'interaction. Ici je présente la procédure qui à mon avis fait le plus de sens d'un point de vue logique, et qui est d'ailleurs supportée par Maxwell et collègues (2017).
+
+**À votre avis, qu'est-ce qu'il faudrait faire dans le cas où il n'y a aucun effet (ni effets principaux, ni interaction) ?\
+**Dans ce cas on ne peut rien dire à propos de l'hypothèse qui est testée. Il existe des procédures pour utiliser un test d'équivalence aussi dans le cas d'une ANOVA factorielle, mais elles ne sont pas encore très répandues dans la littérature.

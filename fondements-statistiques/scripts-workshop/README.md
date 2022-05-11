@@ -58,7 +58,7 @@ Ce code permet d'obtenir toujours les mêmes résultats a des tests statistiques
 
 Le fichier `00_installation.R` contient une ligne de code qui permet d'installer les paquets externes de R utilisés dans les scripts. Vous pouvez l'exécuter avec les commandes illustrées plus haut, ou la copier/coller dans la console. L'installation des paquets peut prendre quelques temps.
 
-## Modélisation de base
+## 01 Modélisation de base
 
 Le fichier `01_basic-models.R` contient des fonctions qui permettent de créer des modélisation de bases comme la moyenne, la médiane, la variance et l'écart type, ainsi que des graphiques pour voir la distribution de données.
 
@@ -72,7 +72,7 @@ Le fichier `01_basic-models.R` contient des fonctions qui permettent de créer d
 
     -   Quel est le rapport entre la variance et l'écart type ?
 
-## Simulations des données et randomisation
+## 02 Simulations des données et randomisation
 
 Le fichier `02_simulations-donnees-et-randomisation.R` a trois objectifs connectés :
 
@@ -110,7 +110,7 @@ Le code de cette activité prévoit :
 
     -   Imaginez deux phénomènes en relation avec les technologies éducatives dans le MALTT (e.g. compétences techniques, intérêt pour les technologies, ...). Comment pensez-vous que ce phénomène est/serait distribué chez l'ensemble des apprenant-es (passé-es et futures) du MALTT ?
 
-## Échantillonnage
+## 03 Échantillonnage
 
 Le fichier `03_echantillonnage.R` introduit le concept d'échantillon, c'est-à-dire un sous-groupe de l'espace/population de référence. L'objectif de l'activité est double :
 
@@ -134,7 +134,7 @@ Sur la base de cette explication et en comparant les distributions des moyennes 
 
 -   Qu'est-ce que vous pouvez en conclure ?
 
-## Puissance statistique pour un test *t* de Welch
+## 04 Puissance statistique pour un test *t* de Welch
 
 Le fichier `04_t-test_power.R` permet de s'exercer au concept de puissance statistique dans le contexte de la comparaison entre deux moyennes/groupes. La puissance statistique est une fonction déterminée par 4 éléments :
 
@@ -159,7 +159,7 @@ En modifiant les trois premiers paramètres dans le script en question, réponde
 
     -   Sur la base de ces changements, la variation de quel type d'erreur influence davantage la taille de l'échantillon ?
 
-## Effectuer une comparaison entre deux moyennes/groupes
+## 05 Effectuer une comparaison entre deux moyennes/groupes
 
 Le fichier `05_t-test_single.R` permet de simuler des tests pour comparer deux moyennes/groupes à la recherche d'un effet, ici dans une perspective inter-sujets (i.e. à groupes indépendants). L'hypothèse nulle dans un t-test de ce type correspond à dire qu'il n'y a pas de différence entre les deux moyennes, ou en d'autres termes que l'effet résultant de la soustraction des deux moyennes est égale à 0 :
 
@@ -195,7 +195,7 @@ En adaptant les paramètres moyennes et écarts types des deux macro-mondes, ain
 
 -   Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?
 
-## Simuler plusieurs comparaisons entre moyennes/groupes tirés du même macro-monde
+## 06 Simuler plusieurs comparaisons entre moyennes/groupes tirés du même macro-monde
 
 Le fichier `06_test_multiple-simulation.R` est une extension de l'activité précédente qui permet de mener une simulation de 1'000 test *t* de Welch dont les échantillons sont à chaque fois tirés depuis le même macro-monde. En d'autres termes, la différence du résultat entre un t-test et l'autre dans les 1'000 qui sont simulés est dû exclusivement à l'effet de l'échantillonnage qui crée des variations parmi les moyennes/groupes. Le code du script propose les éléments suivants :
 
@@ -217,7 +217,7 @@ En utilisant le code du fichier, effectuez les manipulations et répondez aux qu
 
 -   Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 15. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait, notamment en relation avec la problématique de la replicabilité des résultats en sciences sociales ?
 
-## Équivalence entre deux moyennes/groupes
+## 07 Équivalence entre deux moyennes/groupes
 
 Le fichier `07_t-test_equivalence.R` diffère des fichiers sur le test *t* précédents car ici l'enjeu n'est pas de détecter la présence d'un effet entre les deux moyennes/groupes, mais plutôt établir qu'il n'existe pas de différence. En effet, obtenir une *p*-valeur \> alpha (e.g. 0.05) ne signifie par qu'il n'y a pas de différence : *Absence of Evidence Is Not Evidence of Absence*. Or, pour définir l'absence d'un effet il y a deux problématique à considérer :
 
@@ -239,7 +239,7 @@ Le test d'équivalence peut être effectué avec un test *classique* qui cherche
 
 En modifiant les paramètres du script (moyennes et écarts types ainsi que le nombre de participant-es), tester différentes cas de figures et essayez de déterminer à quelle cas de figure correspond le résultat parmi les quatre possibilités.
 
-## Puissance statistique pour une ANOVA simple
+## 08 Puissance statistique pour une ANOVA simple
 
 Lorsque le plan expérimental prévoit une seule variable indépendante (VI) mais avec plus de deux modalités, on utilise une Analyse de la Variance (ANOVA) dites *simple* ou *One-way ANOVA* an anglais. Le fichier `08_anova-one-way_power.R` permet d'effectuer une analyse de puissance statistique pour déterminer l'échantillon nécessaire à détecter un effet dans la comparaison des trois ou plusieurs moyennes/groupes. La présence de 3 ou plusieurs moyennes/groupes nécessite aussi d'un type de mesure de la taille de l'effet différente au Cohen's d lorsqu'on a à faire avec deux moyennes/groupes, comme par exemple le Cohen's f qui généralise à plusieurs moyennes/groupes. Les détails de ce passage sont trop techniques pour le contexte introductif du cours, mais le script peut néanmoins donner une idée des échantillons nécessaires pour mener des ANOVA simple informatives.
 
@@ -249,7 +249,7 @@ En variant les paramètres du fichier, essayez de répondre aux questions suivan
 
 -   Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme.
 
-## Effectuer une comparaison entre trois moyennes/groupes (ou plus)
+## 09 Effectuer une comparaison entre trois moyennes/groupes (ou plus)
 
 Le fichier `09_anova-one-way_test.R` permet d'effectuer des ANOVA *simples* ou *One-Way ANOVA* à l'occurrence avec trois moyennes/groupes, mais le principe peut être élargie à *k* moyennes/groupes du moment où une seule VI est impliquée. Dans une ANOVA *simple* on distingue généralement entre deux types de tests :
 
@@ -289,7 +289,7 @@ En utilisant le script, essayez de répondre aux questions suivantes :
 
 -   Modifiez les paramètres pour le groupe C afin qu'il ait la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?
 
-## Effectuer une ANOVA avec une autre variable (ANCOVA)
+## 10 Effectuer une ANOVA avec une autre variable (ANCOVA)
 
 Dans la littérature expérimentale en sciences sociales on a souvent des tests appelés ANCOVA, acronyme de Analyse de Co-Variance, mais en réalité il s'agit toujours de l'application du modèle linéaire. Le principe d'un point de vue scientifique est d'ajouter à la VI de l'ANOVA un co-varié, c'est-à-dire une variable continue mesurée de la même manière pour toutes les entités/participant-es soumis-es à la VI. Il existe dans l'utilisation de l'ANCOVA souvent des mauvaises interprétations sur l'utilité de cette action. On parle notamment de *contrôler* pour cette variable. D'un point de vue causale, ce mécanisme se justifie lorsqu'on sait du modèle scientifique que ce co-varié peut influencer la VD. En utilisant la régression linéaire, on peut a ce moment *diviser* l'effet de la VI de l'effet du co-varié, pour tester quel est l'effet de la VI en moyennant sur les différents valeurs du co-varié. L'explication technique de ce passage dépasse le cadre introductif du cours et l'ANCOVA est présentée ici car elle est souvent citée dans les articles scientifiques.
 
@@ -299,7 +299,7 @@ Le fichier `10_anova_oneway_with-other-variable.R` permet de simuler une ANCOVA 
 
 -   Modifiez le *bruit* de la variable `z` à travers le script. Plus de bruit signifie que la variable z et la VD sont moins en relation l'une avec l'autre. Que se passe-t-il au niveau des résultats lorsque vous augmentez le bruit ? Comment expliqueriez-vous ce résultat ?
 
-## Puissance statistique d'une ANOVA factorielle
+## 11 Puissance statistique d'une ANOVA factorielle
 
 Un autre type de test qui est souvent utilisé dans la littérature expérimentale en sciences sociales est l'ANOVA factorielle qui résulte de l'implémentation de deux VI ou plus. L'ANOVA factorielle peut se décliner également sous forme d'ANCOVA, car il s'agit encore une fois du même modèle linéaire.
 
@@ -337,7 +337,7 @@ Pour déterminer la taille de l'échantillon nécessaire à une ANOVA factoriell
 
 -   Modifiez comme vous voulez les 4 moyennes des conditions expérimentales et menez à nouveau les simulations. Quels patterns pouvez-vous identifier ?
 
-## Effectuer une ANOVA factorielle
+## 12 Effectuer une ANOVA factorielle
 
 Le fichier `12_anova-factorial_test.R` permet de mener des ANOVA 2x2 avec des données simulées. La complexité d'ajouter une deuxième VI et l'effet d'interaction dans un test se traduit également dans des résultats plus compliqués à interpréter, notamment au niveau des comparaisons entre conditions expérimentales. On peut synthétiser l'interprétation des résultats avec une sorte d'algorithme décisionnel qui dépend du résultat de l'effet d'interaction :
 
@@ -388,10 +388,10 @@ En utilisant le script, essayez de répondre aux questions suivantes :
 
 -   À votre avis, qu'est-ce qu'il faudrait faire dans le cas où il n'y a aucun effet (ni effets principaux, ni interaction) ?
 
-## Modèle multi-niveaux
+## 13 Modèle multi-niveaux
 
 Le fichier `13_modele-multiniveaux.R` propose une modélisation plus avancée qui tient compte par exemple d'éléments hiérarchiques (e.g. classes, binômes, ...) ou à mesure répétée. Pour plus d'informations voir par exemple [l'article de Brown (2021)](https://journals.sagepub.com/doi/full/10.1177/2515245920960351) disponible aussi dans les ressources supplémentaires.
 
-## Méta-analyse
+## 14 Méta-analyse
 
 Le fichier `14_meta-analysis.R` propose un exemple de méta-analyse sur des expériences prévoyant deux groupes (e.g. groupe contrôle vs. traitement). Il est donné à titre d'exemple, vous pouvez modifier les différentes valeurs des expériences ou insérer des données depuis des articles de méta-analyses publiés.
