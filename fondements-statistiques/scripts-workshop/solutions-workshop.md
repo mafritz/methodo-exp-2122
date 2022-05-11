@@ -176,3 +176,26 @@ Enfin, les graphiques des postulats montre que le test respecte les caractérist
 
 **Modifiez les paramètres pour le groupe C afin qu'il ait la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?\
 **La taille de l'effet diminue à 0.31 [0.21, 1.00], tandis que maintenant seulement deux comparaisons/moyennes sur trois sont différentes (A vs. B, et A vs. C), tandis que la comparaison entre B et C n'atteigne pas le seuil alpha.
+
+## 10 Effectuer une ANOVA avec une autre variable (ANCOVA)
+
+**Effectuez d'abord le test avec les données disponibles dans le script et essayé d'interpréter les résultats, notamment en fonction au tableau de l'ANOVA *simple* du point précédent\
+**Contrairement à l'ANOVA simple du point précédent, nous avons ici deux variables qui servent à modéliser la VD : la VI (groupe A, B ou C) et une autre variable continue appelée de manière générique *z.* Par conséquent, chaque observation consiste dans l'attribution au groupe expérimentale, plus la mesure de la VD, plus la mesure de cette variable *z*. Ce que le test souvent appelé ANCOVA fait est de tester l'*apport* de la VI et de l'autre variable dans l'explication/modélisation de la VD. Ce qu'il faut comprendre est que pour les chercherus, la VI a un statut particulier, car c'est ce qu'on manipule, mais pour le modèle statistique la VI et la variable *z* sont *simplement* deux variables qui participent au modèle. Ce qui est très puissant dans la modélisation linéaire est qu'on peut déterminer l'apport de chaque variable *indépendamment* de l'autre. En d'autres termes, le modèle arrive à projeter la question suivante : si on considère deux observations qui ont la même valeur sur la variable *z,* quel est l'*apport* de la VI ? Il s'agit d'une projection statistique parce que dans la plupart des cas, il n'y aura pas des observations exactement avec la même valeur de *z.* Mais le modèle arrive à *moyenner*/stratifier sur *z* pour obtenir une estimation de VI qui est de quelque sorte *indépendante* de la mesure *z.* On peut le voir dans le tableau de l'ANCOVA obtenu avec le test :
+
+| Effect | df    | MSE   | F      | ges  | p.value |
+|:-------|:------|:------|:-------|:-----|:--------|
+| groupe | 2, 56 | 73.48 | 2.43   | .080 | .098    |
+| z      | 1, 56 | 73.48 | 111.66 | .666 | \<.001  |
+
+Nous avons la mesure de deux variables/effets. L'effet de la variable groupe et celui de la variable *z*. Chaque ligne propose les mêmes indicateurs du tableau du point précédent. On peut noter ici que le test F et le generalized effect size (ges) sont plus élevé pour la varible *z* comparé à la VI groupe. Ceci se traduit par le fait que la p-valeur de la VI \> du seuil alpha de 0.05 (0.098), tandis qu'elle est \< alpha (\<.001) pour *z.* D'un point de vue statistique cela signifie que si on tient compte de l'effet de la variable *z,* alors l'effet de la VI n'est pas statistiquement significatif, tandis que l'effet de la variable *z* est significatif. D'un point de vue expérimental/causale, on peut traduire le résultat plus ou moins de la manière suivante : la relation entre *z* et la VD est tellement forte qu'elle explique déjà une grande partie de la variance. À ce moment, l'apport de la VI est minimale.
+
+Ce qui est intéressant à tester dans cet exemple est que si vous enlevez de la formule à la ligne 90 la variable *z* du modèle -- formula = mesure \~ groupe + (1\|participant) -- vous obtenez une ANOVA simple dans laquelle à ce moment l'effet de la VI est significatif :
+
+| Effect | df    | MSE    | F            | ges  | p.value |
+|:-------|:------|:-------|:-------------|:-----|:--------|
+| groupe | 2, 57 | 216.14 | 21.91 \*\*\* | .435 | \<.001  |
+
+Comme indiqué dans la partie du cours sur les fondements expérimentaux, la décision d'inclure la variable *z* dans le modèle ou non doit être faite sur la base de la connaissance du domaine et non pas sur la base du résultat statistique.
+
+**Modifiez le *bruit* de la variable `z` à travers le script. Plus de bruit signifie que la variable z et la VD sont moins en relation l'une avec l'autre. Que se passe-t-il au niveau des résultats lorsque vous augmentez le bruit ? Comment expliqueriez-vous ce résultat ?\
+**Si vous diminuez la relation entre *z* et la VD, par exemple en augmentant l'écart type à 50 à la ligne 58, la VI (groupe) devient significative comme c'était le cas si vous enleviez *z.* Ce changement s'explique par le fait que la force de la relation entre la VI et la VD est maintenant plus forte que la relation entre *z* et la VD.
