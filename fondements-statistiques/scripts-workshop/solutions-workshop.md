@@ -157,7 +157,7 @@ Aucune réponse spécifique. Les tests d'équivalence sont assez récents et don
 **En utilisant les paramètres de base k = 3, alpha = 0.05 et puissance 0.8, combien d'entités/participant-es sont nécessaires par groupes avec un SESOI de Cohen's f = 0.25 ?**\
 53 participant-es x 3 groupes, c'est-à-dire 159 au total.
 
-**Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme. **\
+**Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme.** \
 40 participant-es x 5 groupes, c'est-à-dire 200 au total. En proportion, il faut moins de participant-es par groupes comparé à une ANOVA avec 3 groupes. Cela s'explique par le fait qu'une ANOVA simple test si au moins deux moyennes/groupes sont différents, ce qui est plus probable si on a 5 plutôt que *seulement* 3 groupes. En revanche, effectuer des ANOVA avec plusieurs groupes est assez rare en méthode expérimentale, car même si en proportion moins de participant-es sont nécessaires, le nombre total devient rapidement assez conséquent en termes de temps et éventuellement de budget.
 
 ## 09 Effectuer une comparaison entre trois moyennes/groupes (ou plus)
@@ -200,7 +200,7 @@ La taille de l'effet diminue à 0.31 [0.21, 1.00], tandis que maintenant seuleme
 
 ## 10 Effectuer une ANOVA avec une autre variable (ANCOVA)
 
-**Effectuez d'abord le test avec les données disponibles dans le script et essayé d'interpréter les résultats, notamment en fonction au tableau de l'ANOVA *simple* du point précédent **\
+**Effectuez d'abord le test avec les données disponibles dans le script et essayé d'interpréter les résultats, notamment en fonction au tableau de l'ANOVA *simple* du point précédent** \
 Contrairement à l'ANOVA simple du point précédent, nous avons ici deux variables qui servent à modéliser la VD : la VI (groupe A, B ou C) et une autre variable continue appelée de manière générique *z.* Par conséquent, chaque observation consiste dans l'attribution au groupe expérimentale, plus la mesure de la VD, plus la mesure de cette variable *z*. Ce que le test souvent appelé ANCOVA fait est de tester l'*apport* de la VI et de l'autre variable dans l'explication/modélisation de la VD. Ce qu'il faut comprendre est que pour les chercherus, la VI a un statut particulier, car c'est ce qu'on manipule, mais pour le modèle statistique la VI et la variable *z* sont *simplement* deux variables qui participent au modèle. Ce qui est très puissant dans la modélisation linéaire est qu'on peut déterminer l'apport de chaque variable *indépendamment* de l'autre. En d'autres termes, le modèle arrive à projeter la question suivante : si on considère deux observations qui ont la même valeur sur la variable *z,* quel est l'*apport* de la VI ? Il s'agit d'une projection statistique parce que dans la plupart des cas, il n'y aura pas des observations exactement avec la même valeur de *z.* Mais le modèle arrive à *moyenner*/stratifier sur *z* pour obtenir une estimation de VI qui est de quelque sorte *indépendante* de la mesure *z.* On peut le voir dans le tableau de l'ANCOVA obtenu avec le test :
 
 | Effect | df    | MSE   | F      | ges  | p.value |
@@ -245,7 +245,7 @@ De manière général, il est plus difficile d'avoir assez de puissance statisti
     On peut le voir également depuis le graphique de l'ANOVA factorielle : les deux lignes qui connectent les points ne sont pas parallèle. Notamment, on peut voir que l'effet de la VI1 est modéré par la VI2, car le gain entre la condition VI1_sans et VI1_avec est plus élevé (la ligne est plua raide) si on combine la VI1 avec la modalité VI2_forte comparé à la modalité VI2_faible. D'un point de vue conceptuel, cela se traduit par l'affirmation suivante : les apprenant-es bénéficient de la présence d'un dispositif numérique, et ce bénéfice est d'autant plus important si la difficulté de la tâche est forte.
 
 -   **Selon la réponse, menez les comparaisons successives en accord avec le résultat du test de l'interaction.**\
-   Compte tenu de la présence de l'interaction, on peut tester les 6 effets simples à travers la comparaison/le contraste entre les 4 conditions expérimentales.
+    Compte tenu de la présence de l'interaction, on peut tester les 6 effets simples à travers la comparaison/le contraste entre les 4 conditions expérimentales.
 
     | contrast                  | estimate |    SE |  df | t.ratio | p.value |
     |:--------------------------|---------:|------:|----:|--------:|--------:|
