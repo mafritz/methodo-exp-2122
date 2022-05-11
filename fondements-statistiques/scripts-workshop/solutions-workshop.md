@@ -109,8 +109,8 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 
 ## 05 Effectuer une comparaison entre deux moyennes/groupes
 
-**Testez d'abord le script avec les valeurs initiales et essayez de donner une signification aux différentes éléments graphiques et textuels que vous obtenez.\
-**Le test t compare deux moyennes/groupes sous réserve que la différence entre les deux moyennes est égale à un certain écart, ce qui dans la plupart des cas correspond à un écart de 0, c'est-à-dire pas de différence entre les deux moyennes/groupes (M1 - M2 = 0). Le résultat d'un t test nous informe donc :
+**Testez d'abord le script avec les valeurs initiales et essayez de donner une signification aux différentes éléments graphiques et textuels que vous obtenez.**\
+Le test t compare deux moyennes/groupes sous réserve que la différence entre les deux moyennes est égale à un certain écart, ce qui dans la plupart des cas correspond à un écart de 0, c'est-à-dire pas de différence entre les deux moyennes/groupes (M1 - M2 = 0). Le résultat d'un t test nous informe donc :
 
 1.  Des moyennes obtenus par les deux groupes, c'est-à-dire 96.2 pour le groupe A et 109.7 pour le groupe B
 
@@ -118,8 +118,8 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 
 3.  À quel point cette différence est compatible avec l'hypothèse nulle qui prend la forme de la distribution t avec les degrés de liberté associés au test (df = 32.99) ? La différence observée dans l'échantillon est transformée dans le résultat t(32.99) = -3.14, ce qui correspond à une p-valeur de 0.004. En d'autres termes, il y a une probabilité de seulement 0.004 (ou 0.4%) d'observer des données similaires ou encore plus incompatibles avec la distribution nulle. De ce fait, le chercheur prend le risque de favoriser l'hypothèse alternative selon laquelle les deux moyennes sont différentes et conclure donc en termes expérimentales que ce qui a été observé dans le macro-monde en termes de VI-VD puisse s'appliquer au macro-monde en termes d'intervention-phénomène d'intérêt. Comme indiqué en cours selon l'approche Neyman-Pearson, le chercheur ne peut néanmoins pas savoir si cela correspond ou pas à la *vérité*.
 
-**Testez plusieurs combinaisons entre paramètres, par exemple en augmentant ou diminuant la différence entre les deux moyennes, en explicitant des écarts types plus grands/petits ou hétérogènes entre les deux groupes. Modifiez aussi le nombre de participants par groupe. Notez si vous pensez trouver des *pattern* qui se manifestent (e.g. si j'augmente \_\_\_\_ alors \_\_\_\_\_\_).\
-**En règle générale vous maximiser la chance de pouvoir détecter un effet, c'est-à-dire une différence *statistiquement* significative entre les deux moyennes, si :
+**Testez plusieurs combinaisons entre paramètres, par exemple en augmentant ou diminuant la différence entre les deux moyennes, en explicitant des écarts types plus grands/petits ou hétérogènes entre les deux groupes. Modifiez aussi le nombre de participants par groupe. Notez si vous pensez trouver des *pattern* qui se manifestent (e.g. si j'augmente \_\_\_\_ alors \_\_\_\_\_\_).**\
+En règle générale vous maximiser la chance de pouvoir détecter un effet, c'est-à-dire une différence *statistiquement* significative entre les deux moyennes, si :
 
 -   La différence entre les deux moyennes est grande
 
@@ -127,24 +127,24 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 
 -   Vous augmentez le nombre d'observations/participant-es
 
-**Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?\
-**D'un point de vue mathématique, il est garanti qu'une différence entre deux moyennes à un certain moment devienne *statistiquement* significative, mais cela ne signifie pas qu'elle est *pratiquement* digne de note. Ici nous ne savons pas à quoi correspondent les deux unités de différence entre 100 et 102. C'est la connaissance du domaine qui nous permet de définir/discuter l'effet de l'intervention en termes pratiques ou théoriques.
+**Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?**\
+D'un point de vue mathématique, il est garanti qu'une différence entre deux moyennes à un certain moment devienne *statistiquement* significative, mais cela ne signifie pas qu'elle est *pratiquement* digne de note. Ici nous ne savons pas à quoi correspondent les deux unités de différence entre 100 et 102. C'est la connaissance du domaine qui nous permet de définir/discuter l'effet de l'intervention en termes pratiques ou théoriques.
 
 ## 06 Simuler plusieurs comparaisons entre moyennes/groupes tirés du même macro-monde
 
 **Laissez les valeurs indiquées dans le fichier original (M1 = 100, SD1 = 15 ; M2 = 115, SD2 = 15 ; N = 20) et faites les 1'000 simulations. Depuis le graphique que vous obtenez, essayez de mettre en perspective les résultats :**
 
--   **Comment expliquez-vous que *seulement* 86.2% des tests donnent une *p*-valeur \< 0.05 ?\
-    **À cause de la variabilité dans l'échantillonnage, dans 13.8% des échantillons les deux groupes ont des données qui ne sont suffisamment pas divergentes pour reproduire l'effet qui existe dans le macro-monde.
+-   **Comment expliquez-vous que *seulement* 86.2% des tests donnent une *p*-valeur \< 0.05 ?**\
+    À cause de la variabilité dans l'échantillonnage, dans 13.8% des échantillons les deux groupes ont des données qui ne sont suffisamment pas divergentes pour reproduire l'effet qui existe dans le macro-monde.
 
--   **Le 13.8% des *p*-valeurs \> 0.05 correspondent à quel type de phénomène dans un test d'hypothèse basé sur un modèle *nul* ?\
-    **Il s'agit de tests qui appartiennent à l'outcome Erreur de type II dans le test d'une hypothèse : on commet l'erreur de ne pas rejeter l'hypothèse nulle, lorsqu'en réalité il faudra la rejeter, car il existe dans la réalité/macro-monde un effet de l'intervention.
+-   **Le 13.8% des *p*-valeurs \> 0.05 correspondent à quel type de phénomène dans un test d'hypothèse basé sur un modèle *nul* ?**\
+    Il s'agit de tests qui appartiennent à l'outcome Erreur de type II dans le test d'une hypothèse : on commet l'erreur de ne pas rejeter l'hypothèse nulle, lorsqu'en réalité il faudra la rejeter, car il existe dans la réalité/macro-monde un effet de l'intervention.
 
-**Laissez les valeurs du macro-monde courants et augmentez le nombre de participants de 20 à 30. Lancez la simulation. Combien des *p*-valeurs \< 0.05 observez à ce moment ? Quelle conclusion pouvez-vous en tirer ?\
-**Le pourcentage augmente à 96.4%. Avec plus d'observations/participant-es, on diminue le risque d'avoir des erreurs de type II.
+**Laissez les valeurs du macro-monde courants et augmentez le nombre de participants de 20 à 30. Lancez la simulation. Combien des *p*-valeurs \< 0.05 observez à ce moment ? Quelle conclusion pouvez-vous en tirer ?**\
+Le pourcentage augmente à 96.4%. Avec plus d'observations/participant-es, on diminue le risque d'avoir des erreurs de type II.
 
-**Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 15. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait, notamment en relation avec la problématique de la replicabilité des résultats en sciences sociales ?\
-**Lorsqu'il n'y a pas d'effet dans le macro-monde, la distribution des p-valeurs s'approche d'une distribution normale. En d'autres termes, le test a plus ou moins les mêmes probabilités de donner toutes les p-valeurs possibles, y compris une p-valeur qui est *significative*. Dans ce cas, il s'agirait d'un erreur de type I.
+**Modifiez à ce point les caractéristiques du macro-monde pour avoir exactement les mêmes valeurs dans les deux groupes : M1 = M2 = 100 ; SD1 = SD2 = 15. Laissez 30 participants par groupe et lancez la simulation. Sur la base du résultat, vous pouvez conclure que : quand il n'y a pas d'effet dans le macro-monde, la distribution des *p*-valeurs est \_\_\_\_\_\_\_\_\_\_. Quelles sont à votre avis les implications de ce fait, notamment en relation avec la problématique de la replicabilité des résultats en sciences sociales ?**\
+Lorsqu'il n'y a pas d'effet dans le macro-monde, la distribution des p-valeurs s'approche d'une distribution normale. En d'autres termes, le test a plus ou moins les mêmes probabilités de donner toutes les p-valeurs possibles, y compris une p-valeur qui est *significative*. Dans ce cas, il s'agirait d'un erreur de type I.
 
 Le problème avec une seule expérience/un seul test est que nous n'avons pas les moyens de savoir si une p-valeur \< alpha (e.g. 0.05) *appartient* est l'exception d'une distribution uniforme (un faux positif ou erreur de type I), ou c'est la *normalité* d'une distribution qui favorise des p-valeurs plus proche de 0. Pour cette raison, on essaie de répliquer les expériences à fin de corroborer les résultats. Si déjà deux expériences menées par deux équipes indépendantes dans les mêmes conditions présentent des tests statistiquement significatifs, alors on peut être beaucoup plus rassuré-es qu'il ne s'agit pas d'une erreur de type I.
 
@@ -154,16 +154,16 @@ Aucune réponse spécifique. Les tests d'équivalence sont assez récents et don
 
 ## 08 Puissance statistique pour une ANOVA simple
 
-**En utilisant les paramètres de base k = 3, alpha = 0.05 et puissance 0.8, combien d'entités/participant-es sont nécessaires par groupes avec un SESOI de Cohen's f = 0.25 ?\
-**53 participant-es x 3 groupes, c'est-à-dire 159 au total.
+**En utilisant les paramètres de base k = 3, alpha = 0.05 et puissance 0.8, combien d'entités/participant-es sont nécessaires par groupes avec un SESOI de Cohen's f = 0.25 ?**\
+53 participant-es x 3 groupes, c'est-à-dire 159 au total.
 
-**Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme.\
-**40 participant-es x 5 groupes, c'est-à-dire 200 au total. En proportion, il faut moins de participant-es par groupes comparé à une ANOVA avec 3 groupes. Cela s'explique par le fait qu'une ANOVA simple test si au moins deux moyennes/groupes sont différents, ce qui est plus probable si on a 5 plutôt que *seulement* 3 groupes. En revanche, effectuer des ANOVA avec plusieurs groupes est assez rare en méthode expérimentale, car même si en proportion moins de participant-es sont nécessaires, le nombre total devient rapidement assez conséquent en termes de temps et éventuellement de budget.
+**Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme. **\
+40 participant-es x 5 groupes, c'est-à-dire 200 au total. En proportion, il faut moins de participant-es par groupes comparé à une ANOVA avec 3 groupes. Cela s'explique par le fait qu'une ANOVA simple test si au moins deux moyennes/groupes sont différents, ce qui est plus probable si on a 5 plutôt que *seulement* 3 groupes. En revanche, effectuer des ANOVA avec plusieurs groupes est assez rare en méthode expérimentale, car même si en proportion moins de participant-es sont nécessaires, le nombre total devient rapidement assez conséquent en termes de temps et éventuellement de budget.
 
 ## 09 Effectuer une comparaison entre trois moyennes/groupes (ou plus)
 
-**En laissant les données disponibles de base dans le fichier, observez les différentes représentations textuelles et graphiques et essayez de repérer toutes les informations importantes. Quel est le résultat du *omnibus* test ? Quels sont les résultats des comparaisons ? Concentrez-vous ensuite sur les postulats : sont-ils respectés à votre avis ?\
-**Le résultat du omnibus test est contenu dans le tableau de l'ANOVA qu'on reporte souvent dans des contributions scientifiques car il contient toutes les informations utiles (degrés de liberté, résultat du test statistique, p-valeur et taille de l'effet standardisé). Au niveau de la taille de l'effet, il serait idéalement mieux d'y ajouter aussi les intervalles de confiance à 95% :
+**En laissant les données disponibles de base dans le fichier, observez les différentes représentations textuelles et graphiques et essayez de repérer toutes les informations importantes. Quel est le résultat du *omnibus* test ? Quels sont les résultats des comparaisons ? Concentrez-vous ensuite sur les postulats : sont-ils respectés à votre avis ?**\
+Le résultat du omnibus test est contenu dans le tableau de l'ANOVA qu'on reporte souvent dans des contributions scientifiques car il contient toutes les informations utiles (degrés de liberté, résultat du test statistique, p-valeur et taille de l'effet standardisé). Au niveau de la taille de l'effet, il serait idéalement mieux d'y ajouter aussi les intervalles de confiance à 95% :
 
 | Effect | df     | MSE    | F     | ges               | p.value |
 |:-------|:-------|:-------|:------|:------------------|:--------|
@@ -195,13 +195,13 @@ Les comparaisons indiquent que les trois moyennes sont différentes les unes des
 
 Enfin, les graphiques des postulats montre que le test respecte les caractéristiques attendues pour que la modélisation de l'ANOVA puisse être utilisée dans le contexte d'un test d'hypothèse.
 
-**Modifiez les paramètres pour le groupe C afin qu'il ait la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?\
-**La taille de l'effet diminue à 0.31 [0.21, 1.00], tandis que maintenant seulement deux comparaisons/moyennes sur trois sont différentes (A vs. B, et A vs. C), tandis que la comparaison entre B et C n'atteigne pas le seuil alpha.
+**Modifiez les paramètres pour le groupe C afin qu'il ait la même moyenne (M = 115) et écart type (SD = 15) du groupe B. Vous avez donc le groupe A qui est tiré d'un macro-monde avec une moyenne inférieure aux groupes B et C, qui au contraire sont tirés du *même* macro-monde. Quel est l'effet sur le *generalised effect size* ? Que se passe-t-il au niveau des comparaisons ?**\
+La taille de l'effet diminue à 0.31 [0.21, 1.00], tandis que maintenant seulement deux comparaisons/moyennes sur trois sont différentes (A vs. B, et A vs. C), tandis que la comparaison entre B et C n'atteigne pas le seuil alpha.
 
 ## 10 Effectuer une ANOVA avec une autre variable (ANCOVA)
 
-**Effectuez d'abord le test avec les données disponibles dans le script et essayé d'interpréter les résultats, notamment en fonction au tableau de l'ANOVA *simple* du point précédent\
-**Contrairement à l'ANOVA simple du point précédent, nous avons ici deux variables qui servent à modéliser la VD : la VI (groupe A, B ou C) et une autre variable continue appelée de manière générique *z.* Par conséquent, chaque observation consiste dans l'attribution au groupe expérimentale, plus la mesure de la VD, plus la mesure de cette variable *z*. Ce que le test souvent appelé ANCOVA fait est de tester l'*apport* de la VI et de l'autre variable dans l'explication/modélisation de la VD. Ce qu'il faut comprendre est que pour les chercherus, la VI a un statut particulier, car c'est ce qu'on manipule, mais pour le modèle statistique la VI et la variable *z* sont *simplement* deux variables qui participent au modèle. Ce qui est très puissant dans la modélisation linéaire est qu'on peut déterminer l'apport de chaque variable *indépendamment* de l'autre. En d'autres termes, le modèle arrive à projeter la question suivante : si on considère deux observations qui ont la même valeur sur la variable *z,* quel est l'*apport* de la VI ? Il s'agit d'une projection statistique parce que dans la plupart des cas, il n'y aura pas des observations exactement avec la même valeur de *z.* Mais le modèle arrive à *moyenner*/stratifier sur *z* pour obtenir une estimation de VI qui est de quelque sorte *indépendante* de la mesure *z.* On peut le voir dans le tableau de l'ANCOVA obtenu avec le test :
+**Effectuez d'abord le test avec les données disponibles dans le script et essayé d'interpréter les résultats, notamment en fonction au tableau de l'ANOVA *simple* du point précédent **\
+Contrairement à l'ANOVA simple du point précédent, nous avons ici deux variables qui servent à modéliser la VD : la VI (groupe A, B ou C) et une autre variable continue appelée de manière générique *z.* Par conséquent, chaque observation consiste dans l'attribution au groupe expérimentale, plus la mesure de la VD, plus la mesure de cette variable *z*. Ce que le test souvent appelé ANCOVA fait est de tester l'*apport* de la VI et de l'autre variable dans l'explication/modélisation de la VD. Ce qu'il faut comprendre est que pour les chercherus, la VI a un statut particulier, car c'est ce qu'on manipule, mais pour le modèle statistique la VI et la variable *z* sont *simplement* deux variables qui participent au modèle. Ce qui est très puissant dans la modélisation linéaire est qu'on peut déterminer l'apport de chaque variable *indépendamment* de l'autre. En d'autres termes, le modèle arrive à projeter la question suivante : si on considère deux observations qui ont la même valeur sur la variable *z,* quel est l'*apport* de la VI ? Il s'agit d'une projection statistique parce que dans la plupart des cas, il n'y aura pas des observations exactement avec la même valeur de *z.* Mais le modèle arrive à *moyenner*/stratifier sur *z* pour obtenir une estimation de VI qui est de quelque sorte *indépendante* de la mesure *z.* On peut le voir dans le tableau de l'ANCOVA obtenu avec le test :
 
 | Effect | df    | MSE   | F      | ges  | p.value |
 |:-------|:------|:------|:-------|:-----|:--------|
@@ -218,16 +218,16 @@ Ce qui est intéressant à tester dans cet exemple est que si vous enlevez de la
 
 Comme indiqué dans la partie du cours sur les fondements expérimentaux, la décision d'inclure la variable *z* dans le modèle ou non doit être faite sur la base de la connaissance du domaine et non pas sur la base du résultat statistique.
 
-**Modifiez le *bruit* de la variable `z` à travers le script. Plus de bruit signifie que la variable z et la VD sont moins en relation l'une avec l'autre. Que se passe-t-il au niveau des résultats lorsque vous augmentez le bruit ? Comment expliqueriez-vous ce résultat ?\
-**Si vous diminuez la relation entre *z* et la VD, par exemple en augmentant l'écart type à 50 à la ligne 58, la VI (groupe) devient significative comme c'était le cas si vous enleviez *z.* Ce changement s'explique par le fait que la force de la relation entre la VI et la VD est maintenant plus forte que la relation entre *z* et la VD.
+**Modifiez le *bruit* de la variable `z` à travers le script. Plus de bruit signifie que la variable z et la VD sont moins en relation l'une avec l'autre. Que se passe-t-il au niveau des résultats lorsque vous augmentez le bruit ? Comment expliqueriez-vous ce résultat ?**\
+Si vous diminuez la relation entre *z* et la VD, par exemple en augmentant l'écart type à 50 à la ligne 58, la VI (groupe) devient significative comme c'était le cas si vous enleviez *z.* Ce changement s'explique par le fait que la force de la relation entre la VI et la VD est maintenant plus forte que la relation entre *z* et la VD.
 
 ## 11 Puissance statistique d'une ANOVA factorielle
 
-**Laissez les paramètres de base du script et effectuer la simulation de la puissance statistique. Quelle est la puissance statistique pour les différents effets (simples, principaux et interaction) ?\
-**Nous avons en général une puissance très élevée, avec 100% pour les effets simples (pairwise comparisons avec t-test), les deux effets principaux (deux première ligne du tableau de l'ANOVA), et 94% pour l'effet d'interaction (troisième ligne du tableau de l'ANOVA).
+**Laissez les paramètres de base du script et effectuer la simulation de la puissance statistique. Quelle est la puissance statistique pour les différents effets (simples, principaux et interaction) ?**\
+Nous avons en général une puissance très élevée, avec 100% pour les effets simples (pairwise comparisons avec t-test), les deux effets principaux (deux première ligne du tableau de l'ANOVA), et 94% pour l'effet d'interaction (troisième ligne du tableau de l'ANOVA).
 
-**Modifiez comme vous voulez les 4 moyennes des conditions expérimentales et menez à nouveau les simulations. Quels patterns pouvez-vous identifier ?\
-**De manière général, il est plus difficile d'avoir assez de puissance statistique pour détecter l'interaction comparé aux effets principaux ou simples. Par conséquent, il faut généralement beaucoup plus d'observations/participant-es si on est intéressé-es à un effet d'interaction.
+**Modifiez comme vous voulez les 4 moyennes des conditions expérimentales et menez à nouveau les simulations. Quels patterns pouvez-vous identifier ?**\
+De manière général, il est plus difficile d'avoir assez de puissance statistique pour détecter l'interaction comparé aux effets principaux ou simples. Par conséquent, il faut généralement beaucoup plus d'observations/participant-es si on est intéressé-es à un effet d'interaction.
 
 ## 12 Effectuer une ANOVA factorielle
 
@@ -244,8 +244,8 @@ Comme indiqué dans la partie du cours sur les fondements expérimentaux, la dé
 
     On peut le voir également depuis le graphique de l'ANOVA factorielle : les deux lignes qui connectent les points ne sont pas parallèle. Notamment, on peut voir que l'effet de la VI1 est modéré par la VI2, car le gain entre la condition VI1_sans et VI1_avec est plus élevé (la ligne est plua raide) si on combine la VI1 avec la modalité VI2_forte comparé à la modalité VI2_faible. D'un point de vue conceptuel, cela se traduit par l'affirmation suivante : les apprenant-es bénéficient de la présence d'un dispositif numérique, et ce bénéfice est d'autant plus important si la difficulté de la tâche est forte.
 
--   **Selon la réponse, menez les comparaisons successives en accord avec le résultat du test de l'interaction.\
-    **Tenu compte de la présence de l'interaction, on peut tester les 6 effets simples à travers la comparaison/le contraste entre les 4 conditions expérimentales.
+-   **Selon la réponse, menez les comparaisons successives en accord avec le résultat du test de l'interaction.**\
+   Compte tenu de la présence de l'interaction, on peut tester les 6 effets simples à travers la comparaison/le contraste entre les 4 conditions expérimentales.
 
     | contrast                  | estimate |    SE |  df | t.ratio | p.value |
     |:--------------------------|---------:|------:|----:|--------:|--------:|
@@ -256,11 +256,11 @@ Comme indiqué dans la partie du cours sur les fondements expérimentaux, la dé
     | Avec Faible - Avec Forte  |  -36.885 | 4.378 |  76 |  -8.426 | \<0.001 |
     | Sans Forte - Avec Forte   |  -54.119 | 4.378 |  76 | -12.363 | \<0.001 |
 
--   **Essayez de comprendre les différents indicateurs et de donner du sens aux résultats. Que signifie-t-il un effet d'interaction dans ce cas ? Qu'est-ce que les comparaisons successives nous disent ?\
-    **Comme indiqué au point précédent, un effet d'interaction détermine que l'effet d'une variable peut-être plus ou moins prononcé selon le croisement avec l'autre variable. Les deux effets principaux restent intéressants, mais leur quantification dépende de l'interaction entre les deux VI. Les comparaisons successives entre les quatre modalités suggèrent que toutes les conditions sont différentes les unes des autres, avec des effets aussi large que 68 unités de la VD dans le cas de la comparaisons Sans/Faible vs. Avec/Forte.
+-   **Essayez de comprendre les différents indicateurs et de donner du sens aux résultats. Que signifie-t-il un effet d'interaction dans ce cas ? Qu'est-ce que les comparaisons successives nous disent ?**\
+    Comme indiqué au point précédent, un effet d'interaction détermine que l'effet d'une variable peut-être plus ou moins prononcé selon le croisement avec l'autre variable. Les deux effets principaux restent intéressants, mais leur quantification dépende de l'interaction entre les deux VI. Les comparaisons successives entre les quatre modalités suggèrent que toutes les conditions sont différentes les unes des autres, avec des effets aussi large que 68 unités de la VD dans le cas de la comparaisons Sans/Faible vs. Avec/Forte.
 
-**Modifiez les 4 moyennes des conditions expérimentales selon vos choix et essayez de reproduire le même mécanisme du point précédent : tester pour l'interaction et effectuez ensuite les comparaisons correspondantes.\
-**Comme il arrive souvent en statistiques, la procédure correcte à effectuer selon la présence ou l'absence de l'interaction peut varier d'article en article. Il peut donc arriver que les effets principaux soient discutés/traités en même temps que l'effet de l'interaction. Ici je présente la procédure qui à mon avis fait le plus de sens d'un point de vue logique, et qui est d'ailleurs supportée par Maxwell et collègues (2017).
+**Modifiez les 4 moyennes des conditions expérimentales selon vos choix et essayez de reproduire le même mécanisme du point précédent : tester pour l'interaction et effectuez ensuite les comparaisons correspondantes.**\
+Comme il arrive souvent en statistiques, la procédure correcte à effectuer selon la présence ou l'absence de l'interaction peut varier d'article en article. Il peut donc arriver que les effets principaux soient discutés/traités en même temps que l'effet de l'interaction. Ici je présente la procédure qui à mon avis fait le plus de sens d'un point de vue logique, et qui est d'ailleurs supportée par Maxwell et collègues (2017).
 
-**À votre avis, qu'est-ce qu'il faudrait faire dans le cas où il n'y a aucun effet (ni effets principaux, ni interaction) ?\
-**Dans ce cas on ne peut rien dire à propos de l'hypothèse qui est testée. Il existe des procédures pour utiliser un test d'équivalence aussi dans le cas d'une ANOVA factorielle, mais elles ne sont pas encore très répandues dans la littérature.
+**À votre avis, qu'est-ce qu'il faudrait faire dans le cas où il n'y a aucun effet (ni effets principaux, ni interaction) ?**\
+Dans ce cas on ne peut rien dire à propos de l'hypothèse qui est testée. Il existe des procédures pour utiliser un test d'équivalence aussi dans le cas d'une ANOVA factorielle, mais elles ne sont pas encore très répandues dans la littérature.
