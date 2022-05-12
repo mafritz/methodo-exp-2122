@@ -115,14 +115,52 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 
 ## 05 Effectuer une comparaison entre deux moyennes/groupes
 
-**Testez d'abord le script avec les valeurs initiales et essayez de donner une signification aux différentes éléments graphiques et textuels que vous obtenez.**\
-Le test t compare deux moyennes/groupes sous réserve que la différence entre les deux moyennes est égale à un certain écart, ce qui dans la plupart des cas correspond à un écart de 0, c'est-à-dire pas de différence entre les deux moyennes/groupes (M1 - M2 = 0). Le résultat d'un t test nous informe donc :
+**Exécutez progressivement les différentes parties du script avec les paramètres initiaux (M1 = 100, SD1 = 15, M2 = 115, SD2 = 15, Ngroupe = 20) et essayez de répondre aux questions suivantes :**
 
-1.  Des moyennes obtenus par les deux groupes, c'est-à-dire 96.2 pour le groupe A et 109.7 pour le groupe B
+-   **Quel type d'hypothèse est testée dans ce script ?\
+    **M(groupe A) ≠ M(groupe B), ce qui équivaut à une hypothèse non-directionnelle ou bilatérale. En d'autres termes, on s'attend à ce que les deux groupes diffèrent dans l'*efficacité* de la VD, mais sans établir à priori quel groupe aura une *meilleure* *efficacité.*
 
-2.  De la différence entre les deux moyennes sous forme d'estimation précise (moyenne A - moyenne B) qui correspond à 96.2 - 109.7 = -13.5 et d'intervalle de confiance autour de cette estimation [-22.10, -4.74]. Cette intervalle dépend de la variabilité (i.e. variance et écart types) de l'échantillon et des deux groupes respectivement. Ici on peut voir que l'estimation peut aller de -22.1 à -4.74, c'est-à-dire que potentiellement le groupe B peut avoir un score plus élevé sur la VD de 22 points, mais également *seulement* de 4. En termes standardisés, cette différence correspond à Cohen's d = -1.09 avec un intervalle de confiance de [-1.82, -0.35].
+-   **À quoi correspond donc l'hypothèse nulle ?\
+    **L'hypothèse nulle consiste à partir du présupposé qu'il n'y a pas de différence entre les deux moyennes/groupes. En d'autres termes, que l'effet défini par la différence entre les deux moyennes est égale à 0 (M1 - M2 = 0).
 
-3.  À quel point cette différence est compatible avec l'hypothèse nulle qui prend la forme de la distribution t avec les degrés de liberté associés au test (df = 32.99) ? La différence observée dans l'échantillon est transformée dans le résultat t(32.99) = -3.14, ce qui correspond à une p-valeur de 0.004. En d'autres termes, il y a une probabilité de seulement 0.004 (ou 0.4%) d'observer des données similaires ou encore plus incompatibles avec la distribution nulle. De ce fait, le chercheur prend le risque de favoriser l'hypothèse alternative selon laquelle les deux moyennes sont différentes et conclure donc en termes expérimentales que ce qui a été observé dans le macro-monde en termes de VI-VD puisse s'appliquer au macro-monde en termes d'intervention-phénomène d'intérêt. Comme indiqué en cours selon l'approche Neyman-Pearson, le chercheur ne peut néanmoins pas savoir si cela correspond ou pas à la *vérité*.
+-   **Identifiez les résultats du test correspondants respectivement aux degrés de liberté, au résultat du t test statistique, à la p-valeur obtenue, la taille de l'effet brute et standardisée avec les intervalles de confiances à 95%.**
+
+    -   Degrés de liberté : df = 32.99
+
+    -   t(32.99) = -3.14
+
+    -   p-valeur = 0.004
+
+    -   Taille de l'effet brute : différence = -13.46, 95% CI [-22.19, -4.74], ce qui correspond notamment à la soustraction entre la moyenne du groupe A et la moyenne du groupe B (96.20 - 109.66 = -13.46)
+
+    -   Taille de l'effet standardisée : Cohen's d = -1.09, 95% CI [-1.82, -0.35]
+
+-   **L'hypothèse nulle (H0) est \_\_\_\_\_ ? L'hypothèse alternative (H1) est \_\_\_\_\_\_ ?\
+    **H0 est rejetée, H1 est donc acceptée/corroborée. En d'autres termes, il y a une probabilité de seulement 0.004 (ou 0.4%) d'observer des données similaires ou encore plus incompatibles avec la distribution nulle. De ce fait, le chercheur prend le risque de rejeter l'hypothèse M1 = M2 et favoriser l'hypothèse alternative selon laquelle les deux moyennes sont différentes. Par conséquent, il faut conclure en termes expérimentaux que ce qui a été observé dans le macro-monde en termes de VI-VD peut s'appliquer au macro-monde en termes d'intervention-phénomène d'intérêt. Comme indiqué en cours selon l'approche Neyman-Pearson, le chercheur ne peut néanmoins pas savoir si cela correspond ou pas à la *vérité*.
+
+-   **Quelle interprétation donneriez-vous de ces résultats ? \
+    **L'intervention produit un effet qui peut se quantifier comme une différence d'environ 13.5 unités de la VD en faveur du groupe B. Les intervalles de confiance indiquent cependant que l'incertitude autour de cet effet est encore plutôt large.
+
+**Laissez tous les paramètres inchangés et modifiez le type de test de alternative = "two.sided" à alternative = "less" à la ligne 65. Quelle interprétation donnez-vous maintenant par rapport à H0 et H1 ? Regardez ensuite les indicateurs et comparez-le avec le test précédent. La p-valeur est plus \_\_\_\_\_ ? Pourquoi ? La taille de l'effet est \_\_\_\_\_\_ ? Pourquoi ? Qu'est qui apparaît maintenant dans les intervalles de confiance ? Pourquoi ?**
+
+-   Même conclusion du test précédent : H0 est rejetée et H1 est acceptée/corroborée. Il faut néanmoins faire attention que si l'hypothèse alternative est M1 \< M2, l'hypothèse nulle devient M1 \>= M2. Traduit en termes d'effet, cela devient donc M1 - M2 \>= 0.
+
+-   La p-valeur est plus petite, elle passe de 0.004 à 0.002. Comme indiqué dans la partie sur la puissance statistique, cela s'explique par le fait que le seuil critique de l'erreur de type I est *moins* extrême car il est tout sur le côté gauche de la distribution nulle.
+
+-   La taille de l'effet reste inchangée dans l'estimation (différence = -13.46). La taille de l'effet est indépendante de la direction de l'hypothèse, ce qui renforce ultérierment le principe selon lequel la p-valeur ne donne aucune informations sur les conséquences *pratiques*/quantifiables de l'effet. La p-valeur détermine seulement le choix de rejeter/accepter H0/H1.
+
+-   La limite inférieur des intervalles de confiance est à ce moment -Inf, ce qui équivaut à moins infini en termes mathématiques. En termes concrètes, vue qu'on s'intéresse seulement à savoir si M1 \< M2, nous sommes intéressé-es exclusivement à la limite supérieur de l'intervalle de confiance : elle doit être \< 0. Ce qui est le cas ici, vue que la limite supérieur est -6.2. À noter que ce chiffre est inférieur à -
+
+**Enfin, modifiez l'alternative = "greater" et répondez aux mêmes questions.**
+
+-   L'hypothèse alternative est maintenant M1 \> M2, avec l'hypothèse nulle M1 \<= M2 (ou M1 - M2 \<= 0). On sait déjà depuis les résultats précédent que M1 - M2 = -13.46. Donc l'hypothèse nulle n'est pas rejetée.
+
+-   La p-valeur est beaucoup plus élevée, elle devient p = 0.998, c'est-à-dire à l'opposé de p = .002 (1 - 0.002 = 0.098). Cela s'explique par le fait que le seuil alpha se trouve de l'autre côté (vers +2) de la distribution nulle par rapport au résultat du t test obtenu (-3.14). Souvenez-vous que la p-valeur est un indicateur de (in)compatibilité avec la distribution nulle : une p-valeur proche de 0 témoigne que les données tendent vers l'incompatibilité avec la distribution nulle ; une valeur proche de 1 témoigne que les données tendent plutôt vers la compatibilité avec la distribution nulle. Ici on est clairement dans une condition ou l'hypothèse nulle est plutôt compatible avec les données observées, car les données montrent clairement que M1 \< M2. Vous voyez ici l'importance de pré-enregistrer les hypothèses, car cette situation est un exemple des tentations que peuvent avoir les chercheurs. Si l'hypothèse du chercher M1 \> M2 n'avait pas été figée en amont dans la fiche, les chercheurs pourraient maintenir ces mêmes données est simplement changer la direction de leur hypothèse en M1 \< M2. À ce moment, ils se retrouvent avec un résultat statistiquement significatif !
+
+-   La taille de l'effet reste encore une fois inchangée : la différence entre moyenne est toujours de -13.46. À ce moment le limite supérieur de l'intervalle de confiance passe à +Inf car nous nous intéressons plutôt à la limite inférieur.
+
+**Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?**\
+D'un point de vue mathématique, il est garanti qu'une différence entre deux moyennes à un certain moment devienne *statistiquement* significative, mais cela ne signifie pas qu'elle est *pratiquement* digne de note. Ici nous ne savons pas à quoi correspondent les deux unités de différence entre 100 et 102. C'est la connaissance du domaine qui nous permet de définir/discuter l'effet de l'intervention en termes pratiques ou théoriques.
 
 **Testez plusieurs combinaisons entre paramètres, par exemple en augmentant ou diminuant la différence entre les deux moyennes, en explicitant des écarts types plus grands/petits ou hétérogènes entre les deux groupes. Modifiez aussi le nombre de participants par groupe. Notez si vous pensez trouver des *pattern* qui se manifestent (e.g. si j'augmente \_\_\_\_ alors \_\_\_\_\_\_).**\
 En règle générale vous maximiser la chance de pouvoir détecter un effet, c'est-à-dire une différence *statistiquement* significative entre les deux moyennes, si :
@@ -132,9 +170,6 @@ En règle générale vous maximiser la chance de pouvoir détecter un effet, c'e
 -   L'écart type est petit et similaire pour les deux groupes
 
 -   Vous augmentez le nombre d'observations/participant-es
-
-**Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?**\
-D'un point de vue mathématique, il est garanti qu'une différence entre deux moyennes à un certain moment devienne *statistiquement* significative, mais cela ne signifie pas qu'elle est *pratiquement* digne de note. Ici nous ne savons pas à quoi correspondent les deux unités de différence entre 100 et 102. C'est la connaissance du domaine qui nous permet de définir/discuter l'effet de l'intervention en termes pratiques ou théoriques.
 
 ## 06 Simuler plusieurs comparaisons entre moyennes/groupes tirés du même macro-monde
 
