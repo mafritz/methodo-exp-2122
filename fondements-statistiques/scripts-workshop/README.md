@@ -173,7 +173,7 @@ En modifiant les différents paramètres dans le script en question, répondez a
 
 ## 05 Effectuer une comparaison entre deux moyennes/groupes
 
-Le fichier `05_t-test_single.R` permet de simuler des tests pour comparer deux moyennes/groupes à la recherche d'un effet, ici dans une perspective inter-sujets (i.e. à groupes indépendants). L'hypothèse nulle dans un t-test de ce type correspond à dire qu'il n'y a pas de différence entre les deux moyennes, ou en d'autres termes que l'effet résultant de la soustraction des deux moyennes est égale à 0 :
+Le fichier `05_t-test_single.R` permet de simuler des tests pour comparer deux moyennes/groupes à la recherche d'un effet, ici dans une perspective inter-sujets (i.e. à groupes indépendants). L'hypothèse nulle dans un t-test de ce type correspond le plus souvent à dire qu'il n'y a pas de différence entre les deux moyennes, ou en d'autres termes que l'effet résultant de la soustraction des deux moyennes est égale à 0 :
 
 -   M(groupe A) = M(groupe B)
 
@@ -181,13 +181,11 @@ Le fichier `05_t-test_single.R` permet de simuler des tests pour comparer deux m
 
 L'hypothèse alternative peut être :
 
--   M(groupe A) ≠ M(groupe B), ce qui équivaut à une hypothèse non-directionnelle ou bi-directionnelle
+-   M(groupe A) ≠ M(groupe B), ce qui équivaut à une hypothèse non-directionnelle ou bilatérale
 
 -   M(groupe A) \> M(groupe B), ce qui équivaut à une hypothèse directionnelle
 
 -   M(groupe A) \< M(groupe B), ce qui équivaut à une hypothèse directionnelle
-
-Lorsqu'on pose une hypothèse directionnelle, on peut utiliser un test-t unilatéral au lieu d'un test bilatéral, mais cette possibilité n'est pas abordée. Le test mené dans le script est bilatéral, ce qui peut-être utilisé pour les trois types hypothèses alternatives.
 
 Le script permet de faire principalement 4 choses :
 
@@ -195,17 +193,31 @@ Le script permet de faire principalement 4 choses :
 
 2.  Montrer graphiquement la dispersion/distribution des données autour de la moyenne du groupe et des intervalles de confiance
 
-3.  Effectuer un test t de Welch et afficher le résultats avec les différents indicateurs (degrés de liberté, résultat du test statistique, p-valeur, taille de l'effet brute et standardisée)
+3.  Effectuer un test t de Welch (qui n'assume pas l'homogénéité de la variance) et afficher le résultats avec les différents indicateurs (degrés de liberté, résultat du test statistique, p-valeur, taille de l'effet brute et standardisée)
 
 4.  Affichez la p-valeur en fonction de la distribution nulle pour une seuil de l'erreur de type I de 0.05 bilatéral
 
-En adaptant les paramètres moyennes et écarts types des deux macro-mondes, ainsi que le nombre d'observations par groupe, essayez de tester/comprendre les scénarios suivants :
+Adaptez les différents partie du script selon les consignes suivantes et répondez aux questions/réflexions proposées :
 
--   Testez d'abord le script avec les valeurs initiales et essayez de donner une signification aux différentes éléments graphiques et textuels que vous obtenez.
+-   Exécutez progressivement les différentes parties du script avec les paramètres initiaux (M1 = 100, SD1 = 15, M2 = 115, SD2 = 15, Ngroupe = 20) et essayez de répondre aux questions suivantes :
+
+    -   Quel type d'hypothèse est testée dans ce script ?
+
+    -   À quoi correspond donc l'hypothèse nulle ?
+
+    -   Identifiez les résultats du test correspondants respectivement aux degrés de liberté, au résultat du t test statistique, à la p-valeur obtenue, la taille de l'effet brute et standardisée avec les intervalles de confiances à 95%.
+
+    -   L'hypothèse nulle (H0) est \_\_\_\_\_ ? L'hypothèse alternative (H1) est \_\_\_\_\_\_ ?
+
+    -   Quelle interprétation donneriez-vous de ces résultats ?
+
+-   Laissez tous les paramètres inchangés et modifiez le type de test de alternative = "two.sided" à alternative = "less" à la ligne 65. Quelle interprétation donnez-vous maintenant par rapport à H0 et H1 ? Regardez ensuite les indicateurs et comparez-le avec le test précédent. La p-valeur est plus \_\_\_\_\_ ? Pourquoi ? La taille de l'effet est \_\_\_\_\_\_ ? Pourquoi ? Qu'est qui apparaît maintenant dans les intervalles de confiance ? Pourquoi ?
+
+-   Enfin, modifiez l'alternative = "greater" et répondez aux mêmes questions.
+
+-   Mettez à nouveau l'alternative = "two.sided" et utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?
 
 -   Testez plusieurs combinaisons entre paramètres, par exemple en augmentant ou diminuant la différence entre les deux moyennes ou en explicitant des écarts types plus grands/petits ou hétérogènes entre les deux groupes. Modifiez aussi le nombre de participants par groupe. Notez si vous pensez trouver des *pattern* qui se manifestent (e.g. si j'augmente \_\_\_\_ alors \_\_\_\_\_\_).
-
--   Utilisez maintenant les paramètres suivants M1 = 100, SD1 = 15 et M2 = 102, SD2 = 15, ce qui signifie qu'il y a dans le macro-monde une petite différence de 2 points entre les deux moyennes. Utilisez `n_participants_per_groupe = 1000`, donc avec beaucoup de participants pour chaque groupe. Menez le test et observez le résultat. Qu'est-ce que vous pouvez conclure depuis cette simulation ?
 
 ## 06 Simuler plusieurs comparaisons entre moyennes/groupes tirés du même macro-monde
 
