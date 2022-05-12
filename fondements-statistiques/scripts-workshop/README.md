@@ -183,9 +183,9 @@ L'hypothèse alternative peut être :
 
 -   M(groupe A) ≠ M(groupe B), ce qui équivaut à une hypothèse non-directionnelle ou bilatérale
 
--   M(groupe A) \> M(groupe B), ce qui équivaut à une hypothèse directionnelle
+-   M(groupe A) \> M(groupe B), ce qui équivaut à une hypothèse directionnelle ou unilatérale
 
--   M(groupe A) \< M(groupe B), ce qui équivaut à une hypothèse directionnelle
+-   M(groupe A) \< M(groupe B), ce qui équivaut à une hypothèse directionnelle ou unilatérale
 
 Le script permet de faire principalement 4 choses :
 
