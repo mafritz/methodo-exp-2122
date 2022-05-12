@@ -88,8 +88,15 @@ curve(
   col = "steelblue"
 )
 
-abline(v = qt(0.025, df = model$parameter), lwd = 3, lty = 2)
-abline(v = qt(1 - 0.025, df = model$parameter), lwd = 3, lty = 2)
+if (model$alternative == "two.sided") {
+  abline(v = qt(0.025, df = model$parameter), lwd = 3, lty = 2)
+  abline(v = qt(1 - 0.025, df = model$parameter), lwd = 3, lty = 2)
+} else if (model$alternative == "less") {
+  abline(v = qt(0.05, df = model$parameter), lwd = 3, lty = 2)
+} else {
+  abline(v = qt(1 - 0.05, df = model$parameter), lwd = 3, lty = 2)
+}
+
 abline(v = model$statistic, col = "red", lwd = 3)
 
 legend(
