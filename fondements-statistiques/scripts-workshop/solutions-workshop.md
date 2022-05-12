@@ -93,11 +93,10 @@ Lorsqu'on a à faire avec des échantillons et non pas des *populations* entièr
 **Combien de participant-es seraient nécessaire pour détecter un SESOI de Cohen's d = 0.5, dans un test bilatéral (alternative = "two.sided") avec un erreur de type I de 0.05 et de type II de 0.8 ?**\
 64 par groupe, donc 128 au total.
 
-**Modifiez seulement l'alternative = "greater" à la ligne 25 et laissez tous les autres éléments inchangés. Qu'est-ce que vous observez au niveau du nombre de participant-es nécessaires ? Est-ce que vous imaginez qu'avec l'alternative "less" le nombre sera différent ? (Hint : si vous voulez tester il faudra mettre le SESOI négatif, à -0.5)\
-**Avec un test unilatéral il faut 51 participants par groupe, donc 102 au total, que ce soit dans l'alternative M1 \> M2 ou M1 \< M2. Il s'agit donc d'un nombre considérablement inférieur par rapport à l'alternative bilatéral. Cela s'explique par le fait que la zone de la distribution nulle couverte par le 5 de l'erreur de type I est toute sur l'une des deux côtés de la distribution t. De cette manière, il faut donc une valeur du test t moins extrême pour franchir le seuil, ce qu'on peut obtenir avec un nombre de participant-es moins élevé. L'image ci-dessous montre que pour un test unilatéral, le seuil correspondant à une p-valeur de 0.05 est supérieur à -2 ou inférieur +2. En d'autres termes, ces seuils sont plus proche du sommet de la courbe où la densité est plus élevé et donc un résultat plus probable/plausible. Au contraire, pour le test bilatéral il faut un résultat du t test inférieur à -2 ou supérieur à +2, donc plutôt vers les extrémités de la courbe où la densité est plus faible.
+**Modifiez seulement l'alternative = "greater" à la ligne 25 et laissez tous les autres éléments inchangés. Qu'est-ce que vous observez au niveau du nombre de participant-es nécessaires ? Est-ce que vous imaginez qu'avec l'alternative "less" le nombre sera différent ? (Hint : si vous voulez tester il faudra mettre le SESOI négatif, à -0.5)**\
+Avec un test unilatéral il faut 51 participants par groupe, donc 102 au total, que ce soit dans l'alternative M1 \> M2 ou M1 \< M2. Il s'agit donc d'un nombre considérablement inférieur par rapport à l'alternative bilatéral. Cela s'explique par le fait que la zone de la distribution nulle couverte par le 5 de l'erreur de type I est toute sur l'une des deux côtés de la distribution t. De cette manière, il faut donc une valeur du test t moins extrême pour franchir le seuil, ce qu'on peut obtenir avec un nombre de participant-es moins élevé. L'image ci-dessous montre que pour un test unilatéral, le seuil correspondant à une p-valeur de 0.05 est supérieur à -2 ou inférieur +2. En d'autres termes, ces seuils sont plus proche du sommet de la courbe où la densité est plus élevé et donc un résultat plus probable/plausible. Au contraire, pour le test bilatéral il faut un résultat du t test inférieur à -2 ou supérieur à +2, donc plutôt vers les extrémités de la courbe où la densité est plus faible.
 
-![](images/t-test-distributions.png){width="100%"}**\
-**
+![Distributions selon type de test/hypothèse](images/t-test-distributions.png){width="100%"}
 
 **Remettez l'alternative = "two.sided". Dans la première manipulation avec type I = 0.05, type II = 0.8, et SESOI = 0.5 vous avez obtenu 64 participant-es par groupe. Diminuez maintenant le SESOI = 0.25, la taille de l'échantillon nécessaire et plus grande ou plus petite ? De ce fait, vous pouvez conclure que plus \_\_\_\_\_\_\_\_ est le SESOI, plus \_\_\_\_\_\_\_\_\_\_ sera l'échantillon nécessaire. Essayez d'expliquer ce phénomène.**\
 Plus grand le SESOI, plus petit l'échantillon nécessaire. Ou respectivement plus petit le SESOI, plus grand l'échantillon nécessaire. Cela s'explique par le fait qu'un grand effet, par exemple une grande différence entre deux groupes, est plus évidente et nécessite donc de moins d'observations pour la déceler. Au contraire, une petite différence est plus sensible à du *bruit* et nécessite donc plus d'observations avant de pouvoir détecter le signal.
@@ -117,11 +116,11 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 
 **Exécutez progressivement les différentes parties du script avec les paramètres initiaux (M1 = 100, SD1 = 15, M2 = 115, SD2 = 15, Ngroupe = 20) et essayez de répondre aux questions suivantes :**
 
--   **Quel type d'hypothèse est testée dans ce script ?\
-    **M(groupe A) ≠ M(groupe B), ce qui équivaut à une hypothèse non-directionnelle ou bilatérale. En d'autres termes, on s'attend à ce que les deux groupes diffèrent dans l'*efficacité* de la VD, mais sans établir à priori quel groupe aura une *meilleure* *efficacité.*
+-   **Quel type d'hypothèse est testée dans ce script ?**\
+    M(groupe A) ≠ M(groupe B), ce qui équivaut à une hypothèse non-directionnelle ou bilatérale. En d'autres termes, on s'attend à ce que les deux groupes diffèrent dans l'*efficacité* de la VD, mais sans établir à priori quel groupe aura une *meilleure* *efficacité.*
 
--   **À quoi correspond donc l'hypothèse nulle ?\
-    **L'hypothèse nulle consiste à partir du présupposé qu'il n'y a pas de différence entre les deux moyennes/groupes. En d'autres termes, que l'effet défini par la différence entre les deux moyennes est égale à 0 (M1 - M2 = 0).
+-   **À quoi correspond donc l'hypothèse nulle ?**\
+    L'hypothèse nulle consiste à partir du présupposé qu'il n'y a pas de différence entre les deux moyennes/groupes. En d'autres termes, que l'effet défini par la différence entre les deux moyennes est égale à 0 (M1 - M2 = 0).
 
 -   **Identifiez les résultats du test correspondants respectivement aux degrés de liberté, au résultat du t test statistique, à la p-valeur obtenue, la taille de l'effet brute et standardisée avec les intervalles de confiances à 95%.**
 
@@ -135,11 +134,11 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 
     -   Taille de l'effet standardisée : Cohen's d = -1.09, 95% CI [-1.82, -0.35]
 
--   **L'hypothèse nulle (H0) est \_\_\_\_\_ ? L'hypothèse alternative (H1) est \_\_\_\_\_\_ ?\
-    **H0 est rejetée, H1 est donc acceptée/corroborée. En d'autres termes, il y a une probabilité de seulement 0.004 (ou 0.4%) d'observer des données similaires ou encore plus incompatibles avec la distribution nulle. De ce fait, le chercheur prend le risque de rejeter l'hypothèse M1 = M2 et favoriser l'hypothèse alternative selon laquelle les deux moyennes sont différentes. Par conséquent, il faut conclure en termes expérimentaux que ce qui a été observé dans le macro-monde en termes de VI-VD peut s'appliquer au macro-monde en termes d'intervention-phénomène d'intérêt. Comme indiqué en cours selon l'approche Neyman-Pearson, le chercheur ne peut néanmoins pas savoir si cela correspond ou pas à la *vérité*.
+-   **L'hypothèse nulle (H0) est \_\_\_\_\_ ? L'hypothèse alternative (H1) est \_\_\_\_\_\_ ?**\
+    H0 est rejetée, H1 est donc acceptée/corroborée. En d'autres termes, il y a une probabilité de seulement 0.004 (ou 0.4%) d'observer des données similaires ou encore plus incompatibles avec la distribution nulle. De ce fait, le chercheur prend le risque de rejeter l'hypothèse M1 = M2 et favoriser l'hypothèse alternative selon laquelle les deux moyennes sont différentes. Par conséquent, il faut conclure en termes expérimentaux que ce qui a été observé dans le macro-monde en termes de VI-VD peut s'appliquer au macro-monde en termes d'intervention-phénomène d'intérêt. Comme indiqué en cours selon l'approche Neyman-Pearson, le chercheur ne peut néanmoins pas savoir si cela correspond ou pas à la *vérité*.
 
--   **Quelle interprétation donneriez-vous de ces résultats ? \
-    **L'intervention produit un effet qui peut se quantifier comme une différence d'environ 13.5 unités de la VD en faveur du groupe B. Les intervalles de confiance indiquent cependant que l'incertitude autour de cet effet est encore plutôt large.
+-   **Quelle interprétation donneriez-vous de ces résultats ?**\
+    L'intervention produit un effet qui peut se quantifier comme une différence d'environ 13.5 unités de la VD en faveur du groupe B. Les intervalles de confiance indiquent cependant que l'incertitude autour de cet effet est encore plutôt large.
 
 **Laissez tous les paramètres inchangés et modifiez le type de test de alternative = "two.sided" à alternative = "less" à la ligne 65. Quelle interprétation donnez-vous maintenant par rapport à H0 et H1 ? Regardez ensuite les indicateurs et comparez-le avec le test précédent. La p-valeur est plus \_\_\_\_\_ ? Pourquoi ? La taille de l'effet est \_\_\_\_\_\_ ? Pourquoi ? Qu'est qui apparaît maintenant dans les intervalles de confiance ? Pourquoi ?**
 
