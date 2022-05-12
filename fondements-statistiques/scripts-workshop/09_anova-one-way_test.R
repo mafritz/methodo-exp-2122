@@ -143,4 +143,4 @@ comparaisons <- emmeans(
 print(comparaisons)
 
 # Récupérer un tableau avec les intervalles de confiance
-comparaisons |> summary(infer = TRUE)
+comparaisons |> summary(infer = TRUE, digits = 2)
