@@ -148,7 +148,7 @@ L'erreur de type II a généralement plus d'impact sur la taille de l'échantill
 
 -   La taille de l'effet reste inchangée dans l'estimation (différence = -13.46). La taille de l'effet est indépendante de la direction de l'hypothèse, ce qui renforce ultérierment le principe selon lequel la p-valeur ne donne aucune informations sur les conséquences *pratiques*/quantifiables de l'effet. La p-valeur détermine seulement le choix de rejeter/accepter H0/H1.
 
--   La limite inférieur des intervalles de confiance est à ce moment -Inf, ce qui équivaut à moins infini en termes mathématiques. En termes concrètes, vue qu'on s'intéresse seulement à savoir si M1 \< M2, nous sommes intéressé-es exclusivement à la limite supérieur de l'intervalle de confiance : elle doit être \< 0. Ce qui est le cas ici, vue que la limite supérieur est -6.2. À noter que ce chiffre est inférieur à -
+-   La limite inférieur des intervalles de confiance est à ce moment -Inf, ce qui équivaut à moins infini en termes mathématiques. En termes concrètes, vue qu'on s'intéresse seulement à savoir si M1 \< M2, nous sommes intéressé-es exclusivement à la limite supérieur de l'intervalle de confiance : elle doit être \< 0. Ce qui est le cas ici, vue que la limite supérieur est -6.2. À noter que ce chiffre est inférieur à -4.74 du test bilatéral pour les mêmes raisons de *risque* vers une direction. On s'expose plus sur l'un de côté.
 
 **Enfin, modifiez l'alternative = "greater" et répondez aux mêmes questions.**
 
