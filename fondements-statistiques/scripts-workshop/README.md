@@ -277,9 +277,15 @@ En variant les paramètres du fichier, essayez de répondre aux questions suivan
 
 Le fichier `09_anova-one-way_test.R` permet d'effectuer des ANOVA *simples* ou *One-Way ANOVA* à l'occurrence avec trois moyennes/groupes, mais le principe peut être élargie à *k* moyennes/groupes du moment où une seule VI est impliquée. Dans une ANOVA *simple* on distingue généralement entre deux types de tests :
 
--   L'*omnibus ANOVA*, c'est-à-dire le test entre toutes les moyennes/groupes impliqués, qui sert généralement à identifier l'effet général de la VI sur la VD et, parfois, est utilisé pour déterminer si faire des comparaisons/contrastes ultérieurs (voir point suivant).
+-   L'*omnibus ANOVA*, c'est-à-dire le test entre toutes les moyennes/groupes impliqués, qui sert généralement à identifier l'effet général de la VI sur la VD et, parfois, est utilisé pour déterminer si faire des comparaisons/contrastes ultérieurs (voir point suivant). L'hypothèse nulle qui est posée dans l'*omnibus* ANOVA consiste dans l'égalité des toutes les moyennes/groupes impliquées dans le test. En termes formels, M1 = M2 = M3 ... = M*k.* L'hypothèse alternative est favorisée lorsqu'au moins deux moyennes/groupes sont différentes. Dans une ANOVA à 3 groupes, cela signifie donc qu'au moins l'une de ces conditions s'avère :
 
--   Des comparaisons/contrastes entre des moyennes/groupes spécifiques. Ces comparaisons ou contrastes peuvent être spécifiés avant de voir les données, comme partie par exemple d'une hypothèse théorique/opérationnelle, ou une fois les données observées (i.e., *post-hoc*).
+    -   M1 ≠ M2
+
+    -   M1 ≠ M3
+
+    -   M2 ≠ M3
+
+-   Des comparaisons/contrastes entre des moyennes/groupes spécifiques. Ces comparaisons ou contrastes peuvent être spécifiés avant de voir les données, comme partie par exemple d'une hypothèse théorique/opérationnelle, ou une fois les données observées (i.e., *post-hoc*). Comme pour le test t, les hypothèses à ce stade peuvent être directionnelles ou non-directionnelles.
 
 Dans le passé, il y avait la tendance à effectuer des comparaisons/contrastes seulement si le résultat du *omnibus* test était \< alpha. Aujourd'hui il y a plutôt la tendance, surtout dans une perspective test d'hypothèse, de planifier à l'avance les comparaisons/contrastes ou des les effectuer *post-hoc* selon l'intérêt pratique/théorique et indépendamment du résultat du test *omnibus*.
 
