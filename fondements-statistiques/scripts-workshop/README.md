@@ -405,3 +405,7 @@ Le fichier `13_modele-multiniveaux.R` propose une modélisation plus avancée qu
 ## 14 Méta-analyse
 
 Le fichier `14_meta-analysis.R` propose un exemple de méta-analyse sur des expériences prévoyant deux groupes (e.g. groupe contrôle vs. traitement). Il est donné à titre d'exemple, vous pouvez modifier les différentes valeurs des expériences ou insérer des données depuis des articles de méta-analyses publiés.
+
+## Réponses
+
+[Les réponses aux questions sont disponibles dans un fichier séparé.](https://github.com/mafritz/methodo-exp-2122/blob/main/fondements-statistiques/scripts-workshop/solutions-workshop.md)
