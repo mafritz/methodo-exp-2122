@@ -30,6 +30,8 @@ Pour utiliser les fichiers, téléchargez ou clonez l'ensemble de ce dépôt Git
 
 6.  Ouvrez au fur et à mesure les fichiers correspondants aux activités
 
+Les activités proposes des questions/problèmes. La fin de ce document propose un lien aux réponses, mais il est important d'essayer de manipuler vous-mêmes les scripts et de noter vos propres réponses pour les comparer ensuite.
+
 ### Commandes fréquentes
 
 Pour exécuter le code des scripts, la manière la plus rapide est d'utiliser les raccourcis de clavier :
