@@ -145,11 +145,21 @@ Le fichier `04_t-test_power.R` permet de s'exercer au concept de puissance stati
 
 Lorsqu'on connait 3 de ces 4 éléments, on peut dériver le 4ème mathématiquement. On utilise cette fonction pour justifier/déterminer la taille de l'échantillon dans le test.
 
-En modifiant les trois premiers paramètres dans le script en question, répondez aux questions suivantes :
+De plus, le t test a la particularité qu'on peut tester trois types d'hypothèses :
 
--   Combien de participant-es seraient nécessaire pour détecter un SESOI de Cohen's d = 0.5, avec un erreur de type I de 0.05 et de type II de 0.8 ?
+-   Hypothèse non-directionnelle M1 ≠ M2, avec ce qu'on appelle un test bilatéral et qui est représenté dans la fonction `t.test` avec l'attribut `alternative = "two.sided"`
 
--   En gardant type I = 0.05 et type II = 0.8, mais avec SESOI = 0.25, la taille de l'échantillon nécessaire et plus grande ou plus petite ? De ce fait, vous pouvez conclure que plus \_\_\_\_\_\_\_\_ est le SESOI, plus \_\_\_\_\_\_\_\_\_\_ sera l'échantillon nécessaire. Essayez d'expliquer ce phénomène.
+-   Hypothèse directionnelle M1 \< M2, avec ce qu'on appelle un test unilatéral et qui est représenté dans la fonction `t.test` avec l'attribut `alternative = "less"`
+
+-   Hypothèse directionnelle M1 \> M2, qui est toujours un test unilatéral représenté avec `alternative = "greater"`
+
+En modifiant les différents paramètres dans le script en question, répondez aux questions suivantes :
+
+-   Combien de participant-es seraient nécessaire pour détecter un SESOI de Cohen's d = 0.5, dans un test bilatéral (alternative = "two.sided") avec un erreur de type I de 0.05 et de type II de 0.8 ?
+
+-   Modifiez seulement l'alternative = "greater" à la ligne 25 et laissez tous les autres éléments inchangés. Qu'est-ce que vous observez au niveau du nombre de participant-es nécessaires ? Est-ce que vous imaginez qu'avec l'alternative "less" le nombre sera différent ? (Hint : si vous voulez tester il faudra mettre le SESOI négatif, à -0.5)
+
+-   Remettez l'alternative = "two.sided". Dans la première manipulation avec type I = 0.05, type II = 0.8, et SESOI = 0.5 vous avez obtenu 64 participant-es par groupe. Diminuez maintenant le SESOI = 0.25, la taille de l'échantillon nécessaire et plus grande ou plus petite ? De ce fait, vous pouvez conclure que plus \_\_\_\_\_\_\_\_ est le SESOI, plus \_\_\_\_\_\_\_\_\_\_ sera l'échantillon nécessaire. Essayez d'expliquer ce phénomène.
 
 -   Mettez à nouveau le SESOI = 0.5, ensuite :
 

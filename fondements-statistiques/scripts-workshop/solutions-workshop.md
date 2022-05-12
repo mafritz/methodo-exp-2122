@@ -90,10 +90,16 @@ Lorsqu'on a à faire avec des échantillons et non pas des *populations* entièr
 
 ## 04 Puissance statistique pour un test *t* de Welch
 
-**Combien de participant-es seraient nécessaire pour détecter un SESOI de Cohen's d = 0.5, avec un erreur de type I de 0.05 et de type II de 0.8 ?**\
+**Combien de participant-es seraient nécessaire pour détecter un SESOI de Cohen's d = 0.5, dans un test bilatéral (alternative = "two.sided") avec un erreur de type I de 0.05 et de type II de 0.8 ?**\
 64 par groupe, donc 128 au total.
 
-**En gardant type I = 0.05 et type II = 0.8, mais avec SESOI = 0.25, la taille de l'échantillon nécessaire et plus grande ou plus petite ? De ce fait, vous pouvez conclure que plus \_\_\_\_\_\_\_\_ est le SESOI, plus \_\_\_\_\_\_\_\_\_\_ sera l'échantillon nécessaire. Essayez d'expliquer ce phénomène.**\
+**Modifiez seulement l'alternative = "greater" à la ligne 25 et laissez tous les autres éléments inchangés. Qu'est-ce que vous observez au niveau du nombre de participant-es nécessaires ? Est-ce que vous imaginez qu'avec l'alternative "less" le nombre sera différent ? (Hint : si vous voulez tester il faudra mettre le SESOI négatif, à -0.5)\
+**Avec un test unilatéral il faut 51 participants par groupe, donc 102 au total, que ce soit dans l'alternative M1 \> M2 ou M1 \< M2. Il s'agit donc d'un nombre considérablement inférieur par rapport à l'alternative bilatéral. Cela s'explique par le fait que la zone de la distribution nulle couverte par le 5 de l'erreur de type I est toute sur l'une des deux côtés de la distribution t. De cette manière, il faut donc une valeur du test t moins extrême pour franchir le seuil, ce qu'on peut obtenir avec un nombre de participant-es moins élevé. L'image ci-dessous montre que pour un test unilatéral, le seuil correspondant à une p-valeur de 0.05 est supérieur à -2 ou inférieur +2. En d'autres termes, ces seuils sont plus proche du sommet de la courbe où la densité est plus élevé et donc un résultat plus probable/plausible. Au contraire, pour le test bilatéral il faut un résultat du t test inférieur à -2 ou supérieur à +2, donc plutôt vers les extrémités de la courbe où la densité est plus faible.
+
+![](images/t-test-distributions.png){width="100%"}**\
+**
+
+**Remettez l'alternative = "two.sided". Dans la première manipulation avec type I = 0.05, type II = 0.8, et SESOI = 0.5 vous avez obtenu 64 participant-es par groupe. Diminuez maintenant le SESOI = 0.25, la taille de l'échantillon nécessaire et plus grande ou plus petite ? De ce fait, vous pouvez conclure que plus \_\_\_\_\_\_\_\_ est le SESOI, plus \_\_\_\_\_\_\_\_\_\_ sera l'échantillon nécessaire. Essayez d'expliquer ce phénomène.**\
 Plus grand le SESOI, plus petit l'échantillon nécessaire. Ou respectivement plus petit le SESOI, plus grand l'échantillon nécessaire. Cela s'explique par le fait qu'un grand effet, par exemple une grande différence entre deux groupes, est plus évidente et nécessite donc de moins d'observations pour la déceler. Au contraire, une petite différence est plus sensible à du *bruit* et nécessite donc plus d'observations avant de pouvoir détecter le signal.
 
 Avec à nouveau le SESOI = 0.5.
@@ -157,7 +163,7 @@ Aucune réponse spécifique. Les tests d'équivalence sont assez récents et don
 **En utilisant les paramètres de base k = 3, alpha = 0.05 et puissance 0.8, combien d'entités/participant-es sont nécessaires par groupes avec un SESOI de Cohen's f = 0.25 ?**\
 53 participant-es x 3 groupes, c'est-à-dire 159 au total.
 
-**Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme.** \
+**Modifiez le paramètre k = 5 pour augmenter le nombre de modalités de la VI en laissant les autres paramètres pareils. Quelle est la nouvelle valeur de N ? Essayez d'expliquer ce mécanisme.**\
 40 participant-es x 5 groupes, c'est-à-dire 200 au total. En proportion, il faut moins de participant-es par groupes comparé à une ANOVA avec 3 groupes. Cela s'explique par le fait qu'une ANOVA simple test si au moins deux moyennes/groupes sont différents, ce qui est plus probable si on a 5 plutôt que *seulement* 3 groupes. En revanche, effectuer des ANOVA avec plusieurs groupes est assez rare en méthode expérimentale, car même si en proportion moins de participant-es sont nécessaires, le nombre total devient rapidement assez conséquent en termes de temps et éventuellement de budget.
 
 ## 09 Effectuer une comparaison entre trois moyennes/groupes (ou plus)
@@ -200,7 +206,7 @@ La taille de l'effet diminue à 0.31 [0.21, 1.00], tandis que maintenant seuleme
 
 ## 10 Effectuer une ANOVA avec une autre variable (ANCOVA)
 
-**Effectuez d'abord le test avec les données disponibles dans le script et essayé d'interpréter les résultats, notamment en fonction au tableau de l'ANOVA *simple* du point précédent** \
+**Effectuez d'abord le test avec les données disponibles dans le script et essayé d'interpréter les résultats, notamment en fonction au tableau de l'ANOVA *simple* du point précédent**\
 Contrairement à l'ANOVA simple du point précédent, nous avons ici deux variables qui servent à modéliser la VD : la VI (groupe A, B ou C) et une autre variable continue appelée de manière générique *z.* Par conséquent, chaque observation consiste dans l'attribution au groupe expérimentale, plus la mesure de la VD, plus la mesure de cette variable *z*. Ce que le test souvent appelé ANCOVA fait est de tester l'*apport* de la VI et de l'autre variable dans l'explication/modélisation de la VD. Ce qu'il faut comprendre est que pour les chercherus, la VI a un statut particulier, car c'est ce qu'on manipule, mais pour le modèle statistique la VI et la variable *z* sont *simplement* deux variables qui participent au modèle. Ce qui est très puissant dans la modélisation linéaire est qu'on peut déterminer l'apport de chaque variable *indépendamment* de l'autre. En d'autres termes, le modèle arrive à projeter la question suivante : si on considère deux observations qui ont la même valeur sur la variable *z,* quel est l'*apport* de la VI ? Il s'agit d'une projection statistique parce que dans la plupart des cas, il n'y aura pas des observations exactement avec la même valeur de *z.* Mais le modèle arrive à *moyenner*/stratifier sur *z* pour obtenir une estimation de VI qui est de quelque sorte *indépendante* de la mesure *z.* On peut le voir dans le tableau de l'ANCOVA obtenu avec le test :
 
 | Effect | df    | MSE   | F      | ges  | p.value |
