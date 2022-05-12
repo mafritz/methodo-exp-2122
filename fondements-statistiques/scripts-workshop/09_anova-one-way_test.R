@@ -142,3 +142,5 @@ comparaisons <- emmeans(
 # Voir moyennes marginales et contrastes inférentiels
 print(comparaisons)
 
+# Récupérer un tableau avec les intervalles de confiance
+comparaisons |> summary(infer = TRUE)
