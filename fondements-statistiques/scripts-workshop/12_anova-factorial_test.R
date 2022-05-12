@@ -89,6 +89,8 @@ comparison_with_interaction <- emmeans(
   specs = ~ vi1 * vi2
 ) |> pairs()
 
+comparison_with_interaction |> summary(infer = TRUE, digits = 2)
+
 
 # Comparaisons/contrasts sans effet de l'interaction ----------------------
 
@@ -97,10 +99,14 @@ main_effect_vi1 <- emmeans(
   specs = ~ vi1
 ) |> pairs()
 
+main_effect_vi1 |> summary(infer = TRUE, digits = 2)
+
 main_effect_vi2 <- emmeans(
   model,
   specs = ~ vi2
 ) |> pairs()
+
+main_effect_vi2 |> summary(infer = TRUE, digits = 2)
 
 # Contrôler les postulats de l'ANOVA --------------------------------------
 
