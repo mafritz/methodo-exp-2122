@@ -195,7 +195,7 @@ Le script permet de faire principalement 4 choses :
 
 3.  Effectuer un test t de Welch (qui n'assume pas l'homogénéité de la variance) et afficher le résultats avec les différents indicateurs (degrés de liberté, résultat du test statistique, p-valeur, taille de l'effet brute et standardisée)
 
-4.  Affichez la p-valeur en fonction de la distribution nulle pour une seuil de l'erreur de type I de 0.05 bilatéral
+4.  Affichez la p-valeur en fonction de la distribution nulle pour une seuil de l'erreur de type I de 0.05
 
 Adaptez les différents partie du script selon les consignes suivantes et répondez aux questions/réflexions proposées :
 
