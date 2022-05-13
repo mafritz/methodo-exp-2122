@@ -60,8 +60,30 @@ data_combined <- data_combined |>
   )
 
 
-# Montrer graphiquement les données -------------------------------------
+# Connaître/explorer les données -------------------------------------
 
+# Échantillon globale
+data_combined |>
+  summarise(
+    N = n(),
+    M_measure = mean(mesure),
+    SD_measure = sd(mesure),
+    M_z = mean(z),
+    SD_z = sd(z)
+  )
+
+# Stratification par VI
+data_combined |>
+  group_by(groupe) |>
+  summarise(
+    N = n(),
+    M_measure = mean(mesure),
+    SD_measure = sd(mesure),
+    M_z = mean(z),
+    SD_z = sd(z)
+  )
+
+# Visualiser les données
 ggplot(data = data_combined, aes(x = groupe, y = mesure, color = groupe)) +
   geom_jitter(alpha = 0.2) +
   stat_summary(
