@@ -57,7 +57,7 @@ Pour atteindre les objectifs pédagogiques du cours, vous allez produire les él
 
     -   justification scientifique et éthique de l'expérience ;
 
-    -   explication causale potentielle (hypothèse théorique) de l'effet d'une l'intervention sur un phénomène d'intérêt ;
+    -   explication causale potentielle (hypothèse théorique) de l'effet d'une intervention sur un phénomène d'intérêt ;
 
     -   planification méthodologique de la génération, récolte et analyse de données expérimentale vissant établir la présence (ou absence) d'un effet d'une variable indépendante (VI) sur une variable dépendante (VD)
 
@@ -408,11 +408,13 @@ Quelques ressources complémentaires ou pour aller plus loin. Les ressources son
 
 ## Livres
 
+-   Lakens, D. (2022). Improving Your Statistical Inferences. Retrieved from <https://lakens.github.io/statistical_inferences/>. <https://doi.org/10.5281/zenodo.6409077>
+
+-   Maxwell, S. E., Delaney, H. D., & Kelley, K. (2017). *Designing experiments and analyzing data : A model comparison perspective* (Third edition). Routledge.
+
 -   Pearl, J., & Mackenzie, D. (2018). *The book of why : The new science of cause and effect*. Basic Books.
 
 -   Pearl, J., Glymour, M., & Jewell, N. P. (2016). *Causal inference in statistics : A primer*. Wiley.
-
--   Maxwell, S. E., Delaney, H. D., & Kelley, K. (2017). *Designing experiments and analyzing data : A model comparison perspective* (Third edition). Routledge.
 
 ## Articles
 
