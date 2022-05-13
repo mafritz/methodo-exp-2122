@@ -67,6 +67,48 @@ data_combined <- data_combined |>
     vi2 = factor(vi2, labels = c("Faible", "Forte")) # Modifier les labels de modalités vi2
   )
 
+# Connaître/explorer les données -------------------------------------
+
+# Échantillon globale
+data_combined |>
+  summarise(
+    N = n(),
+    M = mean(mesure),
+    SD = sd(mesure),
+  )
+
+# Stratification par VIs
+data_combined |>
+  group_by(vi1, vi2) |>
+  summarise(
+    N = n(),
+    M = mean(mesure),
+    SD = sd(mesure),
+  )
+
+# Visualiser les données
+ggplot(data = data_combined, aes(x = 1, y = mesure)) +
+  geom_jitter(alpha = 0.2) +
+  stat_summary(
+    fun.data = mean_cl_normal,
+    geom = "errorbar",
+    width = 0.3,
+    position = position_dodge(width = 0.1)
+  ) +
+  stat_summary(
+    fun = mean, geom = "point",
+    size = 3,
+    shape = 15,
+    position = position_dodge(width = 0.6)
+  ) +
+  facet_grid(vi2 ~ vi1) +
+  labs(
+    x = NULL,
+    y = "Mesure", title = "Graphique du test. Barres = CI 95%"
+  ) +
+  scale_color_flat() +
+  theme(legend.position = "none")
+
 
 # Test avec interaction entre facteurs ------------------------------------
 
